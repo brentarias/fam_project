@@ -1,0 +1,29 @@
+---
+import SuccessToast from './SuccessToast.astro';
+---
+
+<div class="form-fundraising-wrapper">
+  <form class="stubbed-form space-y-4" novalidate>
+    <input type="text" placeholder="Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base" />
+    <input type="email" placeholder="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base" />
+    <input type="tel" placeholder="Phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base" />
+    <textarea placeholder="Tell us about your organization" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base resize-y"></textarea>
+    <button type="submit" class="w-full px-6 py-3 bg-fam-orange text-white font-semibold rounded-lg hover:bg-fam-orange-dark transition-colors duration-200">
+      Let's raise some funds!
+    </button>
+  </form>
+  <SuccessToast />
+</div>
+
+<script>
+  document.querySelectorAll('.form-fundraising-wrapper .stubbed-form').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formEl = e.target as HTMLFormElement;
+      const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement;
+      if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; }
+      formEl.reset();
+      (window as any).__showToast?.(formEl);
+    });
+  });
+</script>

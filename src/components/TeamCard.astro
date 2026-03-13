@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  name: string;
+  title: string;
+  bio: string;
+  photo: ImageMetadata;
+}
+
+const { name, title, bio, photo } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-sm overflow-hidden text-center p-6 hover:shadow-md transition-shadow duration-300">
+  <Image
+    src={photo}
+    alt={`${name} — ${title}`}
+    class="w-32 h-32 rounded-full mx-auto object-cover mb-4"
+    width={256}
+    height={256}
+  />
+  <h3 class="text-lg font-bold text-fam-text">{name}</h3>
+  <p class="text-sm text-fam-orange font-medium mb-3">{title}</p>
+  <p class="text-sm text-fam-text-light leading-relaxed">{bio}</p>
+</div>

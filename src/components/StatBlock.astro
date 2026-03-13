@@ -1,0 +1,17 @@
+---
+interface Props {
+  stat: string;
+  label: string;
+  source?: string;
+}
+
+const { stat, label, source } = Astro.props;
+---
+
+<div class="text-center p-6">
+  <div class="text-4xl md:text-5xl font-bold text-fam-orange mb-2">{stat}</div>
+  <div class="text-lg font-medium text-fam-text mb-1">{label}</div>
+  {source && (
+    <div class="text-xs text-fam-text-light italic">Source: {source}</div>
+  )}
+</div>

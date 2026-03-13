@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TeamCard from '../components/TeamCard.astro';
+
+const teamMembers = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Our F.A.M. — The F.A.M. Project" description="Meet the passionate team behind The F.A.M. Project. Our board members and leaders are dedicated to strengthening families and communities.">
+  <!-- Header -->
+  <section class="py-16 md:py-24 bg-fam-blue text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our F.A.M.</h1>
+      <p class="text-xl text-gray-200">Meet the passionate people behind the movement.</p>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {teamMembers.map((member) => (
+          <TeamCard
+            name={member.data.name}
+            title={member.data.title}
+            bio={member.data.bio}
+            photo={member.data.photo}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

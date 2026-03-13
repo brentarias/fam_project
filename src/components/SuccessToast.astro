@@ -1,0 +1,52 @@
+---
+// Success toast component — displayed by form components upon stubbed submission
+---
+
+<div class="success-toast hidden fixed bottom-6 right-6 z-50 bg-fam-green text-white px-6 py-4 rounded-lg shadow-lg max-w-sm transition-all duration-300 translate-y-4 opacity-0" role="alert">
+  <div class="flex items-start gap-3">
+    <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <div>
+      <p class="font-semibold">Thanks! Your submission was received.</p>
+      <p class="text-sm text-green-100 mt-1">Backend integration coming in Stage 2.</p>
+    </div>
+    <button class="toast-close ml-2 text-green-100 hover:text-white flex-shrink-0" aria-label="Dismiss">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  function showToast(formEl: HTMLFormElement) {
+    const toast = formEl.closest('section')?.querySelector('.success-toast')
+      || formEl.parentElement?.querySelector('.success-toast')
+      || document.querySelector('.success-toast');
+    if (!toast) return;
+
+    toast.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      toast.classList.remove('translate-y-4', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+    });
+
+    const timer = setTimeout(() => dismissToast(toast), 5000);
+
+    const closeBtn = toast.querySelector('.toast-close');
+    closeBtn?.addEventListener('click', () => {
+      clearTimeout(timer);
+      dismissToast(toast);
+    }, { once: true });
+  }
+
+  function dismissToast(toast: Element) {
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-4', 'opacity-0');
+    setTimeout(() => toast.classList.add('hidden'), 300);
+  }
+
+  // Make showToast available globally for form components
+  (window as any).__showToast = showToast;
+</script>

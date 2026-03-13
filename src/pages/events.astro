@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormNewsletter from '../components/FormNewsletter.astro';
+import FormSponsor from '../components/FormSponsor.astro';
+---
+
+<BaseLayout title="Events — The F.A.M. Project" description="Discover family-focused events hosted by The F.A.M. Project. Community gatherings, workshops, and experiences that bring families closer together.">
+  <!-- Header -->
+  <section class="py-16 md:py-24 bg-fam-blue text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Events</h1>
+      <p class="text-xl text-gray-200">Bringing families together through unforgettable experiences.</p>
+    </div>
+  </section>
+
+  <!-- Event Series -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue mb-8">Our Event Series</h2>
+      <div class="space-y-8">
+        <div class="bg-fam-cream rounded-xl p-8">
+          <h3 class="text-xl font-bold text-fam-text mb-3">Family Fun Nights</h3>
+          <p class="text-fam-text-light">Monthly community gatherings featuring games, activities, and opportunities for families to connect in a fun, relaxed environment. No screens allowed — just quality family time.</p>
+        </div>
+        <div class="bg-fam-cream rounded-xl p-8">
+          <h3 class="text-xl font-bold text-fam-text mb-3">Parent Workshops</h3>
+          <p class="text-fam-text-light">Educational sessions covering topics like digital wellness, family communication, and child development. Led by experts and designed for real-world application.</p>
+        </div>
+        <div class="bg-fam-cream rounded-xl p-8">
+          <h3 class="text-xl font-bold text-fam-text mb-3">Community Service Days</h3>
+          <p class="text-fam-text-light">Volunteer together as a family while making a positive impact in your community. These events teach children the value of giving back while strengthening family bonds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Download Form -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-fam-blue mb-4">Stay in the Loop</h2>
+      <p class="text-fam-text-light mb-8">Get our event schedule and a free family activity guide delivered to your inbox.</p>
+      <FormNewsletter buttonText="Get my free guide" />
+    </div>
+  </section>
+
+  <!-- Legacy Events -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue mb-8">Past Events</h2>
+      <div class="space-y-6">
+        <div class="border-l-4 border-fam-orange pl-6">
+          <h3 class="text-lg font-bold text-fam-text">Family Fun Fest 2024</h3>
+          <p class="text-fam-text-light">Our largest event of the year, bringing together over 500 families for a day of games, food, live music, and community connection.</p>
+        </div>
+        <div class="border-l-4 border-fam-orange pl-6">
+          <h3 class="text-lg font-bold text-fam-text">Digital Detox Weekend</h3>
+          <p class="text-fam-text-light">A weekend retreat where families unplugged from technology and reconnected with each other through outdoor activities and guided workshops.</p>
+        </div>
+        <div class="border-l-4 border-fam-orange pl-6">
+          <h3 class="text-lg font-bold text-fam-text">Holiday Giving Campaign</h3>
+          <p class="text-fam-text-light">Families came together to prepare and distribute care packages to families in need during the holiday season.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legacy Event Downloads -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-fam-blue mb-4">Event Resources</h2>
+      <p class="text-fam-text-light mb-8">Download recaps and photos from our past events.</p>
+      <FormNewsletter buttonText="Get my free guide" />
+    </div>
+  </section>
+
+  <!-- Sponsor Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue text-center mb-4">Become a Sponsor</h2>
+      <p class="text-fam-text-light text-center mb-8">Partner with The F.A.M. Project to make a lasting impact on families in your community.</p>
+      <FormSponsor />
+    </div>
+  </section>
+</BaseLayout>

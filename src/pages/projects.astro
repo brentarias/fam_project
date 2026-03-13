@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormFundraising from '../components/FormFundraising.astro';
+---
+
+<BaseLayout title="Projects — The F.A.M. Project" description="Explore The F.A.M. Project's initiatives including FAM Fun Pass, FAM Central app, vendor partnerships, and fundraising opportunities.">
+  <!-- Header -->
+  <section class="py-16 md:py-24 bg-fam-blue text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
+      <p class="text-xl text-gray-200">Innovative initiatives that empower families and communities.</p>
+    </div>
+  </section>
+
+  <!-- FAM Fun Pass -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue mb-6">FAM Fun Pass</h2>
+      <p class="text-lg text-fam-text-light mb-6">
+        The FAM Fun Pass is your ticket to exclusive family discounts and experiences at local businesses. Save money on restaurants, entertainment, activities, and more — all while supporting local businesses that believe in family values.
+      </p>
+      <p class="text-fam-text-light mb-6">
+        Each pass unlocks hundreds of dollars in savings and gives your family access to unique experiences you won't find anywhere else. It's the perfect way to explore your community while making lasting memories together.
+      </p>
+      <a
+        href="https://www.famfunpass.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-8 py-3 bg-fam-orange text-white font-semibold rounded-full hover:bg-fam-orange-dark transition-colors duration-200 no-underline"
+      >
+        Visit FAM Fun Pass
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAM Central -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue mb-6">FAM Central</h2>
+      <p class="text-lg text-fam-text-light mb-6">
+        FAM Central is our mobile app that puts family resources, event information, and community connection right at your fingertips. Stay up to date on upcoming events, access educational content, and connect with other families in your area.
+      </p>
+      <a
+        href="https://apps.apple.com/us/app/fam-central/id1595169801"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-8 py-3 bg-fam-blue text-white font-semibold rounded-full hover:bg-fam-blue-light transition-colors duration-200 no-underline"
+      >
+        Download on the App Store
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Vendor Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue mb-6">Vendor Partnerships</h2>
+      <p class="text-lg text-fam-text-light mb-6">
+        We partner with local businesses and vendors who share our commitment to family values. As a vendor partner, you gain exposure to hundreds of engaged families while supporting a meaningful cause.
+      </p>
+      <p class="text-fam-text-light">
+        Whether you're a restaurant, entertainment venue, retail shop, or service provider, there's a place for you in The F.A.M. Project community. Join our growing network of family-friendly businesses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fundraising -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-fam-blue text-center mb-4">Fundraising Partnerships</h2>
+      <p class="text-fam-text-light text-center mb-8">
+        Looking for a unique fundraising opportunity? Partner with The F.A.M. Project to raise funds for your organization while promoting family togetherness.
+      </p>
+      <FormFundraising />
+    </div>
+  </section>
+</BaseLayout>

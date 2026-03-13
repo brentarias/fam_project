@@ -1,49 +1,152 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import FormNewsletter from '../components/FormNewsletter.astro';
+import FormContact from '../components/FormContact.astro';
+import StatBlock from '../components/StatBlock.astro';
+import Testimonial from '../components/Testimonial.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SOCIAL_LINKS } from '../consts';
+import heroImage from '../assets/hero/home-header.jpg';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'The F.A.M. Project',
+  url: SITE_URL,
+  logo: `${SITE_URL}/favicon.svg`,
+  sameAs: [SOCIAL_LINKS.facebook, SOCIAL_LINKS.instagram, SOCIAL_LINKS.youtube],
+};
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout title={`${SITE_TITLE} — Strengthening Families`} description={SITE_DESCRIPTION}>
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+
+  <!-- Hero Section -->
+  <HeroSection
+    title="Strengthening Families, One Connection at a Time"
+    subtitle="The F.A.M. Project empowers families through education, events, and community resources."
+    backgroundImage={heroImage}
+    backgroundAlt="Families enjoying time together at a F.A.M. Project event"
+  >
+    <FormNewsletter buttonText="Let's change the world!" />
+  </HeroSection>
+
+  <!-- Mission Teaser -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue mb-6">Our Mission</h2>
+      <p class="text-lg text-fam-text-light leading-relaxed mb-8">
+        We believe that strong families build strong communities. The F.A.M. Project is dedicated to providing families with the tools, knowledge, and experiences they need to thrive — from reducing digital distractions to creating meaningful moments together.
+      </p>
+      <a
+        href="/our-mission/"
+        class="inline-flex items-center px-8 py-3 bg-fam-blue text-white font-semibold rounded-full hover:bg-fam-blue-light transition-colors duration-200 no-underline"
+      >
+        Learn More About Our Mission
+      </a>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-12">The Numbers Speak</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StatBlock stat="7+ hrs" label="Average daily screen time for teens" source="Common Sense Media, 2023" />
+        <StatBlock stat="65%" label="Parents concerned about screen time" source="Pew Research Center" />
+        <StatBlock stat="1 in 3" label="Children report feeling addicted to devices" source="Common Sense Media" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Teaser -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue mb-6">Community Events</h2>
+      <p class="text-lg text-fam-text-light leading-relaxed mb-8">
+        Experience the power of togetherness at our family-focused events. From fun-filled community gatherings to educational workshops, we create spaces where families can connect, learn, and grow.
+      </p>
+      <a
+        href="/events/"
+        class="inline-flex items-center px-8 py-3 bg-fam-orange text-white font-semibold rounded-full hover:bg-fam-orange-dark transition-colors duration-200 no-underline"
+      >
+        Explore Our Events
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Testimonial
+        quote="The F.A.M. Project has truly transformed how our family spends time together. We've put down our phones and picked up conversations."
+        name="Sarah M."
+        title="F.A.M. Project Community Member"
+      />
+    </div>
+  </section>
+
+  <!-- YouTube Video -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-8">See Us in Action</h2>
+      <YouTubeEmbed videoId="dQw4w9WgXcQ" title="The F.A.M. Project — Our Story" />
+    </div>
+  </section>
+
+  <!-- Projects Teaser -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue mb-12">Our Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-fam-text mb-3">FAM Fun Pass</h3>
+          <p class="text-fam-text-light mb-4">
+            Exclusive family discounts and experiences at local businesses. Save money while making memories.
+          </p>
+          <a
+            href="https://www.famfunpass.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-fam-orange font-semibold no-underline hover:text-fam-orange-dark transition-colors"
+          >
+            Visit FAM Fun Pass
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-fam-text mb-3">FAM Central</h3>
+          <p class="text-fam-text-light mb-4">
+            Our mobile app bringing family resources, event info, and community connection right to your fingertips.
+          </p>
+          <a
+            href="https://apps.apple.com/us/app/fam-central/id1595169801"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-fam-orange font-semibold no-underline hover:text-fam-orange-dark transition-colors"
+          >
+            Download on the App Store
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-4">Get in Touch</h2>
+      <p class="text-fam-text-light text-center mb-8">
+        Ready to strengthen your family? We'd love to hear from you.
+      </p>
+      <FormContact buttonText="Let's change the world!" />
+    </div>
+  </section>
+</BaseLayout>

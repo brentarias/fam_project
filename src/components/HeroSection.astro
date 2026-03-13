@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  backgroundImage: ImageMetadata;
+  backgroundAlt?: string;
+}
+
+const { title, subtitle, backgroundImage, backgroundAlt = '' } = Astro.props;
+---
+
+<section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
+  <!-- Background Image -->
+  <Image
+    src={backgroundImage}
+    alt={backgroundAlt}
+    class="absolute inset-0 w-full h-full object-cover"
+    widths={[640, 1024, 1920]}
+    sizes="100vw"
+    loading="eager"
+  />
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-fam-blue/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16">
+    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    )}
+    <div class="max-w-md mx-auto">
+      <slot />
+    </div>
+  </div>
+</section>

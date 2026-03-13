@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Testimonial from '../components/Testimonial.astro';
+import StatBlock from '../components/StatBlock.astro';
+import FormContact from '../components/FormContact.astro';
+---
+
+<BaseLayout title="Our Mission — The F.A.M. Project" description="Learn about The F.A.M. Project's mission to strengthen families through education, community events, and resources.">
+  <!-- Mission Header -->
+  <section class="py-16 md:py-24 bg-fam-blue text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Mission</h1>
+      <p class="text-xl text-gray-200">Strengthening families, one connection at a time.</p>
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
+      <p class="text-lg leading-relaxed text-fam-text">
+        The F.A.M. Project — which stands for <strong>Family, Awareness, Movement</strong> — was founded with a simple but powerful belief: that strong families are the foundation of strong communities.
+      </p>
+      <p class="text-lg leading-relaxed text-fam-text">
+        In an age of constant digital distraction, families are spending less quality time together than ever before. The average American family spends more time on screens than in meaningful conversation. Children are growing up in a world where a text message has replaced a dinner table discussion.
+      </p>
+      <p class="text-lg leading-relaxed text-fam-text">
+        We're here to change that. Through community events, educational resources, and family-focused programs, The F.A.M. Project empowers families to reconnect, communicate, and build the kind of bonds that last a lifetime.
+      </p>
+      <p class="text-lg leading-relaxed text-fam-text">
+        Our approach is built on three pillars: <strong>Education</strong> — giving families the knowledge and tools to navigate modern challenges; <strong>Community</strong> — creating spaces where families come together and support one another; and <strong>Action</strong> — turning awareness into meaningful change through events, projects, and resources.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tim Cook Quote -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Testimonial
+        quote="I don't worry about people using technology too much. I worry about people not using it enough to engage with the people around them."
+        name="Tim Cook"
+        title="CEO, Apple Inc."
+      />
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-12">Why It Matters</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StatBlock stat="53%" label="Teens feel addicted to their phones" source="Common Sense Media" />
+        <StatBlock stat="8 hrs" label="Average daily screen time for U.S. adults" source="Nielsen Report" />
+        <StatBlock stat="37%" label="Families eat dinner together daily" source="The Family Dinner Project" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-4">Join Our Mission</h2>
+      <p class="text-fam-text-light text-center mb-8">Ready to make a difference? Reach out to us.</p>
+      <FormContact buttonText="Let's change the world!" />
+    </div>
+  </section>
+</BaseLayout>

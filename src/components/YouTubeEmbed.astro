@@ -1,0 +1,48 @@
+---
+interface Props {
+  videoId: string;
+  title?: string;
+}
+
+const { videoId, title = 'YouTube video' } = Astro.props;
+const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+---
+
+<div class="youtube-facade relative aspect-video rounded-xl overflow-hidden bg-black cursor-pointer group" data-video-id={videoId}>
+  <!-- Thumbnail -->
+  <img
+    src={thumbnailUrl}
+    alt={title}
+    class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
+    loading="lazy"
+  />
+
+  <!-- Play Button Overlay -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors duration-300">
+      <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.youtube-facade').forEach((facade) => {
+    facade.addEventListener('click', () => {
+      const videoId = facade.getAttribute('data-video-id');
+      if (!videoId) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      iframe.title = 'YouTube video player';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.className = 'w-full h-full absolute inset-0';
+
+      facade.innerHTML = '';
+      facade.appendChild(iframe);
+      facade.classList.remove('cursor-pointer');
+    }, { once: true });
+  });
+</script>

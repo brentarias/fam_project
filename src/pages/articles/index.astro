@@ -1,0 +1,89 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { ARTICLE_CATEGORIES } from '../../consts';
+
+const allArticles = (await getCollection('articles')).sort(
+  (a: any, b: any) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+---
+
+<BaseLayout title="Articles — The F.A.M. Project" description="Read articles about family wellness, digital distraction, communication, child development, and more from The F.A.M. Project.">
+  <!-- Header -->
+  <section class="py-16 md:py-24 bg-fam-blue text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Articles</h1>
+      <p class="text-xl text-gray-200">Insights and resources for stronger families.</p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="py-8 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-3 justify-center" id="category-filters">
+        <button
+          class="category-btn px-4 py-2 text-sm font-medium rounded-full bg-fam-blue text-white transition-colors"
+          data-category="all"
+        >
+          All
+        </button>
+        {ARTICLE_CATEGORIES.map((cat) => (
+          <button
+            class="category-btn px-4 py-2 text-sm font-medium rounded-full bg-fam-gray-light text-fam-gray-dark hover:bg-fam-blue hover:text-white transition-colors"
+            data-category={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Grid -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="article-grid">
+        {allArticles.map((article: any) => (
+          <div class="article-item" data-category={article.data.category}>
+            <ArticleCard
+              title={article.data.title}
+              slug={article.data.slug}
+              category={article.data.category}
+              excerpt={article.data.excerpt}
+              featuredImage={article.data.featuredImage}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('.category-btn');
+  const items = document.querySelectorAll('.article-item');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+
+      // Update active state
+      buttons.forEach((b) => {
+        b.classList.remove('bg-fam-blue', 'text-white');
+        b.classList.add('bg-fam-gray-light', 'text-fam-gray-dark');
+      });
+      btn.classList.remove('bg-fam-gray-light', 'text-fam-gray-dark');
+      btn.classList.add('bg-fam-blue', 'text-white');
+
+      // Filter articles
+      items.forEach((item) => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          (item as HTMLElement).style.display = '';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
