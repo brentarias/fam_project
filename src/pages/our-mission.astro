@@ -3,64 +3,222 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Testimonial from '../components/Testimonial.astro';
 import StatBlock from '../components/StatBlock.astro';
 import FormContact from '../components/FormContact.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero/home-header-2.jpg';
+import didYouKnowImg from '../assets/misc/did-you-know.png';
+import didYouKnowBgImg from '../assets/hero/did-you-know-screens.jpg';
+import statPhoneUseImg from '../assets/misc/stat-phone-use.png';
+import statMainMissionImg from '../assets/misc/stat-main-mission.png';
+import moreThisImg from '../assets/misc/more-this-image.png';
+import sunsetOceanBg from '../assets/hero/sunset-ocean-horizon.jpg';
+import timCookImg from '../assets/team/tim-cook.png';
+import statPhoneUse1Img from '../assets/misc/stat-phone-use-1.png';
+import statSexTraffickingImg from '../assets/misc/stat-sex-trafficking.png';
+import statPronImg from '../assets/misc/stat-pron.png';
+import cloudsBg from '../assets/hero/clouds.jpg';
 ---
 
-<BaseLayout title="Our Mission — The F.A.M. Project" description="Learn about The F.A.M. Project's mission to strengthen families through education, community events, and resources.">
-  <!-- Mission Header -->
-  <section class="py-16 md:py-24 bg-fam-blue text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Mission</h1>
-      <p class="text-xl text-gray-200">Strengthening families, one connection at a time.</p>
+<BaseLayout title="Our Mission — The F.A.M. Project" description="The FAM Project connects families through fun and authentic transformation, combating technological addictions that destroy family bonds.">
+  <!-- Mission Section: Header + Statement + Image -->
+  <section class="relative py-16 md:py-24 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center">
+        <!-- Text column -->
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-[#6d2c8c]">Our Mission</h1>
+          <h2 class="text-2xl md:text-3xl font-semibold text-[#8dc63f] mb-8">To Connect Families Through Fun &amp; Authentic Transformation!</h2>
+          <p class="text-lg leading-relaxed mb-4 font-semibold text-fam-text">
+            The FAM Project was started by a group of families tired of losing their kids attention to devices and social media. F.A.M. stands for Family Awareness Movement, and we are committed to shining a light so bright on the effects and issues surrounding technological addictions like social media and gaming, which in some cases leads to pornography and other detrimental, even life threatening addictions and behaviors.
+          </p>
+          <p class="text-base leading-relaxed text-fam-text-light mb-4">
+            Handing our children a smartphone at a young age could lead to serious addictions down the road if  we're not careful. It could prove to be the demise of future generations to come and our society as we know it.
+          </p>
+          <p class="text-base leading-relaxed text-fam-text-light mb-4">
+            We live in the 21st century. The advent of the internet, smart phones, and social media, has put our lives  into hyperdrive.  Constant notifications, overstimulation and information at our fingertips and nothing will change, unless we do.  Since this social bombardment is not going away and will only increase in momentum as new technological and social advancements continue to scream for our time and attention, we must fight back and get M.A.D. (Make A Difference).
+          </p>
+          <p class="text-base leading-relaxed text-fam-text-light">
+            We are constantly looking for organizations that share in our vision and mission so as a united front we can kick this movement into overdrive to affect the lives of those we love.  Our products are designed to bring families back together again.  Join our mission and help families take back their life!
+          </p>
+        </div>
+        <!-- Image column -->
+        <div class="hidden md:flex justify-center">
+          <Image
+            src={statMainMissionImg}
+            alt="Family screen time statistics"
+            class="w-full max-w-[280px] lg:max-w-[340px] h-auto rounded-lg"
+            widths={[280, 340, 570, 658]}
+            sizes="(max-width: 1024px) 280px, 340px"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Mission Statement -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
-      <p class="text-lg leading-relaxed text-fam-text">
-        The F.A.M. Project — which stands for <strong>Family, Awareness, Movement</strong> — was founded with a simple but powerful belief: that strong families are the foundation of strong communities.
-      </p>
-      <p class="text-lg leading-relaxed text-fam-text">
-        In an age of constant digital distraction, families are spending less quality time together than ever before. The average American family spends more time on screens than in meaningful conversation. Children are growing up in a world where a text message has replaced a dinner table discussion.
-      </p>
-      <p class="text-lg leading-relaxed text-fam-text">
-        We're here to change that. Through community events, educational resources, and family-focused programs, The F.A.M. Project empowers families to reconnect, communicate, and build the kind of bonds that last a lifetime.
-      </p>
-      <p class="text-lg leading-relaxed text-fam-text">
-        Our approach is built on three pillars: <strong>Education</strong> — giving families the knowledge and tools to navigate modern challenges; <strong>Community</strong> — creating spaces where families come together and support one another; and <strong>Action</strong> — turning awareness into meaningful change through events, projects, and resources.
-      </p>
+  <!-- "Did You Know?" Info Bit -->
+  <section class="relative py-12 md:py-16 bg-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={didYouKnowBgImg}
+        alt=""
+        class="w-full h-full object-cover object-bottom opacity-20"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-[30%_70%] gap-8 items-center">
+        <div class="flex justify-center md:justify-start">
+          <Image
+            src={didYouKnowImg}
+            alt="Did you know?"
+            class="w-3/4 md:w-full max-w-[200px]"
+            widths={[200, 400, 579]}
+            sizes="(max-width: 768px) 60vw, 200px"
+          />
+        </div>
+        <div>
+          <p class="text-lg md:text-xl font-normal leading-relaxed mb-3">
+            One study found that when the working parent arrived home after work, his or her children were so immersed in technology that the parent was greeted only 30 percent of the time and was totally ignored 50 percent of the time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Disconnect to Connect (full-bleed) -->
+  <section class="relative overflow-hidden">
+    <!-- Full-width clouds background + purple overlay (spans entire section) -->
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={sunsetOceanBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200, 1920]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-purple-900/70"></div>
+    </div>
+    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2">
+      <!-- Left half: Foreground image (clouds + purple visible behind) -->
+      <div class="relative min-h-[400px] md:min-h-[600px] flex items-center justify-center p-8 md:p-12">
+        <Image
+          src={moreThisImg}
+          alt="More of this – families spending quality time together"
+          class="w-full max-w-[640px] lg:max-w-[800px] h-auto drop-shadow-lg"
+          widths={[380, 480, 768, 1028]}
+          sizes="(max-width: 1024px) 380px, 480px"
+        />
+      </div>
+      <!-- Right half: Text with violet background (covers the sunset behind it) -->
+      <div class="bg-[#e8d3f1] py-16 md:py-24 px-6 sm:px-10 lg:px-16 flex items-center">
+        <div class="max-w-xl">
+          <p class="text-2xl md:text-3xl font-semibold leading-relaxed text-[#ee2e56] mb-2">
+            <strong>Our vision</strong> is to empower you to connect more fully, communicate more clearly, and thrive as a family, or simply put…
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#6d2c8c] mt-4 mb-8">Disconnect to Connect!</h2>
+          <p class="text-lg leading-relaxed text-fam-text mb-4">
+            The FAM Project is a movement to give families and parents a fighting chance to stay connected and flourish in today's technological world. Through our various products we are committed to helping families create more memorable experiences and provide discounts, freebies and a host of ideas to encourage getting out of the house and disconnected from devices and social media. Since the FAM project is all about awareness we are constantly educating parents and children alike on how to live in a fast paced technological world but not be controlled by it. Through our tools and resources, our parents will have more confidence in knowing how to manage and monitor their children's screen time as well as protect them against unwanted adult material, content and potential predators.
+          </p>
+          <p class="text-lg leading-relaxed text-fam-text">
+            We encourage hands on learning through experience with coordinated adventures and coordinated travel opportunities. We are committed to creating fun and engaging resources that promote awareness for our youth and helps prepare them to be responsible, smart phone users. We will make a difference one family at a time and give parents alternatives to the smart phone baby sitter. Since kids do what they see parents do, we encourage parents to look at their own device usage and help create boundaries that everyone can live with. And more importantly, start to connect and thrive as a family again. Join the F.A.M. project and help put families back together one piece at a time.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Tim Cook Quote -->
-  <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Testimonial
-        quote="I don't worry about people using technology too much. I worry about people not using it enough to engage with the people around them."
-        name="Tim Cook"
-        title="CEO, Apple Inc."
-      />
+  <section class="py-16 md:py-24 bg-[#8dc63f]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
+        <!-- Tim Cook image -->
+        <div class="flex justify-center md:justify-start">
+          <Image
+            src={timCookImg}
+            alt="Tim Cook"
+            class="w-32 md:w-40 h-auto rounded-full"
+            widths={[128, 160, 320]}
+            sizes="(max-width: 768px) 128px, 160px"
+          />
+        </div>
+        <!-- Quote text -->
+        <div class="text-white">
+          <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-4">
+            "I don't have a kid, but I have a nephew that I put some boundaries on... There are some things that I won't allow; I don't want them on a social network."
+          </p>
+          <cite class="not-italic font-semibold text-2xl block text-[#ee2e56]">Tim Cook</cite>
+          <span class="text-sm text-white/80">CEO of Apple, Inc.</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Statistics -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-16 md:py-24 bg-fam-cream">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-12">Why It Matters</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <StatBlock stat="53%" label="Teens feel addicted to their phones" source="Common Sense Media" />
-        <StatBlock stat="8 hrs" label="Average daily screen time for U.S. adults" source="Nielsen Report" />
-        <StatBlock stat="37%" label="Families eat dinner together daily" source="The Family Dinner Project" />
+      <h2 class="text-4xl md:text-5xl font-bold text-fam-blue text-center mb-4">It's all in the numbers</h2>
+      <p class="text-center text-3xl text-fam-text-light mb-12">Statistics that will make you think</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        <div class="flex justify-center">
+          <Image
+            src={statPhoneUse1Img}
+            alt="Phone use statistics"
+            class="w-full max-w-[300px] h-auto"
+            widths={[200, 300, 400]}
+            sizes="(max-width: 640px) 80vw, 300px"
+          />
+        </div>
+        <div class="flex justify-center">
+          <Image
+            src={statSexTraffickingImg}
+            alt="Sex trafficking statistics"
+            class="w-full max-w-[300px] h-auto"
+            widths={[200, 300, 400]}
+            sizes="(max-width: 640px) 80vw, 300px"
+          />
+        </div>
+        <div class="flex justify-center">
+          <Image
+            src={statPronImg}
+            alt="Pornography exposure statistics"
+            class="w-full max-w-[300px] h-auto"
+            widths={[200, 300, 400]}
+            sizes="(max-width: 640px) 80vw, 300px"
+          />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Form -->
-  <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-4">Join Our Mission</h2>
-      <p class="text-fam-text-light text-center mb-8">Ready to make a difference? Reach out to us.</p>
-      <FormContact buttonText="Let's change the world!" />
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={cloudsBg}
+        alt=""
+        class="w-full h-full object-cover opacity-50"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-4">Inspired by our mission?</h2>
+          <p class="text-fam-text-light text-center mb-6">Want to get involved?</p>
+          <FormContact buttonText="Let's change the world!" />
+        </div>
+        <div class="text-fam-text text-lg font-light leading-relaxed">
+          <p class="mb-4">
+            <strong>Email</strong><br />
+            help@theFAMproject.com
+          </p>
+          <p>
+            <strong>Phone</strong><br />
+            +1 (888) 44-FAMILY
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

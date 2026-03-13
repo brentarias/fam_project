@@ -98,11 +98,21 @@
 ## 12. Content Extraction & Assets
 
 - [x] 12.1 Download hero background images from WordPress and place in `src/assets/hero/`
-- [ ] 12.2 Download all ~30 article featured images from WordPress and place in `src/assets/articles/` (6 article images returned 404 — WordPress CDN degraded; placeholder images used)
+- [x] 12.2 Download all ~30 article featured images from WordPress and place in `src/assets/articles/` (6 article images returned 404 — WordPress CDN degraded; stand-in placeholder images used per user direction)
 - [x] 12.3 Download project screenshots/mockups from WordPress and place in `src/assets/projects/`
 - [x] 12.4 Download F.A.M. Project logo(s) and place in `src/assets/logos/`
 - [ ] 12.5 Scrape and convert all ~30 articles from WordPress to markdown with correct frontmatter (title, slug, category, excerpt, featuredImage, publishDate)
 - [ ] 12.6 Review each migrated article for formatting correctness (broken HTML, missing images, markdown rendering)
+- [x] 12.7 Scrape actual text content from the WordPress **homepage** and replace fabricated copy in `src/pages/index.astro` (hero text, founding story, mission teaser, M.A.D. paragraph, projects description, etc.)
+- [x] 12.8 Scrape actual text content from the WordPress **Our Mission** page and replace fabricated copy in `src/pages/our-mission.astro`
+- [ ] 12.9 Scrape actual text content from the WordPress **Events** page and replace fabricated copy in `src/pages/events.astro`
+- [ ] 12.10 Scrape actual text content from the WordPress **Projects** page and replace fabricated copy in `src/pages/projects.astro`
+- [x] 12.11 Replace text-based logo link in `<Header>` component with the FAM logo image (`src/assets/logos/fam-logo-circle.png`)
+- [x] 12.12 Apply purple hue overlay effect to the homepage hero section — CSS `bg-purple-900/87` overlay matching original's purple-on-hero-image style
+- [x] 12.13 Integrate image-based section titles (`one-world.png`, `did-you-know.png`, `famtopia-logo.png`, `stat-phone-use.png`) into homepage and mission page sections with appropriate alt text
+- [x] 12.14 Implement "Did you know?" info bits and founder/celebrity quote callouts (Jashin Howell quote on homepage, Tim Cook quote on mission page) as visually distinct sections
+- [x] 12.15 Replace placeholder YouTube video ID (`dQw4w9WgXcQ`) with the actual FAM Central App Promo Video — discovered it's Vimeo (ID: 509100210), not YouTube; embedded as Vimeo iframe
+- [ ] 12.16 Audit all downloaded images in `src/assets/` and ensure every image is referenced in the appropriate page; flag or remove any orphaned assets
 
 ## 13. RSS & Sitemap
 
