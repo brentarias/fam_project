@@ -6,17 +6,17 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="bg-white shadow-sm sticky top-0 z-50 overflow-visible">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 no-underline">
+      <!-- Logo (oversized, overflows below header) -->
+      <a href="/" class="relative z-[51] flex items-center gap-2 no-underline self-start -mt-1">
         <Image
           src={logoImage}
           alt="The F.A.M. Project"
-          class="h-12 md:h-16 w-auto"
-          widths={[48, 64, 150]}
-          sizes="64px"
+          class="h-20 md:h-28 w-auto drop-shadow-md"
+          widths={[80, 112, 200]}
+          sizes="112px"
         />
       </a>
 

@@ -45,11 +45,11 @@ const allArticles = (await getCollection('articles')).sort(
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="article-grid">
         {allArticles.map((article: any) => (
-          <div class="article-item" data-category={article.data.category}>
+          <div class="article-item" data-categories={JSON.stringify(article.data.categories)}>
             <ArticleCard
               title={article.data.title}
               slug={article.data.slug}
-              category={article.data.category}
+              categories={article.data.categories}
               excerpt={article.data.excerpt}
               featuredImage={article.data.featuredImage}
             />
@@ -76,12 +76,13 @@ const allArticles = (await getCollection('articles')).sort(
       btn.classList.remove('bg-fam-gray-light', 'text-fam-gray-dark');
       btn.classList.add('bg-fam-blue', 'text-white');
 
-      // Filter articles
+      // Filter articles (supports multi-category)
       items.forEach((item) => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
+        if (category === 'all') {
           (item as HTMLElement).style.display = '';
         } else {
-          (item as HTMLElement).style.display = 'none';
+          const cats = JSON.parse(item.getAttribute('data-categories') || '[]');
+          (item as HTMLElement).style.display = cats.includes(category) ? '' : 'none';
         }
       });
     });

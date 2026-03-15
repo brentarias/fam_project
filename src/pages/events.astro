@@ -2,83 +2,287 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormNewsletter from '../components/FormNewsletter.astro';
 import FormSponsor from '../components/FormSponsor.astro';
+import { Image } from 'astro:assets';
+import famtopiaLogo from '../assets/projects/famtopia-logo.png';
+import waveLinesBackground from '../assets/hero/wave-lines-background.jpg';
+import beachFamily from '../assets/hero/beach-family.jpg';
+import thisIsMePhoto from '../assets/misc/this-is-me.jpg';
+import thisIsMeLogo from '../assets/misc/this-is-me-logo.png';
+import thisIsUsPhoto from '../assets/misc/this-is-us.jpg';
+import thisIsUsLogo from '../assets/misc/this-is-us-logo.png';
+import thisIsWePhoto from '../assets/misc/this-is-we.jpg';
+import thisIsWeLogo from '../assets/misc/this-is-we-logo.png';
+import myFamLegacy from '../assets/misc/my-fam-legacy.png';
+import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
+import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
+import cloudsBg from '../assets/hero/clouds.jpg';
 ---
 
-<BaseLayout title="Events — The F.A.M. Project" description="Discover family-focused events hosted by The F.A.M. Project. Community gatherings, workshops, and experiences that bring families closer together.">
-  <!-- Header -->
-  <section class="py-16 md:py-24 bg-fam-blue text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Events</h1>
-      <p class="text-xl text-gray-200">Bringing families together through unforgettable experiences.</p>
+<BaseLayout title="Events — The F.A.M. Project" description="FAMtopia events and workshops by The F.A.M. Project. Workshops and retreats to empower positive change for couples, kids, and families.">
+  <!-- Section 1: FAMtopia Hero (wave-lines background) -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={waveLinesBackground}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Image
+        src={famtopiaLogo}
+        alt="FAMtopia Events & Workshops"
+        class="mx-auto w-4/5 max-w-xl mb-6"
+        widths={[300, 600, 800]}
+        sizes="(max-width: 768px) 80vw, 50vw"
+      />
+      <h1 class="sr-only">Events</h1>
+      <p class="text-lg md:text-2xl text-fam-text font-light leading-snug">
+        We are committed to educating couples, kids, families, and anyone wanting to learn how to better build and develop the meaningful relationships in their lives.
+      </p>
     </div>
   </section>
 
-  <!-- Event Series -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue mb-8">Our Event Series</h2>
-      <div class="space-y-8">
-        <div class="bg-fam-cream rounded-xl p-8">
-          <h3 class="text-xl font-bold text-fam-text mb-3">Family Fun Nights</h3>
-          <p class="text-fam-text-light">Monthly community gatherings featuring games, activities, and opportunities for families to connect in a fun, relaxed environment. No screens allowed — just quality family time.</p>
+  <!-- Section 2: Quote + Workshops & Retreats (purple bg with Beach-Family left half) -->
+  <section class="relative text-white overflow-hidden" style="background-color: #6d2c8c;">
+    <!-- Left: Beach Family image — full bleed to left edge, hidden on mobile -->
+    <div class="hidden md:block absolute top-0 bottom-0 left-0 w-1/2 z-0">
+      <Image
+        src={beachFamily}
+        alt="Family walking on the beach together"
+        class="w-full h-full object-cover"
+        widths={[600, 960]}
+        sizes="50vw"
+      />
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <!-- Mobile: Beach Family image shown inline -->
+    <div class="md:hidden relative w-full h-64 overflow-hidden">
+      <Image
+        src={beachFamily}
+        alt="Family walking on the beach together"
+        class="w-full h-full object-cover"
+        widths={[600, 900]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute inset-0 z-10 flex flex-col justify-center p-8">
+        <blockquote class="text-xl font-light italic leading-relaxed mb-4">
+          "Families are the compass that guides us. They are the inspiration to reach great heights, and our comfort when we occasionally falter."
+        </blockquote>
+        <cite class="not-italic text-white/80">— Brad Henry</cite>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <!-- Left: Brad Henry Quote (desktop only — overlays the full-bleed image) -->
+        <div class="hidden md:flex relative z-10 flex-col justify-center py-16 pr-10">
+          <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed mb-4">
+            "Families are the compass that guides us. They are the inspiration to reach great heights, and our comfort when we occasionally falter."
+          </blockquote>
+          <cite class="not-italic text-white/80">— Brad Henry</cite>
         </div>
-        <div class="bg-fam-cream rounded-xl p-8">
-          <h3 class="text-xl font-bold text-fam-text mb-3">Parent Workshops</h3>
-          <p class="text-fam-text-light">Educational sessions covering topics like digital wellness, family communication, and child development. Led by experts and designed for real-world application.</p>
-        </div>
-        <div class="bg-fam-cream rounded-xl p-8">
-          <h3 class="text-xl font-bold text-fam-text mb-3">Community Service Days</h3>
-          <p class="text-fam-text-light">Volunteer together as a family while making a positive impact in your community. These events teach children the value of giving back while strengthening family bonds.</p>
+        <!-- Right: Workshops & Retreats text -->
+        <div class="py-12 md:py-16 md:pl-10 flex flex-col justify-center">
+          <h2 class="text-3xl font-bold mb-6">Workshops & Retreats to Empower Positive Change</h2>
+          <p class="text-white/90 leading-relaxed mb-4">
+            The F.A.M. Events will provide the opportunity, tools and resources for couples and families to learn how to reconnect, find strength and fight the issues weakening or even ruining our family relationships.
+          </p>
+          <p class="text-white/90 leading-relaxed">
+            Today we talk so much about reform. Reform of government and reform in the workplace to name a few. But what about reform in the relationships that bring us the most joy and fulfillment in our lives? The definition of reform is to "make changes in order to improve something". Our team is developing opportunities and products for couples and families to become educated, empowered and motivated to change and improve our relationships.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter / Download Form -->
-  <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-fam-blue mb-4">Stay in the Loop</h2>
-      <p class="text-fam-text-light mb-8">Get our event schedule and a free family activity guide delivered to your inbox.</p>
-      <FormNewsletter buttonText="Get my free guide" />
-    </div>
-  </section>
-
-  <!-- Legacy Events -->
+  <!-- Section 3: Our Flagship Trilogy Event Series -->
   <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue mb-8">Past Events</h2>
-      <div class="space-y-6">
-        <div class="border-l-4 border-fam-orange pl-6">
-          <h3 class="text-lg font-bold text-fam-text">Family Fun Fest 2024</h3>
-          <p class="text-fam-text-light">Our largest event of the year, bringing together over 500 families for a day of games, food, live music, and community connection.</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" style="color: #6d2c8c;">Our Flagship Trilogy Event Series</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- This is Me -->
+        <div class="text-center">
+          <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-lg bg-gray-100">
+            <Image
+              src={thisIsMePhoto}
+              alt="This is Me — individual transformation event"
+              class="w-full h-full object-cover"
+              widths={[192, 384]}
+              sizes="192px"
+            />
+          </div>
+          <div class="h-28 flex items-center justify-center mb-4">
+            <Image
+              src={thisIsMeLogo}
+              alt="This is Me"
+              class="w-3/4 max-w-[250px]"
+              widths={[200, 400]}
+              sizes="(max-width: 768px) 60vw, 250px"
+            />
+          </div>
+          <p class="text-fam-text-light text-sm leading-relaxed">
+            Who are you? Who are you Really? Most importantly… who do you want to be? In these transformational events we guide you through profound learning and engagement to create clarity and power in your life and walk away proudly proclaiming: THIS is ME! Live In-Person and Online Virtual Events available.
+          </p>
         </div>
-        <div class="border-l-4 border-fam-orange pl-6">
-          <h3 class="text-lg font-bold text-fam-text">Digital Detox Weekend</h3>
-          <p class="text-fam-text-light">A weekend retreat where families unplugged from technology and reconnected with each other through outdoor activities and guided workshops.</p>
+        <!-- This is Us -->
+        <div class="text-center">
+          <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-lg bg-gray-100">
+            <Image
+              src={thisIsUsPhoto}
+              alt="This is Us — couples connection event"
+              class="w-full h-full object-cover"
+              widths={[192, 384]}
+              sizes="192px"
+            />
+          </div>
+          <div class="h-28 flex items-center justify-center mb-4">
+            <Image
+              src={thisIsUsLogo}
+              alt="This is Us"
+              class="w-3/4 max-w-[250px]"
+              widths={[200, 400]}
+              sizes="(max-width: 768px) 60vw, 250px"
+            />
+          </div>
+          <p class="text-fam-text-light text-sm leading-relaxed">
+            The secret to great family is connection! In these events for couples, use your newfound self and skills to create a more powerful connection between you and your partner. One that will joyfully stand any test of time! Live In-Person and Online Virtual Events available.
+          </p>
         </div>
-        <div class="border-l-4 border-fam-orange pl-6">
-          <h3 class="text-lg font-bold text-fam-text">Holiday Giving Campaign</h3>
-          <p class="text-fam-text-light">Families came together to prepare and distribute care packages to families in need during the holiday season.</p>
+        <!-- This is We -->
+        <div class="text-center">
+          <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-lg bg-gray-100">
+            <Image
+              src={thisIsWePhoto}
+              alt="This is We — whole family event"
+              class="w-full h-full object-cover"
+              widths={[192, 384]}
+              sizes="192px"
+            />
+          </div>
+          <div class="h-28 flex items-center justify-center mb-4">
+            <Image
+              src={thisIsWeLogo}
+              alt="This is We"
+              class="w-3/4 max-w-[250px]"
+              widths={[200, 400]}
+              sizes="(max-width: 768px) 60vw, 250px"
+            />
+          </div>
+          <p class="text-fam-text-light text-sm leading-relaxed">
+            In these events for the whole family, families experience fun activities and engaging learning material for all ages! These events help families learn many of the tools and skills needed to help conquer the many challenges we all face today in the home. Live In-Person and Online Virtual Events available.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Legacy Event Downloads -->
-  <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-fam-blue mb-4">Event Resources</h2>
-      <p class="text-fam-text-light mb-8">Download recaps and photos from our past events.</p>
+  <!-- Section 4: Workshops coming soon! (orange) -->
+  <section class="py-10 md:py-14 text-white text-center" style="background-color: #f7931d;">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold">Workshops coming soon!</h2>
+    </div>
+  </section>
+
+  <!-- Section 5: My FAM Legacy — Upcoming Event Series -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Image
+        src={myFamLegacy}
+        alt="My F.A.M. Legacy"
+        class="mx-auto w-full max-w-lg mb-8"
+        widths={[300, 600, 762]}
+        sizes="(max-width: 768px) 90vw, 50vw"
+      />
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-blue text-center mb-10">Upcoming Event Series | Envision, Craft, Pass it On</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left: text -->
+        <div>
+          <p class="text-fam-text-light leading-relaxed mb-4">
+            Did you know that a recent study by APFM, the nation's largest senior living referral service found that more than a quarter of Americans would like to know more about their parents? Those that were surveyed wanted to know more about their parents family history, personal history, medical history, life advice and personal achievements throughout their lives.
+          </p>
+          <p class="text-fam-text-light leading-relaxed">
+            The FAM Legacy Events are designed to help individuals learn how to first live a purposeful life in building a valuable legacy to leave behind, but we also teach and provide the best tools and resources to parents to know <em>how</em> to leave a legacy with their families through our <strong>Leave A Legacy</strong> events. By doing this we build deeper connection and memory of those we love most.
+          </p>
+        </div>
+        <!-- Right: CTA + Form (vertically centered) -->
+        <div class="flex items-center justify-center">
+          <div class="rounded-xl p-8 text-center w-full" style="background-color: #6d2c8c;">
+            <p class="text-white text-lg leading-relaxed mb-6">
+              Download our <strong>FREE guide <em>"Crafting Your Living Legacy"</em></strong> and get notified when this event series is live!
+            </p>
+            <FormNewsletter buttonText="Get my free guide" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Brandon Lee Quote (purple-grunge background) -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={purpleGrungeBg}
+        alt=""
+        class="w-full h-full object-cover opacity-80"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-6" style="color: #8dc63f;">
+        "Immortality is to live your life doing good things, and <em><strong>leaving your mark behind."</strong></em>
+      </p>
+      <cite class="not-italic font-semibold text-white/90 text-xl block">Brandon Lee</cite>
+    </div>
+  </section>
+
+  <!-- Section 7: Subscribe to FAM Events List (Ropes Course background) -->
+  <section class="relative py-16 md:py-24 bg-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={ropesCourseFamily}
+        alt="Family enjoying a ropes course adventure together"
+        class="w-full h-full object-cover object-top opacity-20"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-white text-lg leading-relaxed mb-8">
+        <strong>Subscribe to The FAM Events List</strong> to get notified of upcoming events in your area and world-class destinations all over the globe.
+      </p>
       <FormNewsletter buttonText="Get my free guide" />
     </div>
   </section>
 
-  <!-- Sponsor Section -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue text-center mb-4">Become a Sponsor</h2>
-      <p class="text-fam-text-light text-center mb-8">Partner with The F.A.M. Project to make a lasting impact on families in your community.</p>
-      <FormSponsor />
+  <!-- Section 8: Sponsor / Venue / Partner (Clouds background) -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={cloudsBg}
+        alt=""
+        class="w-full h-full object-cover opacity-50"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Left: text -->
+        <div>
+          <h2 class="text-3xl font-bold text-fam-blue mb-6">Interested in being an event sponsor, venue, or partner?</h2>
+          <p class="text-fam-text-light leading-relaxed">
+            With decades of experience, we know transformational events take a lot of moving parts and helping hands. We're an experienced team who loves to collaborate with change-makers and influencers. If you are passionate for our cause and either have a venue, would like to speak at, sponsor, help facilitate at or JV in some other way… get in touch!
+          </p>
+        </div>
+        <!-- Right: Form -->
+        <div>
+          <FormSponsor />
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

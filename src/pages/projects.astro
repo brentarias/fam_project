@@ -1,83 +1,223 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormFundraising from '../components/FormFundraising.astro';
+import Testimonial from '../components/Testimonial.astro';
+import { Image } from 'astro:assets';
+import famFunPassLogo from '../assets/projects/fam-funpass-logo.png';
+import famAppImage from '../assets/projects/fam-app-image.png';
+import famFundraisingBanner from '../assets/projects/fam-fundraising-banner.png';
+import noCostImage from '../assets/projects/no-cost-image.png';
+import famCentralLogo from '../assets/projects/fam-central-logo.png';
+import famCentralApp from '../assets/projects/fam-central-app.jpg';
+import homeHeaderBg from '../assets/hero/home-header.jpg';
+import famBikesBg from '../assets/hero/background-fam-bikes-color.jpg';
+import sunburstBg from '../assets/hero/sunburst-background.jpg';
+import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
+import chrisLangePhoto from '../assets/team/chris-lange.png';
 ---
 
 <BaseLayout title="Projects — The F.A.M. Project" description="Explore The F.A.M. Project's initiatives including FAM Fun Pass, FAM Central app, vendor partnerships, and fundraising opportunities.">
-  <!-- Header -->
-  <section class="py-16 md:py-24 bg-fam-blue text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <!-- Section 1: Our Projects hero (purple overlay on bikes bg) -->
+  <section class="relative py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={famBikesBg}
+        alt="Family riding bikes together"
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-purple-900/87"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
-      <p class="text-xl text-gray-200">Innovative initiatives that empower families and communities.</p>
+      <p class="text-lg md:text-xl text-white/90 font-light leading-relaxed mb-4">
+        Connection to parents, connection to kids, connection to people is key in helping solve many of our current issues today.
+      </p>
+      <p class="text-white/80 font-light leading-relaxed">
+        So much of our current technology today with smart phones, social media, gaming and other entertainment provides very little real opportunity to authentically and genuinely connect with the people around us. We need to learn to disconnect to connect. Meaning that as we purposefully spend less time using these digital technologies and spend more time doing activities that connect us, we build fulfilling relationships that strengthens our character, gives us more purpose and meaning and provides healthy outlets to deal with many of the common issues we all face today. The FAM Project programs are designed with this mind. Not only to help provide ideas, tools and resources to build an environment and opportunity for better connecting as a family but also to help families save a ton of money while doing it and being able to give back to our community in a meaningful way.
+      </p>
     </div>
   </section>
 
-  <!-- FAM Fun Pass -->
+  <!-- Section 2: FAM Fun Pass (sunburst bg) -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={sunburstBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left: App Image -->
+        <div class="flex justify-center">
+          <Image
+            src={famAppImage}
+            alt="FAM Fun Pass app showing family deals and discounts"
+            class="w-full max-w-md"
+            widths={[300, 500, 762]}
+            sizes="(max-width: 768px) 80vw, 40vw"
+          />
+        </div>
+        <!-- Right: Text + CTA -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-fam-blue mb-4">We're getting the family together</h2>
+          <Image
+            src={famFunPassLogo}
+            alt="FAM Fun Pass"
+            class="w-3/4 max-w-[300px] mb-6"
+            widths={[200, 400, 500]}
+            sizes="(max-width: 768px) 70vw, 300px"
+          />
+          <p class="text-fam-text-light leading-relaxed mb-4">
+            An app on both Apple and Android with BIG savings for the whole family, so you can disconnect to connect <em>more often!</em> Have more fun doing more together… face-to-face… in your town or abroad… without breaking the bank!
+          </p>
+          <h5 class="text-lg font-bold text-fam-blue mb-4">Get it today!</h5>
+          <a
+            href="https://www.famfunpass.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-8 py-3 bg-fam-orange text-white font-semibold rounded-sm hover:bg-opacity-90 transition-colors duration-200 no-underline"
+          >
+            Learn more about the FAM Fun Pass!
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: FAM Central -->
   <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue mb-6">FAM Fun Pass</h2>
-      <p class="text-lg text-fam-text-light mb-6">
-        The FAM Fun Pass is your ticket to exclusive family discounts and experiences at local businesses. Save money on restaurants, entertainment, activities, and more — all while supporting local businesses that believe in family values.
-      </p>
-      <p class="text-fam-text-light mb-6">
-        Each pass unlocks hundreds of dollars in savings and gives your family access to unique experiences you won't find anywhere else. It's the perfect way to explore your community while making lasting memories together.
-      </p>
-      <a
-        href="https://www.famfunpass.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center px-8 py-3 bg-fam-orange text-white font-semibold rounded-full hover:bg-fam-orange-dark transition-colors duration-200 no-underline"
-      >
-        Visit FAM Fun Pass
-        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1 flex justify-center">
+          <Image
+            src={famCentralLogo}
+            alt="FAM Central"
+            class="w-full max-w-[400px]"
+            widths={[200, 400, 800]}
+            sizes="(max-width: 768px) 80vw, 400px"
+          />
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-fam-blue mb-4">From Family Fun to Family Connection!</h2>
+          <p class="text-fam-text-light leading-relaxed mb-4">
+            An app on both Apple and Android this is your family's "one stop shop" for all things family! Educational resources and tools with tips and tricks from the worlds best experts! Find everything you need to build a stronger, happier and more connected family!
+          </p>
+          <h5 class="text-lg font-bold text-fam-blue mb-4">Get it today!</h5>
+          <a
+            href="https://apps.apple.com/us/app/fam-central/id1548755945"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-8 py-3 bg-fam-blue text-white font-semibold rounded-sm hover:bg-opacity-90 transition-colors duration-200 no-underline"
+          >
+            Learn more about FAM Central!
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- FAM Central -->
+  <!-- Section 4: Vendor / Have a product? (green background) -->
+  <section class="py-16 md:py-24 text-white" style="background-color: #8dc63f;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Left: Text + CTA -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold italic mb-6"><em>Have a product or service any fam would love?</em></h2>
+          <p class="text-white/90 text-lg leading-relaxed mb-8">
+            Drive traffic to your business through our network of families ready to explore new things to do and new ways to learn at no cost to you!
+          </p>
+          <a
+            href="https://www.famfunpass.com/become-a-vendor/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-8 py-3 bg-fam-orange text-white font-semibold rounded-sm hover:bg-opacity-90 transition-colors duration-200 no-underline"
+          >
+            Check out our vendor benefits
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        <!-- Right: No Cost Image -->
+        <div class="flex justify-center">
+          <Image
+            src={noCostImage}
+            alt="There's no cost to be a partner"
+            class="w-full max-w-xs"
+            widths={[250, 400, 600]}
+            sizes="(max-width: 768px) 60vw, 300px"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Chris Lange Testimonial (purple-grunge background) -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={purpleGrungeBg}
+        alt=""
+        class="w-full h-full object-cover opacity-80"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-8">
+        "This is really such a unique opportunity for families to find the tools and resources they need to build a stronger, happier and more connected home. All in one central place! We bring it all together for the families and experts to connect on one platform. Our app is more than just great deals, tools and resources, its a community."
+      </p>
+      <div class="flex flex-col items-center gap-4">
+        <Image
+          src={chrisLangePhoto}
+          alt="Chris Lange"
+          class="w-24 h-24 rounded-full object-cover"
+          widths={[96, 192]}
+          sizes="96px"
+        />
+        <div>
+          <cite class="not-italic font-semibold text-lg block" style="color: #8dc63f;">Chris Lange</cite>
+          <span class="text-sm text-white/80">President & Co-Founder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Fundraising -->
   <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue mb-6">FAM Central</h2>
-      <p class="text-lg text-fam-text-light mb-6">
-        FAM Central is our mobile app that puts family resources, event information, and community connection right at your fingertips. Stay up to date on upcoming events, access educational content, and connect with other families in your area.
-      </p>
-      <a
-        href="https://apps.apple.com/us/app/fam-central/id1595169801"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center px-8 py-3 bg-fam-blue text-white font-semibold rounded-full hover:bg-fam-blue-light transition-colors duration-200 no-underline"
-      >
-        Download on the App Store
-        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Vendor Section -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue mb-6">Vendor Partnerships</h2>
-      <p class="text-lg text-fam-text-light mb-6">
-        We partner with local businesses and vendors who share our commitment to family values. As a vendor partner, you gain exposure to hundreds of engaged families while supporting a meaningful cause.
-      </p>
-      <p class="text-fam-text-light">
-        Whether you're a restaurant, entertainment venue, retail shop, or service provider, there's a place for you in The F.A.M. Project community. Join our growing network of family-friendly businesses.
-      </p>
-    </div>
-  </section>
-
-  <!-- Fundraising -->
-  <section class="py-16 md:py-24 bg-fam-cream">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-fam-blue text-center mb-4">Fundraising Partnerships</h2>
-      <p class="text-fam-text-light text-center mb-8">
-        Looking for a unique fundraising opportunity? Partner with The F.A.M. Project to raise funds for your organization while promoting family togetherness.
-      </p>
-      <FormFundraising />
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Left: Banner image heading + text -->
+        <div>
+          <Image
+            src={famFundraisingBanner}
+            alt="FAM FUNdraising"
+            class="w-full max-w-md mb-6"
+            widths={[300, 600, 762]}
+            sizes="(max-width: 768px) 90vw, 45vw"
+          />
+          <p class="text-fam-text-light leading-relaxed">
+            Technology can be used to create amazing good in the world when used properly and effectively. Our Fam FUNdraising programs utilize our FAM Fun Pass App technology to help schools, youth programs, treatment centers and other amazing organizations that are cause driven to effectively raise money and provide valuable tools and resources. Now these organizations can get what they need, when they need it in order to meet the needs and demands of their programs. Our Fam FUNdraisers also help create fun community events that bring communities closer, more connected and unified to help raise awareness and resources for these organizations. Now you can get involved! Now you can make a difference!
+          </p>
+        </div>
+        <!-- Right: Form CTA -->
+        <div>
+          <h2 class="text-3xl font-bold text-fam-blue mb-6">Learn more about our fundraising opportunities</h2>
+          <FormFundraising />
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

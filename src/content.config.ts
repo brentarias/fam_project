@@ -8,14 +8,20 @@ const articles = defineCollection({
     z.object({
       title: z.string(),
       slug: z.string(),
-      category: z.enum([
-        'Digital Distraction',
-        'Communication',
-        'Child Development',
-        'Family',
-        'Date Night',
-        'Uncategorized',
-      ]),
+      categories: z.array(
+        z.enum([
+          'Digital Distraction',
+          'Communication',
+          'Child Development',
+          'Family',
+          'Date Night',
+          'Parenting',
+          'Relationships',
+          'Screen Time',
+          'Personal Development',
+          'Uncategorized',
+        ])
+      ).min(1),
       excerpt: z.string(),
       featuredImage: image(),
       publishDate: z.coerce.date(),

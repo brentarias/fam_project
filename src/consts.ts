@@ -24,6 +24,10 @@ export const ARTICLE_CATEGORIES = [
   'Child Development',
   'Family',
   'Date Night',
+  'Parenting',
+  'Relationships',
+  'Screen Time',
+  'Personal Development',
   'Uncategorized',
 ] as const;
 

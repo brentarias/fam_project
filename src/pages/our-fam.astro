@@ -1,17 +1,28 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TeamCard from '../components/TeamCard.astro';
+import sunburstBg from '../assets/hero/sunburst-background.jpg';
 
 const teamMembers = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout title="Our F.A.M. — The F.A.M. Project" description="Meet the passionate team behind The F.A.M. Project. Our board members and leaders are dedicated to strengthening families and communities.">
-  <!-- Header -->
-  <section class="py-16 md:py-24 bg-fam-blue text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <!-- Header (sunburst background) -->
+  <section class="relative py-16 md:py-24 text-fam-text overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={sunburstBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Our F.A.M.</h1>
-      <p class="text-xl text-gray-200">Meet the passionate people behind the movement.</p>
+      <p class="text-xl text-fam-text-light">Learn a little bit about our passionate FAMatics who are behind this incredible mission.</p>
     </div>
   </section>
 
