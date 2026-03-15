@@ -4,7 +4,7 @@ slug: "how-do-i-connect-better-with-my-teenager"
 categories:
   - "Family"
   - "Parenting"
-excerpt: "Oh the trenches of parenting a teenager. Sometimes it can feel like your living through the terrible two&#8217;s all over again, riiight?!? Only now they are much bigger and certainly more vocal."
+excerpt: "Oh the trenches of parenting a teenager. Sometimes it can feel like your living through the terrible two’s all over again, riiight?!? Only now they are much bigger and certainly more vocal."
 featuredImage: "../../assets/articles/how-do-i-connect-better-with-my-teenager.jpg"
 publishDate: "2020-10-07"
 ---

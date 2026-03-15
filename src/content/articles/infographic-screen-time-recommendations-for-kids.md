@@ -3,7 +3,7 @@ title: "[Infographic] Screen Time Recommendations for Kids"
 slug: "infographic-screen-time-recommendations-for-kids"
 categories:
   - "Digital Distraction"
-excerpt: "Concerned about your child&#8217;s screen time on digital devices? Check out this infographic on screen time recommendations for kids from infants to 6+ years old."
+excerpt: "Concerned about your child’s screen time on digital devices? Check out this infographic on screen time recommendations for kids from infants to 6+ years old."
 featuredImage: "../../assets/articles/infographic-screen-time-recommendations-for-kids.jpg"
 publishDate: "2019-11-10"
 ---

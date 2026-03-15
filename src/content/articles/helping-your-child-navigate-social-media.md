@@ -6,7 +6,7 @@ categories:
   - "Digital Distraction"
   - "Family"
   - "Screen Time"
-excerpt: "Anyone else feel like Social Media is driving the conversation in our world today? It’s difficult to find a balance through it all and helping your child navigate social media can be even more of a&#8230;"
+excerpt: "Anyone else feel like Social Media is driving the conversation in our world today? It’s difficult to find a balance through it all and helping your child navigate social media can be even more of a…"
 featuredImage: "../../assets/articles/helping-your-child-navigate-social-media.jpg"
 publishDate: "2021-01-11"
 ---

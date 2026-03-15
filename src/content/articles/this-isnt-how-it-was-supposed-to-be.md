@@ -1,9 +1,9 @@
 ---
-title: "This isn&#8217;t how it was supposed to be&#8230;"
+title: "This isn’t how it was supposed to be…"
 slug: "this-isnt-how-it-was-supposed-to-be"
 categories:
   - "Uncategorized"
-excerpt: "Imagine the culmination of 12 years worth of time spent working towards a goal. Then, suddenly you&#8217;re hit with a ton of bricks&#8230;"
+excerpt: "Imagine the culmination of 12 years worth of time spent working towards a goal. Then, suddenly you’re hit with a ton of bricks…"
 featuredImage: "../../assets/articles/this-isnt-how-it-was-supposed-to-be.jpg"
 publishDate: "2020-05-23"
 ---

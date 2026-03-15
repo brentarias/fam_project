@@ -3,7 +3,7 @@ title: Reignite your Friday Night
 slug: "reignite-your-friday-night"
 categories:
   - "Date Night"
-excerpt: "It&#8217;s Friday night. The evening where dinner &#038; a movie usually abound. Instead of looking for “5 ways to date your spouse” Get creative &#038; reclaim FRIDAY NIGHT!"
+excerpt: "It’s Friday night. The evening where dinner & a movie usually abound. Instead of looking for “5 ways to date your spouse” Get creative & reclaim FRIDAY NIGHT!"
 featuredImage: "../../assets/articles/reignite-your-friday-night.jpg"
 publishDate: "2020-09-11"
 ---

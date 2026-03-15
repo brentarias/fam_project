@@ -1,10 +1,10 @@
 ---
-title: "Got TO-DO lists?  Maybe You&#8217;re Doing them WRONG!"
+title: "Got TO-DO lists?  Maybe You’re Doing them WRONG!"
 slug: "got-to-do-lists-youre-doing-it-wrong"
 categories:
   - "Family"
   - "Personal Development"
-excerpt: "Building out this week&#8217;s TO&#x2d;DO list? What if YOU are doing it ALL WRONG? How to build a well rounded, week long to&#x2d;do list."
+excerpt: "Building out this week’s TO-DO list? What if YOU are doing it ALL WRONG? How to build a well rounded, week long to-do list."
 featuredImage: "../../assets/articles/got-to-do-lists-youre-doing-it-wrong.png"
 publishDate: "2020-09-14"
 ---

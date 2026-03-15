@@ -4,7 +4,7 @@ slug: "are-we-addicted-to-our-cell-phones"
 categories:
   - "Digital Distraction"
   - "Family"
-excerpt: "Are we ADDICTED to our cell PHONES!?!?! What would you say if I told you that smartphones and apps are specifically designed to be as addictive as possible? What would you say if I told you that there&#8230;"
+excerpt: "Are we ADDICTED to our cell PHONES!?!?! What would you say if I told you that smartphones and apps are specifically designed to be as addictive as possible? What would you say if I told you that there…"
 featuredImage: "../../assets/articles/are-we-addicted-to-our-cell-phones.jpg"
 publishDate: "2020-06-24"
 ---

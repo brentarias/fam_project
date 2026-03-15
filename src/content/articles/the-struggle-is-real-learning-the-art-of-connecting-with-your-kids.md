@@ -1,5 +1,5 @@
 ---
-title: "The struggle is real&#8230; Learning the art of CONNECTING with your kids."
+title: "The struggle is real… Learning the art of CONNECTING with your kids."
 slug: "the-struggle-is-real-learning-the-art-of-connecting-with-your-kids"
 categories:
   - "Family"

@@ -4,7 +4,7 @@ slug: "how-my-smart-phone-affects-my-sleep"
 categories:
   - "Digital Distraction"
   - "Family"
-excerpt: "How does your smart phone affect the way you sleep&#8230; Its time to blame the smartphone. It’s 1:30am.. your eyes are bloodshot, you&#8217;ve tossed and turned enough to twist the bed sheets up into the&#8230;"
+excerpt: "How does your smart phone affect the way you sleep… Its time to blame the smartphone. It’s 1:30am.. your eyes are bloodshot, you’ve tossed and turned enough to twist the bed sheets up into the…"
 featuredImage: "../../assets/articles/how-my-smart-phone-affects-my-sleep.jpg"
 publishDate: "2020-09-09"
 ---

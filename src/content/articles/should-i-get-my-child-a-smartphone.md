@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "Should I get my child a smartphone? How old should my child be to get a cell phone? What are the risks involved with getting my kid a smartphone? When facing these decisions most parents feel&#8230;"
+excerpt: "Should I get my child a smartphone? How old should my child be to get a cell phone? What are the risks involved with getting my kid a smartphone? When facing these decisions most parents feel…"
 featuredImage: "../../assets/articles/should-i-get-my-child-a-smartphone.jpg"
 publishDate: "2020-09-28"
 ---

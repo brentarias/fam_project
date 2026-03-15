@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "These months have undoubtedly been some of the most trying times in anyone&#8217;s memory. As parents, it is possible that you have scoured the internet for every parental hack, tip, or trick in order to&#8230;"
+excerpt: "These months have undoubtedly been some of the most trying times in anyone’s memory. As parents, it is possible that you have scoured the internet for every parental hack, tip, or trick in order to…"
 featuredImage: "../../assets/articles/how-to-make-a-difference-while-spending-time-with-your-kids.jpeg"
 publishDate: "2020-10-06"
 ---

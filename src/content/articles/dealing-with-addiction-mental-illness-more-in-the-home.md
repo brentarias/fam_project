@@ -1,5 +1,5 @@
 ---
-title: "Dealing with Addiction &#038; Mental Illness in the All-American Home"
+title: "Dealing with Addiction & Mental Illness in the All-American Home"
 slug: "dealing-with-addiction-mental-illness-more-in-the-home"
 categories:
   - "Family"

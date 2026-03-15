@@ -5,7 +5,7 @@ categories:
   - "Communication"
   - "Date Night"
   - "Relationships"
-excerpt: "The grass is greener on the other side&#8230; Is it really? Or is this an alluring idea when we do not give proper time and effort to our own intimate relationship."
+excerpt: "The grass is greener on the other side… Is it really? Or is this an alluring idea when we do not give proper time and effort to our own intimate relationship."
 featuredImage: "../../assets/articles/how-to-build-a-lasting-relationship.jpg"
 publishDate: "2020-11-18"
 ---

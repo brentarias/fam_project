@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "Most parents aren&#8217;t sure what to do when your child challenges YOUR thoughts and parental authority. Let&#8217;s talk about 4 Ways to Handle an Opposing View."
+excerpt: "Most parents aren’t sure what to do when your child challenges YOUR thoughts and parental authority. Let’s talk about 4 Ways to Handle an Opposing View."
 featuredImage: "../../assets/articles/how-to-address-opposing-views-with-your-child.jpeg"
 publishDate: "2020-09-18"
 ---

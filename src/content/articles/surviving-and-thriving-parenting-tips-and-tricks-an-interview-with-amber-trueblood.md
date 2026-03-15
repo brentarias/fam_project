@@ -1,5 +1,5 @@
 ---
-title: "Surviving and THRIVING. Parenting Tips and Tricks &#8211; an interview with Amber Trueblood"
+title: "Surviving and THRIVING. Parenting Tips and Tricks – an interview with Amber Trueblood"
 slug: "surviving-and-thriving-parenting-tips-and-tricks-an-interview-with-amber-trueblood"
 categories:
   - "Family"

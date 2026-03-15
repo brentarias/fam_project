@@ -4,7 +4,7 @@ slug: "how-to-limit-screen-time-in-your-home"
 categories:
   - "Digital Distraction"
   - "Parenting"
-excerpt: "It&#8217;s no secret that we live in a world inundated with screens. So, the task of figuring out a healthy balance of screen time in our home can be tricky.."
+excerpt: "It’s no secret that we live in a world inundated with screens. So, the task of figuring out a healthy balance of screen time in our home can be tricky."
 featuredImage: "../../assets/articles/how-to-limit-screen-time-in-your-home.jpg"
 publishDate: "2020-09-01"
 ---

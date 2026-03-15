@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "Family game night can sure bring back some nostalgia and memories that are often filled with laughter, a little bit of competition, and hopefully feelings of joy and excitement. These are the same&#8230;"
+excerpt: "Family game night can sure bring back some nostalgia and memories that are often filled with laughter, a little bit of competition, and hopefully feelings of joy and excitement. These are the same…"
 featuredImage: "../../assets/articles/what-family-game-night-can-do-for-your-family.jpg"
 publishDate: "2020-12-01"
 ---

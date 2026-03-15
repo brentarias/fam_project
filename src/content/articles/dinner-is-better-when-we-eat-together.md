@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "Family dinner time.. Is it just a good &#8216;ol American past time? Or can we reconnect the family by gathering around and rescuing the dinner table!"
+excerpt: "Family dinner time.. Is it just a good ‘ol American past time? Or can we reconnect the family by gathering around and rescuing the dinner table!"
 featuredImage: "../../assets/articles/dinner-is-better-when-we-eat-together.jpg"
 publishDate: "2020-07-14"
 ---

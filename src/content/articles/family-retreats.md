@@ -3,7 +3,7 @@ title: Are Family Retreats More Beneficial than a Vacation?
 slug: "family-retreats"
 categories:
   - "Family"
-excerpt: "Family retreats can play a huge role in satisfying both aspects you&#8217;re looking for, a vacation and bonding more with your family."
+excerpt: "Family retreats can play a huge role in satisfying both aspects you’re looking for, a vacation and bonding more with your family."
 featuredImage: "../../assets/articles/family-retreats.jpg"
 publishDate: "2019-11-10"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Teaching your Kids about Forgiveness and WHY it&#8217;s Important"
+title: "Teaching your Kids about Forgiveness and WHY it’s Important"
 slug: "teaching-your-kids-about-forgiveness-and-why-its-important"
 categories:
   - "Child Development"

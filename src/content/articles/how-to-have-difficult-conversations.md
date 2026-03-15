@@ -5,7 +5,7 @@ categories:
   - "Communication"
   - "Family"
   - "Relationships"
-excerpt: "At some point in any relationship, we all have to face conversations that are difficult. How to have difficult conversations is critical to the long term success of your relationships and are usually&#8230;"
+excerpt: "At some point in any relationship, we all have to face conversations that are difficult. How to have difficult conversations is critical to the long term success of your relationships and are usually…"
 featuredImage: "../../assets/articles/how-to-have-difficult-conversations.jpg"
 publishDate: "2021-01-05"
 ---

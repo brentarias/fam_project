@@ -5,7 +5,7 @@ categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "It&#8217;s time for Back to School 2020! Except this year&#8217;s return looks a lot different! 12 things you CAN do to prepare your family for school Quarantine Style"
+excerpt: "It’s time for Back to School 2020! Except this year’s return looks a lot different! 12 things you CAN do to prepare your family for school Quarantine Style"
 featuredImage: "../../assets/articles/back-to-school-2020-12-tips-for-parents-to-keep-your-cool.jpg"
 publishDate: "2020-08-05"
 ---

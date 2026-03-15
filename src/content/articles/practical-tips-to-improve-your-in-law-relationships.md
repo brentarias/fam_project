@@ -5,7 +5,7 @@ categories:
   - "Communication"
   - "Family"
   - "Relationships"
-excerpt: "Learning how to handle your in&#x2d;law relationships is critical to the health of your own marriage. Let&#8217;s talk tips on how to have a good relationship with your in&#x2d;laws."
+excerpt: "Learning how to handle your in-law relationships is critical to the health of your own marriage. Let’s talk tips on how to have a good relationship with your in-laws."
 featuredImage: "../../assets/articles/practical-tips-to-improve-your-in-law-relationships.jpg"
 publishDate: "2021-01-19"
 ---

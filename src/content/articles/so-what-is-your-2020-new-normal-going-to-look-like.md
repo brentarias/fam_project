@@ -1,11 +1,11 @@
 ---
-title: "So what is your 2020 &#8220;new normal&#8221; going to look like?"
+title: "So what is your 2020 “new normal” going to look like?"
 slug: "so-what-is-your-2020-new-normal-going-to-look-like"
 categories:
   - "Child Development"
   - "Family"
   - "Parenting"
-excerpt: "Everyone is talking about the “new normal” post COVID and what that is going to be like for everyone&#8230;"
+excerpt: "Everyone is talking about the “new normal” post COVID and what that is going to be like for everyone…"
 featuredImage: "../../assets/articles/so-what-is-your-2020-new-normal-going-to-look-like.jpg"
 publishDate: "2020-05-13"
 ---
