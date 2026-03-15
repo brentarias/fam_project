@@ -2,20 +2,38 @@
 
 /* ===== FAM Project Theme ===== */
 @theme {
-  --color-fam-blue: #1e3a5f;
-  --color-fam-blue-dark: #152a45;
-  --color-fam-blue-light: #2a5080;
-  --color-fam-orange: #e8731a;
-  --color-fam-orange-dark: #c45f12;
-  --color-fam-orange-light: #f09040;
-  --color-fam-green: #2d8a4e;
-  --color-fam-green-dark: #1f6638;
-  --color-fam-cream: #faf8f5;
-  --color-fam-gray: #6b7280;
-  --color-fam-gray-light: #f3f4f6;
-  --color-fam-gray-dark: #374151;
-  --color-fam-text: #1f2937;
-  --color-fam-text-light: #6b7280;
+  /* === Official Four Colors (OFC) — Logo variants === */
+  /* Exact colors from the circular FAM Project logo image */
+  --color-fam-green-logo:   #8ec640;
+  --color-fam-red-logo:     #ee3157;
+  --color-fam-purple-logo:  #6d2d8c;
+  --color-fam-orange-logo:  #f89520;
+
+  /* === Official Four Colors (OFC) — Accent variants === */
+  /* Used on backgrounds, buttons, and foreground text */
+  --color-fam-green:        #8dc63f;
+  --color-fam-green-dark:   #6fa02f;
+  --color-fam-red:          #ee2e56;
+  --color-fam-red-dark:     #c9173c;
+  --color-fam-purple:       #6d2c8c;
+  --color-fam-purple-dark:  #5a2473;
+  --color-fam-purple-light: #e8d3f1;
+  --color-fam-orange:       #f7931d;
+  --color-fam-orange-dark:  #d97e17;
+
+  /* === OFC Contrast Background === */
+  --color-fam-gray:         #232b30;
+  --color-fam-gray-light:   #3a4550;
+
+  /* === UI Neutrals (non-brand utility shades) === */
+  --color-fam-cream:        #faf8f5;
+  --color-fam-neutral:      #6b7280;
+  --color-fam-neutral-light: #f3f4f6;
+  --color-fam-neutral-dark: #374151;
+
+  /* === Text === */
+  --color-fam-text:         #1f2937;
+  --color-fam-text-light:   #6b7280;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-heading: "Inter", system-ui, -apple-system, sans-serif;
@@ -32,6 +50,6 @@
   }
 
   a {
-    @apply text-fam-blue hover:text-fam-blue-light transition-colors duration-200;
+    @apply text-fam-red hover:text-fam-purple transition-colors duration-200;
   }
 }
