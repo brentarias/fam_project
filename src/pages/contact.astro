@@ -1,40 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CloudsCTA from '../components/CloudsCTA.astro';
 import FormContact from '../components/FormContact.astro';
-import { Image } from 'astro:assets';
-import cloudsBg from '../assets/hero/clouds.jpg';
 ---
 
 <BaseLayout title="Contact Us — The F.A.M. Project" description="Get in touch with The F.A.M. Project. We'd love to hear from you about partnerships, events, or how we can help strengthen your family.">
-  <!-- Single CTA Section with clouds background (matches original site) -->
-  <section class="relative py-16 md:py-24 overflow-hidden flex-1">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={cloudsBg}
-        alt=""
-        class="w-full h-full object-fill"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl md:text-4xl font-semibold text-fam-blue mb-2">Want to get involved?</h1>
-      <p class="text-xl md:text-2xl text-fam-text-light mb-8">We want to hear from you!</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <div>
-          <FormContact buttonText="Let's change the world!" />
-        </div>
-        <div class="text-fam-text text-lg font-light leading-relaxed">
-          <p class="mb-4">
-            <strong>Email</strong><br />
-            help@theFAMproject.com
-          </p>
-          <p>
-            <strong>Phone</strong><br />
-            +1 (888) 44-FAMILY
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <CloudsCTA
+    heading="Want to get involved?"
+    subheading="We want to hear from you!"
+    headingTag="h1"
+    headingClass="text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-2"
+    subheadingClass="text-xl md:text-2xl text-fam-text-light text-center mb-8"
+    sectionClass="flex-1"
+    headingInGrid
+  >
+    <FormContact buttonText="Let's change the world!" />
+  </CloudsCTA>
 </BaseLayout>

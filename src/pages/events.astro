@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormNewsletter from '../components/FormNewsletter.astro';
 import FormSponsor from '../components/FormSponsor.astro';
+import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import famtopiaLogo from '../assets/projects/famtopia-logo.png';
 import waveLinesBackground from '../assets/hero/wave-lines-background.jpg';
@@ -15,7 +16,6 @@ import thisIsWeLogo from '../assets/misc/this-is-we-logo.png';
 import myFamLegacy from '../assets/misc/my-fam-legacy.png';
 import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
 import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
-import cloudsBg from '../assets/hero/clouds.jpg';
 ---
 
 <BaseLayout title="Events — The F.A.M. Project" description="FAMtopia events and workshops by The F.A.M. Project. Workshops and retreats to empower positive change for couples, kids, and families.">
@@ -259,30 +259,18 @@ import cloudsBg from '../assets/hero/clouds.jpg';
   </section>
 
   <!-- Section 8: Sponsor / Venue / Partner (Clouds background) -->
-  <section class="relative py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={cloudsBg}
-        alt=""
-        class="w-full h-full object-fill"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
+  <CloudsCTA
+    heading="Interested in being an event sponsor, venue, or partner?"
+    headingClass="text-3xl font-bold text-fam-blue mb-6"
+    maxWidth="max-w-4xl"
+    gridClass="grid-cols-1 md:grid-cols-2 gap-10 items-start"
+    headingInGrid
+  >
+    <p class="text-fam-text-light leading-relaxed">
+      With decades of experience, we know transformational events take a lot of moving parts and helping hands. We're an experienced team who loves to collaborate with change-makers and influencers. If you are passionate for our cause and either have a venue, would like to speak at, sponsor, help facilitate at or JV in some other way… get in touch!
+    </p>
+    <div slot="info">
+      <FormSponsor />
     </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <!-- Left: text -->
-        <div>
-          <h2 class="text-3xl font-bold text-fam-blue mb-6">Interested in being an event sponsor, venue, or partner?</h2>
-          <p class="text-fam-text-light leading-relaxed">
-            With decades of experience, we know transformational events take a lot of moving parts and helping hands. We're an experienced team who loves to collaborate with change-makers and influencers. If you are passionate for our cause and either have a venue, would like to speak at, sponsor, help facilitate at or JV in some other way… get in touch!
-          </p>
-        </div>
-        <!-- Right: Form -->
-        <div>
-          <FormSponsor />
-        </div>
-      </div>
-    </div>
-  </section>
+  </CloudsCTA>
 </BaseLayout>

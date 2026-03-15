@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import FormNewsletter from '../components/FormNewsletter.astro';
 import FormContact from '../components/FormContact.astro';
+import CloudsCTA from '../components/CloudsCTA.astro';
 import StatBlock from '../components/StatBlock.astro';
 import Testimonial from '../components/Testimonial.astro';
 import YouTubeEmbed from '../components/YouTubeEmbed.astro';
@@ -23,7 +24,7 @@ import famCentralApp from '../assets/projects/fam-central-app.jpg';
 import famCentralIcon from '../assets/projects/fam-central-icon.png';
 import jashinMedallion from '../assets/team/jashin-howell-medallion.png';
 import homeHeaderBg from '../assets/hero/home-header.jpg';
-import cloudsBg from '../assets/hero/clouds.jpg';
+
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -334,33 +335,11 @@ const jsonLd = {
   </section>
 
   <!-- Contact Form Section (clouds background) -->
-  <section class="relative py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={cloudsBg}
-        alt=""
-        class="w-full h-full object-fill"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-6">Interested in learning more?</h2>
-          <FormContact buttonText="Let's change the world!" />
-        </div>
-        <div class="text-fam-text text-lg font-light leading-relaxed">
-          <p class="mb-4">
-            <strong>Email</strong><br />
-            help@theFAMproject.com
-          </p>
-          <p>
-            <strong>Phone</strong><br />
-            +1 (888) 44-FAMILY
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <CloudsCTA
+    heading="Interested in learning more?"
+    headingClass="text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-6"
+    headingInGrid
+  >
+    <FormContact buttonText="Let's change the world!" />
+  </CloudsCTA>
 </BaseLayout>

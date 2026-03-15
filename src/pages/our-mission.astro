@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Testimonial from '../components/Testimonial.astro';
 import StatBlock from '../components/StatBlock.astro';
 import FormContact from '../components/FormContact.astro';
+import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import heroImage from '../assets/hero/home-header-2.jpg';
 import didYouKnowImg from '../assets/misc/did-you-know.png';
@@ -15,7 +16,6 @@ import timCookImg from '../assets/team/tim-cook.png';
 import statPhoneUse1Img from '../assets/misc/stat-phone-use-1.png';
 import statSexTraffickingImg from '../assets/misc/stat-sex-trafficking.png';
 import statPronImg from '../assets/misc/stat-pron.png';
-import cloudsBg from '../assets/hero/clouds.jpg';
 ---
 
 <BaseLayout title="Our Mission — The F.A.M. Project" description="The FAM Project connects families through fun and authentic transformation, combating technological addictions that destroy family bonds.">
@@ -191,34 +191,12 @@ import cloudsBg from '../assets/hero/clouds.jpg';
   </section>
 
   <!-- Contact Form -->
-  <section class="relative py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={cloudsBg}
-        alt=""
-        class="w-full h-full object-fill"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-4">Inspired by our mission?</h2>
-          <p class="text-fam-text-light text-center mb-6">Want to get involved?</p>
-          <FormContact buttonText="Let's change the world!" />
-        </div>
-        <div class="text-fam-text text-lg font-light leading-relaxed">
-          <p class="mb-4">
-            <strong>Email</strong><br />
-            help@theFAMproject.com
-          </p>
-          <p>
-            <strong>Phone</strong><br />
-            +1 (888) 44-FAMILY
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <CloudsCTA
+    heading="Inspired by our mission?"
+    subheading="Want to get involved?"
+    subheadingClass="text-fam-text-light text-center mb-6"
+    headingInGrid
+  >
+    <FormContact buttonText="Let's change the world!" />
+  </CloudsCTA>
 </BaseLayout>

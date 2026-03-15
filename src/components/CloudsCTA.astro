@@ -1,0 +1,89 @@
+---
+/**
+ * CloudsCTA — Shared clouds-background CTA section.
+ *
+ * Used on: index, our-mission, contact, and events pages.
+ *
+ * Props:
+ *   heading      – main heading text (required)
+ *   subheading   – optional subheading below the heading
+ *   headingTag   – 'h1' | 'h2' (default 'h2')
+ *   headingInGrid – when true, heading/subheading render inside the left
+ *                   grid column (above the default slot) instead of above
+ *                   the grid. Use for layouts where the heading is paired
+ *                   with the form in one column. (default false)
+ *   sectionClass – extra classes on the <section> (e.g. 'flex-1')
+ *   maxWidth     – container max-width class (default 'max-w-6xl')
+ *   gridClass    – grid layout class (default 'grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center')
+ *
+ * Slots:
+ *   (default)  – left column content (typically a form)
+ *   info       – right column content (defaults to email/phone block)
+ */
+import { Image } from 'astro:assets';
+import cloudsBg from '../assets/hero/clouds.jpg';
+
+interface Props {
+  heading: string;
+  subheading?: string;
+  headingTag?: 'h1' | 'h2';
+  headingInGrid?: boolean;
+  sectionClass?: string;
+  maxWidth?: string;
+  gridClass?: string;
+  headingClass?: string;
+  subheadingClass?: string;
+}
+
+const {
+  heading,
+  subheading,
+  headingTag = 'h2',
+  headingInGrid = false,
+  sectionClass = '',
+  maxWidth = 'max-w-6xl',
+  gridClass = 'grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center',
+  headingClass = 'text-3xl md:text-4xl font-semibold text-fam-blue text-center mb-4',
+  subheadingClass = 'text-xl md:text-2xl text-fam-text-light text-center mb-8',
+} = Astro.props;
+
+const HeadingTag = headingTag;
+const hasInfoSlot = Astro.slots.has('info');
+---
+
+<section class:list={['relative py-16 md:py-24 overflow-hidden', sectionClass]}>
+  <div class="absolute inset-0 z-0">
+    <Image
+      src={cloudsBg}
+      alt=""
+      class="w-full h-full object-fill"
+      widths={[800, 1200]}
+      sizes="100vw"
+    />
+  </div>
+  <div class:list={['relative z-10 mx-auto px-4 sm:px-6 lg:px-8', maxWidth]}>
+    {!headingInGrid && <HeadingTag class={headingClass}>{heading}</HeadingTag>}
+    {!headingInGrid && subheading && <p class={subheadingClass}>{subheading}</p>}
+    <div class:list={['grid', gridClass]}>
+      <div>
+        {headingInGrid && <HeadingTag class={headingClass}>{heading}</HeadingTag>}
+        {headingInGrid && subheading && <p class={subheadingClass}>{subheading}</p>}
+        <slot />
+      </div>
+      {hasInfoSlot ? (
+        <slot name="info" />
+      ) : (
+        <div class="text-fam-text text-lg font-light leading-relaxed">
+          <p class="mb-4">
+            <strong>Email</strong><br />
+            help@theFAMproject.com
+          </p>
+          <p>
+            <strong>Phone</strong><br />
+            +1 (888) 44-FAMILY
+          </p>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
