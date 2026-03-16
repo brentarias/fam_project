@@ -16,7 +16,6 @@ import didYouKnowImg from '../assets/misc/did-you-know.png';
 import didYouKnowBgImg from '../assets/hero/did-you-know-screens.jpg';
 import famtopiaLogo from '../assets/projects/famtopia-logo.png';
 import sunburstBg from '../assets/hero/sunburst-background.jpg';
-import jashinHowellQuoteImg from '../assets/misc/jashin-howell-quote.png';
 import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
 import famFunPassLogo from '../assets/projects/fam-funpass-logo.png';
 import famCentralLogo from '../assets/projects/fam-central-logo.png';
@@ -186,39 +185,17 @@ const jsonLd = {
   </section>
 
   <!-- Jashin Howell Quote / Testimonial (purple grunge background) -->
-  <section class="relative py-16 md:py-24 bg-fam-gray overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={purpleGrungeBg}
-        alt=""
-        class="w-full h-full object-cover opacity-80"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-      <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-8">
-        "I'm proud to champion the Family Awareness Movement, and the family of companies, projects, causes and partners we work with to help modern families navigate complex times and complex challenges... together!"
-      </p>
-      <div class="flex flex-col items-center gap-4">
-        <Image
-          src={jashinMedallion}
-          alt="Jashin Howell"
-          class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
-          widths={[160, 192, 384]}
-          sizes="(max-width: 768px) 160px, 192px"
-        />
-        <div>
-          <cite class="not-italic font-semibold text-green-400 text-xl block">Jashin Howell</cite>
-          <span class="text-sm text-white/80">CEO & Co-Founder</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Testimonial
+    quote="I'm proud to champion the Family Awareness Movement, and the family of companies, projects, causes and partners we work with to help modern families navigate complex times and complex challenges... together!"
+    name="Jashin Howell"
+    title="CEO & Co-Founder"
+    photo={jashinMedallion}
+    background={purpleGrungeBg}
+  />
 
   <!-- Video Section (Vimeo embed) -->
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-12 md:py-16 bg-fam-gray">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative w-full" style="padding-bottom: 56.25%;">
         <iframe
           class="absolute top-0 left-0 w-full h-full rounded-lg"

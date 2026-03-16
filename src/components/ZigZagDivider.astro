@@ -1,0 +1,33 @@
+---
+/**
+ * ZigZagDivider — Decorative zig-zag/chevron divider line.
+ *
+ * Renders a repeating red chevron pattern as a visual section separator.
+ * Matches the original thefamproject.com divider style.
+ *
+ * Props:
+ *   height – height of the divider in pixels (default 24)
+ *   class  – additional CSS classes
+ */
+interface Props {
+  height?: number;
+  class?: string;
+}
+
+const { height = 24, class: className = '' } = Astro.props;
+---
+
+<div
+  class:list={['zigzag-divider', className]}
+  style={`height: ${height}px;`}
+  aria-hidden="true"
+/>
+
+<style>
+  .zigzag-divider {
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%25' viewBox='0 0 24 24' stroke='%23EE2E56' stroke-width='4' fill='none' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpolyline points='0,18 12,6 24,18 '/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 24px 100%;
+  }
+</style>

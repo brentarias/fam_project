@@ -1,28 +1,59 @@
 ---
+/**
+ * Testimonial — Dark hero-style quote section with purple-grunge background.
+ *
+ * Used on: index (Jashin Howell), events (Brandon Lee), projects (Chris Lange).
+ *
+ * Props:
+ *   quote       – the testimonial quote text (required); may contain inline
+ *                  HTML (e.g. <em>, <strong>) — must be trusted content only
+ *   name        – person's name (required)
+ *   title       – person's role / title (optional; omitted for e.g. Brandon Lee)
+ *   photo       – Astro ImageMetadata import for the medallion photo (optional)
+ *   photoAlt    – alt text for the photo (defaults to name)
+ *   background  – Astro ImageMetadata import for the background image (required)
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   quote: string;
   name: string;
-  title: string;
-  photo?: string;
+  title?: string;
+  photo?: ImageMetadata;
+  photoAlt?: string;
+  background: ImageMetadata;
 }
 
-const { quote, name, title, photo } = Astro.props;
+const { quote, name, title, photo, photoAlt, background } = Astro.props;
 ---
 
-<blockquote class="bg-fam-cream rounded-2xl p-8 md:p-12 border-l-4 border-fam-orange">
-  <svg class="w-10 h-10 text-fam-orange/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z" />
-  </svg>
-  <p class="text-lg md:text-xl text-fam-neutral-dark italic leading-relaxed mb-6">
-    "{quote}"
-  </p>
-  <footer class="flex items-center gap-4">
-    {photo && (
-      <img src={photo} alt={`${name}`} class="w-12 h-12 rounded-full object-cover" />
-    )}
-    <div>
-      <cite class="not-italic font-semibold text-fam-text block">{name}</cite>
-      <span class="text-sm text-fam-text-light">{title}</span>
+<section class="relative py-16 md:py-24 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <Image
+      src={background}
+      alt=""
+      class="w-full h-full object-cover opacity-80"
+      widths={[800, 1200]}
+      sizes="100vw"
+    />
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-8" set:html={`"${quote}"`} />
+    <div class="flex flex-col items-center gap-4">
+      {photo && (
+        <Image
+          src={photo}
+          alt={photoAlt || name}
+          class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
+          widths={[160, 192, 384]}
+          sizes="(max-width: 768px) 160px, 192px"
+        />
+      )}
+      <div>
+        <cite class="not-italic font-semibold text-fam-green text-xl block">{name}</cite>
+        {title && <span class="text-sm text-white/80">{title}</span>}
+      </div>
     </div>
-  </footer>
-</blockquote>
+  </div>
+</section>

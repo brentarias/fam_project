@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormNewsletter from '../components/FormNewsletter.astro';
 import FormSponsor from '../components/FormSponsor.astro';
+import Testimonial from '../components/Testimonial.astro';
 import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import famtopiaLogo from '../assets/projects/famtopia-logo.png';
@@ -221,23 +222,11 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
   </section>
 
   <!-- Section 6: Brandon Lee Quote (purple-grunge background) -->
-  <section class="relative py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={purpleGrungeBg}
-        alt=""
-        class="w-full h-full object-cover opacity-80"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-6 text-fam-green">
-        "Immortality is to live your life doing good things, and <em><strong>leaving your mark behind."</strong></em>
-      </p>
-      <cite class="not-italic font-semibold text-white/90 text-xl block">Brandon Lee</cite>
-    </div>
-  </section>
+  <Testimonial
+    quote={`Immortality is to live your life doing good things, and <em><strong>leaving your mark behind.</strong></em>`}
+    name="Brandon Lee"
+    background={purpleGrungeBg}
+  />
 
   <!-- Section 7: Subscribe to FAM Events List (Ropes Course background) -->
   <section class="relative py-16 md:py-24 bg-gray-900 text-white overflow-hidden">

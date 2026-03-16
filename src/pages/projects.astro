@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormFundraising from '../components/FormFundraising.astro';
 import Testimonial from '../components/Testimonial.astro';
+import ZigZagDivider from '../components/ZigZagDivider.astro';
 import { Image } from 'astro:assets';
 import famFunPassLogo from '../assets/projects/fam-funpass-logo.png';
 import famAppImage from '../assets/projects/fam-app-image.png';
@@ -93,6 +94,9 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
     </div>
   </section>
 
+  <!-- Zig-zag divider -->
+  <ZigZagDivider />
+
   <!-- Section 3: FAM Central -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,35 +169,13 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
   </section>
 
   <!-- Section 5: Chris Lange Testimonial (purple-grunge background) -->
-  <section class="relative py-16 md:py-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={purpleGrungeBg}
-        alt=""
-        class="w-full h-full object-cover opacity-80"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-      <p class="text-xl md:text-2xl font-light italic leading-relaxed mb-8">
-        "This is really such a unique opportunity for families to find the tools and resources they need to build a stronger, happier and more connected home. All in one central place! We bring it all together for the families and experts to connect on one platform. Our app is more than just great deals, tools and resources, its a community."
-      </p>
-      <div class="flex flex-col items-center gap-4">
-        <Image
-          src={chrisLangePhoto}
-          alt="Chris Lange"
-          class="w-24 h-24 rounded-full object-cover"
-          widths={[96, 192]}
-          sizes="96px"
-        />
-        <div>
-          <cite class="not-italic font-semibold text-lg block text-fam-green">Chris Lange</cite>
-          <span class="text-sm text-white/80">President & Co-Founder</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Testimonial
+    quote="This is really such a unique opportunity for families to find the tools and resources they need to build a stronger, happier and more connected home. All in one central place! We bring it all together for the families and experts to connect on one platform. Our app is more than just great deals, tools and resources, its a community."
+    name="Chris Lange"
+    title="President & Co-Founder"
+    photo={chrisLangePhoto}
+    background={purpleGrungeBg}
+  />
 
   <!-- Section 6: Fundraising -->
   <section class="py-16 md:py-24 bg-fam-cream">
