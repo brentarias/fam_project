@@ -10,7 +10,7 @@ featuredImage: "../../assets/articles/what-family-game-night-can-do-for-your-fam
 publishDate: "2020-12-01"
 ---
 
-Family game night can sure bring back some nostalgia and memories that are often filled with laughter, a little bit of competition, and hopefully feelings of joy and excitement. These are the same memories that we want to provide our family. Maybe even consider busting out some classics like: Simon, Don’t Break the Ice, Pick Up Sticks or even Sorry. While there are many aspects about family game night itself, we will attempt to cover as much ground as possible with ***What ***games to play, ***How** *that game can benefit your family, and the ***POSITIVE RESULTS*** that come from an hour spent at least once a week around games.
+Family game night can sure bring back some nostalgia and memories that are often filled with laughter, a little bit of competition, and hopefully feelings of joy and excitement. These are the same memories that we want to provide our family. Maybe even consider busting out some classics like: Simon, Don’t Break the Ice, Pick Up Sticks or even Sorry. While there are many aspects about family game night itself, we will attempt to cover as much ground as possible with ***What*** games to play, ***How*** that game can benefit your family, and the ***POSITIVE RESULTS*** that come from an hour spent at least once a week around games.
 
 ## WHAT TO PLAY FOR FAMILY GAME NIGHT???
 

@@ -11,7 +11,7 @@ featuredImage: "../../assets/articles/how-to-fight-teen-cell-phone-addiction.jpg
 publishDate: "2021-01-26"
 ---
 
-It is a pretty common picture these days to look around a room and see about 80 – 90% of the people on their cell phones. Whether they are young or old, teen or parents… it doesn't seem to matter. One report in 2016 from Common Sense Media showed that 72% of teens and 48% of parents feel the need to respond immediately to notifications, text messages, or social media messages. That same study found that 50% of teens admit to feeling addicted to their phones.
+It is a pretty common picture these days to look around a room and see about 80 – 90% of the people on their cell phones. Whether they are young or old, teen or parents… it doesn’t seem to matter. One report in 2016 from Common Sense Media showed that 72% of teens and 48% of parents feel the need to respond immediately to notifications, text messages, or social media messages. That same study found that 50% of teens admit to feeling addicted to their phones.
 
 While using a cell phone throughout your day does not mean that you are addicted to it, but there is certainly a tipping point – especially when it comes to our teens. As a parent, we need to be able to ***differentiate*** between using it for fun, entertainment or resource and not ever being able to put the thing down to live life outside of a screen.
 
@@ -33,7 +33,7 @@ This is a simple way to reduce the desire to constantly check their phone whenev
 
 We all know how much sleep teens need for their growing body and minds, right! Studies show that cell phone usage disrupts the ability to get good sleep if used right before bedtime.
 
-Perhaps consider have a charging station in a common area of the house where everyone places their cell phones over night. We'd recommend putting them there at least an hour before bedtime.
+Perhaps consider have a charging station in a common area of the house where everyone places their cell phones over night. We’d recommend putting them there at least an hour before bedtime.
 
 ## Encourage Alternative Activities
 
@@ -45,7 +45,7 @@ Allow for a couple hours a day where they can just be on their phone to connect 
 
 ## Model the Behavior
 
-Remember, we as parents need to model this responsibility because our teens are not the only ones prone to becoming addicted to a device! It can be so easy to fall into the mindless scrolling trap or "I'm using it for work". If we are always glued to our phones we are condoning the behavior and in turn teaching our teens that this is perfectly acceptable. So don't forget to walk the walk and not just talk the talk.
+Remember, we as parents need to model this responsibility because our teens are not the only ones prone to becoming addicted to a device! It can be so easy to fall into the mindless scrolling trap or “I’m using it for work”. If we are always glued to our phones we are condoning the behavior and in turn teaching our teens that this is perfectly acceptable. So don’t forget to walk the walk and not just talk the talk.
 
 With these types of healthy conversations and boundaries in place, families can help establish better relationships in the home and also learn skills that will help your teen for the rest of their lives.
 

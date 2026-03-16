@@ -3,6 +3,8 @@ title: "[Infographic] Screen Time Recommendations for Kids"
 slug: "infographic-screen-time-recommendations-for-kids"
 categories:
   - "Digital Distraction"
+author: "Chris Lange"
+authorBio: "With an unparalleled passion for helping people, Chris has experience with non-profit organizations as a lead educator, where he helped thousands become educated and empowered against drug addiction, social bullying, pornography, unhealthy relationships, and many other challenges we all face today."
 excerpt: "Concerned about your child’s screen time on digital devices? Check out this infographic on screen time recommendations for kids from infants to 6+ years old."
 featuredImage: "../../assets/articles/infographic-screen-time-recommendations-for-kids.jpg"
 publishDate: "2019-11-10"
@@ -17,7 +19,6 @@ To help parents with small and young kids have a better understanding on this su
 To give you a better idea of where these screen time limitations should come in, let us break it down for you a little.
 
 ## Screen Time Recommendations for Kids
-
 ### 0-18 Months
 
 Some video-chatting done with parental supervision can be OK, otherwise, screen time for infants to 18-month-olds is not fully recommended. During these months bonding with your child is extremely important and allowing screen time can interfere with their sleep patterns, which can drastically affect your child’s mood.

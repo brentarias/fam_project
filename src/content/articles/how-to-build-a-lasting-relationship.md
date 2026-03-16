@@ -12,7 +12,7 @@ publishDate: "2020-11-18"
 
 The grass is always greener on the other side of the fence. Ever heard that?? This thought can be a distracting, and even sometimes an alluring temptation. Truthfully, when we do not give the proper time and effort to fertilizing our own intimate relationship, or marriage, the “grass” may not be looking too hot.
 
-Let’s take a look at this phrase and flip it on its head by saying this – “The ***grass is greener* **WHERE YOU WATER IT” (and fertilize, and cut, and care for… but you get the point 😜).
+Let’s take a look at this phrase and flip it on its head by saying this – “The ***grass is greener*** WHERE YOU WATER IT” (and fertilize, and cut, and care for… but you get the point 😜).
 
 This simple idea cannot be overstated. Why? Because taking care of and paying close attention to the most important relationship you will have in your life is very important. Your intimate relationship is BEST SERVED when it is cared for on a regular and ongoing basisl. So, whether you are young and chasing after the love of your life, or have been married for 36 years, this truth still holds the same – *WATER* your relationships with the all that it needs to be sustainable, resilient, healthy, growing, thriving, FUN and most of all rewarding!
 

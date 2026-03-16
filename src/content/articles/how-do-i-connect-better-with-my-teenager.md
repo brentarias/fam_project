@@ -25,13 +25,13 @@ Yes, this time of life can be difficult and confusing for parents, but it is als
 
 **Don’t Assume the Worst:** The natural progression of life is to grow into maturing adults. It is normal for teens to push away from their parents a bit during this time. After all they are trying to figure out what they want in life, who they are and what they want to become. It’s ok for them to make some decisions for themselves and even mess up a time or two!
 
-**Build Mutual Trust: **Teenagers need the ability to earn trust and responsibility. So give it to them. Don’t hover, rather provide a safe place for them to land when they need you. It is important for them to feel like they can be open and authentic with you. So don’t try to always “fix” for them, but rather provide emotional security for your teen by just being someone they can trust.
+**Build Mutual Trust:** Teenagers need the ability to earn trust and responsibility. So give it to them. Don’t hover, rather provide a safe place for them to land when they need you. It is important for them to feel like they can be open and authentic with you. So don’t try to always “fix” for them, but rather provide emotional security for your teen by just being someone they can trust.
 
-**Take the Time to Listen: **Mostly our kids just need to know we care and will listen to them. When your teen comes to you to talk, a great tool to use is ***ask ***if their hope is for you to help them or just listen. Then oblige.
+**Take the Time to Listen:** Mostly our kids just need to know we care and will listen to them. When your teen comes to you to talk, a great tool to use is ***ask*** if their hope is for you to help them or just listen. Then oblige.
 
 **Help Them to Name Their Emotions:** When emotions such as rage, jealousy, loneliness, or humiliation are swirling around, it’s easy to just say I am “mad” or “angry” or “sad”. It is important to drill down those particular emotion(s) that they are experiencing and dig deeper to give them it’s proper name. This will help them understand better and make it more manageable for them to work through.
 
-**Get Them Talking: **We’re not talking pelt them with questions, but find out what their interests are. The car can be a great place for conversation starters because they don’t have to make eye contact. If you are at a loss, there are a lot of fun conversation starters out there just grab a book or give google a look.
+**Get Them Talking:** We’re not talking pelt them with questions, but find out what their interests are. The car can be a great place for conversation starters because they don’t have to make eye contact. If you are at a loss, there are a lot of fun conversation starters out there just grab a book or give google a look.
 
 **Make Family Time a Priority:** Whatever your family interests are – do that! Whether it is family game night, movie night, cooking together or go shopping together, just make sure you are making it a priority to spend time together as a family on a regular basis.
 

@@ -19,45 +19,35 @@ So, let’s break this down into a few simple ways that you can help to create t
 
 1) Make sure there is something else to do in place of being in front of a screen! We’re not saying you have to be an activity director for everyone, we are just saying be proactive.
 
-• For kids between 2 – 8 years old – Have toys and activities in your home that encourage imaginative play. Puzzles, Legos, art supplies, pictionary, playdough, etc. Provide the alternative.
-
-• For older kids 9 – 15 years old – Go to the library and get books on topics of interests, crafting, cook books, whatever will peak the interests of your family members. Thinking that YOUR kids won’t “do the library thing because that place is for nerds??” Just try it out, and let their imaginations run wild, and your return trip may be sooner than you think.
-
-• Fun for the entire family – Prepare a “Something To Do” box. Fill it with age appropriate items that will be fun for them to do when they come to you with the famous “I’m bored” or “There’s nothing to do” moments. You can always check out the clearance section at your local craft store to see if they have any model cars, hand made crafts, paint by number, cross words, or similar items to fill up your box.
+   * For kids between 2 – 8 years old – Have toys and activities in your home that encourage imaginative play.  Puzzles, Legos, art supplies, pictionary, playdough, etc. Provide the alternative.
+   * For older kids 9 – 15 years old – Go to the library and get books on topics of interests, crafting, cook books,  whatever will peak the interests of your family members. Thinking that YOUR kids won’t “do the library thing  because that place is for nerds??” Just try it out, and let their imaginations run wild, and your return trip may  be sooner than you think.
+   * Fun for the entire family – Prepare a “Something To Do” box. Fill it with age appropriate items that will be  fun for them to do when they come to you with the famous “I’m bored” or “There’s nothing to do” moments. You can  always check out the clearance section at your local craft store to see if they have any model cars, hand made  crafts, paint by number, cross words, or similar items to fill up your box.
 
 2) **PLAY with your kids**!!! Be intentional and involve yourself with the silly things they find fun
 
-• Get on the floor and play dolls with your daughter
-
-• Build an epic cardboard fort together
-
-• Get out the ball or frisbee and head to the park
-
-• Play card games together
-
-• Make dinner of your child’s choice together
+   * Get on the floor and play dolls with your daughter
+   * Build an epic cardboard fort together
+   * Get out the ball or frisbee and head to the park
+   * Play card games together
+   * Make dinner of your child’s choice together
 
 This may be the **MOST IMPORTANT** one on this list…
 
-3) GET INVOLVED in your kids life. We can hear it now, “no kidding, get involved.” But what does that look like??
+3) _GET INVOLVED_ in your kids life. We can hear it now, “no kidding, get involved.” But what does that look like?
 
-• Find out things like who their best friends are & why, what season is their favorite & why…
-
-• Observe, LISTEN, ask questions and be intentional with conversation.
-
-• Set time aside to spend one on one time with each family member.
+   * Find out things like who their best friends are & why, what season is their favorite & why…
+   * Observe, LISTEN, ask questions and be intentional with conversation.
+   * Set time aside to spend one on one time with each family member.
 
 4) Set MEDIA FREE times and places in your home. This one may be obvious, but cannot be left unsaid…
 
-• Start small with something like dinnertime. Be sure everyone knows that it is a media free zone so you can engage in conversation and not have to battle cell phones during dinnertime. Pick one central place where phones can go – untouched – until dinnertime is over.
-
-• Turning off screens at least an hour before bedtime. Not to mention, research shows that you will have a much better night rest if you are screen free for at least an hour before you go to bed! Plus, it gives you time to just talk with your child!
-
-• Some other areas of the house that you may consider having a screen free zone is places like the bedrooms or bathrooms… after all… who *REALLY* needs to take your phone into the bathroom!
+   * Start small with something like dinnertime. Be sure everyone knows that it is a media free zone so you can  engage in conversation and not have to battle cell phones during dinnertime. Pick one central place where phones  can go – untouched – until dinnertime is over.
+   * Turning off screens at least an hour before bedtime. Not to mention, research shows that you will have a much  better night rest if you are screen free for at least an hour before you go to bed! Plus, it gives you time to  just talk with your child!
+   * Some other areas of the house that you may consider having a screen free zone is places like the bedrooms or  bathrooms… after all… who *REALLY* needs to take your phone into the bathroom!
 
 5) Set the EXAMPLE
 
-• It’s one thing to say it and another to do it… So be a part of the solution and set a good example for our kids to follow.
+   * It’s one thing to say it and another to do it… So be a part of the solution and set a good example for our kids to follow.
 
 There is really no way to sugar coat it, because as the parents – it is up to us to set the bar and guide through our actions.
 

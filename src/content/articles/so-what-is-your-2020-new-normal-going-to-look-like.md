@@ -18,4 +18,7 @@ This thought concept is for the homes that have both parents in it, it is for th
 
 Here at The FAM Project, we want to propose a new twist and thought on what your “new normal” can look like. So sit back, grab a seat, and enjoy as your thoughts enter into reflection, all while exploring what a new futuristic normal can look like in this 2020 way of living.
 
-Check it out here: https://youtu.be/lTrbLJbgB8E
+Check it out here:
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:1.5em 0"><iframe src="https://www.youtube.com/embed/lTrbLJbgB8E?si=CwbGVcYjiXo1Ujxd" style="position:absolute;top:0;left:0;width:100%;height:100%" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>
+

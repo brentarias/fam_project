@@ -32,3 +32,6 @@ export const ARTICLE_CATEGORIES = [
 ] as const;
 
 export type ArticleCategory = (typeof ARTICLE_CATEGORIES)[number];
+
+export const ABOUT_US_TEXT =
+  'The FAM Project was started by a group of families tired of losing their kids attention to devices and social media. F.A.M. stands for Family Awareness Movement, and we are committed to shining a light so bright on the effects and issues surrounding the technological addictions that are destroying family bonds and leading children down dark paths, alone.';

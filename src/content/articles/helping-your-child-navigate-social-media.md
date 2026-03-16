@@ -38,9 +38,7 @@ The concern with social media is that it becomes a petri dish so-to-speak or a l
 Well.., you are the parent, so ultimately the decisions are yours to make, but we’d like to offer some helpful tips on how to start a conversation with your child, and hopefully come to a reasonable end with some common ground in mind.
 
 1. **Limiting Screen Time.** Yep, there’s an app for that. Ha, but actually, we are being serious when we say that limiting screen time is valuable, and will help them to manage time responsibly. Be sure to involve your child in this conversation. This is not a time for a heavy fist. Talk about screen time limits as a way to self manage and keep a healthy balance with all things. We invite you to take feedback from your child as you come up with a reasonable daily amount that everyone can agree upon.
-
 2. **Talk To Your Child.** This conversation should be light and fun. This is not an interrogation! Keep it as an exploration to find out what they spend their time on devices doing, why they like certain youtubers or games and really engage in that conversation. Once you have learned about those that influence your child – do your *OWN* research on those people and things. If needed, talk with your child about unhealthy examples they may be following, and help guide them to make more informed, and healthier online social connections.
-
 3. **Teach About Balance.** It is SO important to balance their social life with actual people. Yes, we mean interaction with other kids in a real world setting. Whether it is an intentional hangout, a church group, a volunteer group, some time out at a park, just be certain that your child has more than an electronic influence in their life.
 
 Raising kids in an electronically connected world does not have to be upsetting – it just needs an approach that works for everyone involved. You can do it!

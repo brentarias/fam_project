@@ -10,36 +10,28 @@ featuredImage: "../../assets/articles/how-to-build-strong-family-relationships.j
 publishDate: "2020-12-08"
 ---
 
-Well this is certainly a question for the ages. When you hear the words "Strong Family" what immediately comes to mind? Whatever that picture is for you, we want to help you get there.
+Well this is certainly a question for the ages. When you hear the words "Strong Family" what immediately comes to mind? Whatever that picture is in your mind, you can trust knowing that building a strong family doesn't just happen. There are some fundamentals that are crucial to creating healthy relationships. Take a moment to ponder these next few things we share and think about how you can incorporate them into your relationships with your family.
 
-Let's take a look at some things that can strengthen the ties that bind and build stronger family relationships!
+## How to Build Strong Family Relationships
 
-## Communication
+**Learn How to Communicate Effectively:** This is essential to any good relationship, and a family unit is no less important. Imagine a consistent way of conversation with your entire family that builds upon LISTENING and working TOGETHER in communication. Yes, we understand this could sound a little "rose-colored glasses" but hear us out. When all members of your family feel like they can voice their opinion, and be heard, it sets up an environment where everyone is respected and you can work towards a common goal. This approach fosters strong communication, and keeps dialog open. Effective communication in a family can look something like this:
 
-At the core of all healthy relationships is healthy communication. When all members of the family feel heard, valued and respected, the health of the family rises. Encouraging open, honest and supportive dialogue builds trust and cultivates deeper connection. This includes listening actively, expressing needs clearly, and discussing issues before they escalate.
+**1) Give your attention**
 
-## Spending Quality Time Together
+Yep, all of it. If something is being communicated to you, especially of value, you should have the discipline to place your phone down, turn off the TV if it is on, close your book or your laptop. Why? Because the moment you place all of your attention on the person talking to you – it says: "What you are saying is important". This is powerful because they will feel comforted that you've made the effort to be fully engaged.
 
-Nothing builds a connection like shared time and experiences. Whether it is a game night, a family vacation, cooking a meal together, or simply going for a walk, the memories created in these moments are priceless. The key is being intentional about creating these opportunities and making them a priority.
+**2) Listen**
 
-## Show Appreciation and Gratitude
+Pay attention to what the other person is saying and refrain from building up your response. Spend the time to take in all that they are saying.
 
-Acknowledging the contributions and strengths of each family member goes a long way. Simple acts of gratitude — saying "thank you," writing notes, or just recognizing effort — help family members feel valued and strengthen the bond between them.
+**3) It's not always about you**
 
-## Work Through Conflict Constructively
+Often when we are in conversation, we hear a problem or issue and respond with an answer or solution. We might think that surely since this person is talking to me about their problem, so I will give them my idea for a solution. Instead of just spewing out your grand wisdom, consider reflecting on what was just said to you and instead of offering immediate feedback, ASK the person if they would like to hear your perspective, or if they just wanted you to listen. This is powerful because it shows the person that you value their input and also that you believe they are capable of finding a solution on their own.
 
-Every family experiences conflict. Strong families do not avoid conflict; they learn to work through it in a way that respects all parties involved. This means listening to understand rather than to respond, seeking compromise, and being willing to forgive.
+**Sharing How You Feel Safely:** This cannot be overstated. In order to have a strong family bond, every single family member must feel safe to share how they feel in a responsible and respectful way. This goes for all age groups in the family. Creating a space within your home where your spouse and your children know without doubt that they can respectfully share their ideas and thoughts without harm is crucial to the development of your family bond. When your family feels heard as well as respected, they will feel more confident in talking and sharing their ideas out loud with everyone. This can be taught and exampled with one easy trick and here it is: instead of making "YOU" statements (You did this.., or You don't do this..) teach your family to communicate with ownership of their feelings instead. How is this accomplished? Through statements that begin with "I". Things like "I feel this way when this happens", or "I like when this takes place.." Removing the finger pointing word of "you" takes the conversation from accusatory to ownership of your own feelings.
 
-## Support Each Other
+**Spend Time Together:** If you desire strong family bonds, you will want to place value on time spent together. So be intentional and designate some built in time where the family does things together, perhaps a night where everyone cooks together, do some game nights, read a fun story as a family, take everyone on a hike, or go camping, really any event that purposefully draws everyone in is what you're aiming for. This can be challenging, especially if you have broad age ranges, and different time schedules, but that is exactly why it is so important to schedule this time into your lives so you make sure it takes priority.
 
-Being there for each other during challenging times is a hallmark of a strong family. Whether a family member is facing a struggle at school, work, or with their health, knowing that the family has their back creates a sense of security and belonging.
+*BONUS* This should also include the occasional one on one night with just ONE child. As a parent, taking a child out on a date is crucial to their development and how they relate to you in the long run. (I think we should write an entire blog on this topic!!)
 
-## Establish Traditions and Rituals
-
-Family traditions create a sense of identity and belonging. They give family members something to look forward to and create a shared history. These don't have to be elaborate — simple weekly or seasonal traditions can be just as powerful as big annual events.
-
-## Lead by Example
-
-Parents and older family members set the tone for the family. By modeling the behaviors you want to see — kindness, patience, empathy, and responsibility — you teach those values in the most effective way possible.
-
-Building strong family relationships is an ongoing process that requires effort, patience, and love. But the rewards — deeper connections, lasting memories, and a supportive home — are well worth it.
+**Learn to Fight Fair:** Families WILL have conflict no matter how great your connection is. The difference maker here is HOW families navigate these issues with fairness that will make your family stronger. No one family is perfect and we all experience conflict to some degree, so it's important to learn and teach how to disagree without causing damage. This would be things like arguing without lashing out AT someone, or hurling insults and name calling. Learning to remain calm and not yell at each other. Disagreeing with respect for one another opinion. Setting clear boundaries. Remind yourself to not turn your argumentative attention directly to the person or their character. Try to stay focused solely on the issue at hand. These are all ways to insulate your family from damaging fights and in doing so the results will be learning to fight fair, and showing one another healthy ways to have disagreements.

@@ -3,6 +3,8 @@ title: "Do Hugs Matter: The Importance of Hugging Your Child"
 slug: "importance-of-hugging-your-child"
 categories:
   - "Family"
+author: "Chris Lange"
+authorBio: "With an unparalleled passion for helping people, Chris has experience with non-profit organizations as a lead educator, where he helped thousands become educated and empowered against drug addiction, social bullying, pornography, unhealthy relationships, and many other challenges we all face today."
 excerpt: Do hugs matter when it comes to your kids? Discover the importance of hugging your child and how it will help with their physical and mental development.
 featuredImage: "../../assets/articles/importance-of-hugging-your-child.jpg"
 publishDate: "2020-04-07"

@@ -25,17 +25,13 @@ Even if you feel silly, even if you feel in the moment that you’re not even su
 Once we identify the specific issue is, we have to be willing to actually have the conversation and unfortunately a lot of couples don’t do this. One of the big reasons why we don’t have these types of conversations is fear. We have a lot of fear about what’s going to happen if I approach my partner and try to have these hard conversations. The research suggests there’s at least three kind of major fears that we can have that lead us to maybe not have these conversations.
 
 1. **The Fear of Rejection.** The first one is fear of rejection. What if my partner doesn’t like me anymore based on this? What will they think if I share this about myself? What if I disclose these feelings? What if I want to have this conversation and it makes them think negatively about me? That’s one of the biggest barriers in couples relationships. We fear that rejection. That can be a major reason why we don’t have those conversations because we are worried that they are going to reject me.
-
 2. **The Fear of Instability.** Another big fear that we see in research is fear of instability. What if we fight? What if this makes our relationship weaker? Maybe those thoughts are based on a previous experience where you’ll say things to yourself like “I’ve tried to bring this up. We’ve had this talk before and we just fight. It always ends poorly”. That fear of instability in the relationship where everything is going great, except when we talk about (intimacy, parenting differences, or whatever it is…) that is when things get bad. Again, that feeling of instability stops us from being able to express important matters.
-
 3. **The Fear of Being Misunderstood.** The last one is the fear of being misunderstood. What if I can’t say it the right way? What if I can’t express what I feel? What if I say something wrong or I don’t say it the right way? We don’t feel like we have the skills or the tools to really come across in a positive way, or maybe we’re worried that if I start talking about this I’m just going to get mad and then I’m going to say the wrong thing. This common fear tells us that we are inadequate, and maybe even dumb because expressing how we feel in words is a challenge.
 
 ## What You Can Do.
 
 1. **Clear Your Mind.** Take some time to really gain control of your emotions that you can clearly identify the root of the problem. Really whittle it down to its finest point. “I feel sad when this happens”, or “It makes me upset when this gets said”, or “I desire this in our relationship”. Is it something that you just need to vent, or is it a difficult conversation that you need to have.
-
 2. **Write Down Your Answer.** If so, then consider writing down exactly how you feel and either read that note aloud to your partner, or have them read it aloud with you present.
-
 3. **Do Not Personally Escalate.** Make sure you do not take your partner’s response (or lack of response) personally and escalate the conversation from sharing your thoughts and turning it into an argument. Remind your partner that your emotions may not be based in reality, but that it is what you are feeling, and that it is important to get it out into the open.
 
 Relationships are worth the work it takes to be successful, and learning how to have difficult conversations will ultimately help lead you to a fruitful and joy-filled relationship!

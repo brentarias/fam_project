@@ -3,6 +3,8 @@ title: Are Family Retreats More Beneficial than a Vacation?
 slug: "family-retreats"
 categories:
   - "Family"
+author: "Chris Lange"
+authorBio: "With an unparalleled passion for helping people, Chris has experience with non-profit organizations as a lead educator, where he helped thousands become educated and empowered against drug addiction, social bullying, pornography, unhealthy relationships, and many other challenges we all face today."
 excerpt: "Family retreats can play a huge role in satisfying both aspects you’re looking for, a vacation and bonding more with your family."
 featuredImage: "../../assets/articles/family-retreats.jpg"
 publishDate: "2019-11-10"
@@ -22,7 +24,7 @@ A family retreat is a mixture of traditional vacation activities and therapeutic
 
 **Amplifies Your Own Self Awareness** – It becomes very clear on what areas you may need to work on within yourself to be a better supportive member of your family. When small issues are brought out into the open and discussed in a healthy manner, family members can make great strides in seeing that there are ways they can improve to help themselves and their families.
 
-**Improves the Quality of How You Support One Another** – During some of the sessions, you are given skills that will allow each family member to better understand one another and provide support as needed. This could be realized when you just need to be a shoulder to cry on or more help through guidance from your own personal experiences. 
+**Improves the Quality of How You Support One Another** – During some of the sessions, you are given skills that will allow each family member to better understand one another and provide support as needed. This could be realized when you just need to be a shoulder to cry on or more help through guidance from your own personal experiences.
 
 **Create Memorable and Lifelong Friendships with Other Retreat Families** – At these retreats, you won’t be the only family going through these life-changing experiences. You will meet and interact with other families daily and will form an amazing bond with them. They each can relate where you are coming from and a huge sense of pride and community is created which makes everyone even more comfortable in the setting.
 

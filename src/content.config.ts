@@ -23,6 +23,8 @@ const articles = defineCollection({
         ])
       ).min(1),
       excerpt: z.string(),
+      author: z.string().optional().default('Jason & Dellynn'),
+      authorBio: z.string().optional(),
       featuredImage: image(),
       publishDate: z.coerce.date(),
     }),

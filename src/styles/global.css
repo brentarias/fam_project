@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ===== FAM Project Theme ===== */
 @theme {
@@ -53,3 +54,11 @@
     @apply text-fam-red hover:text-fam-purple transition-colors duration-200;
   }
 }
+
+/* Tighter spacing for nested (secondary) list items in articles */
+/* used in articles */
+.prose :is(ul ul, ol ul, ul ol, ol ol) > li {
+  margin-top: 0.20em;
+  margin-bottom: 0.20em;
+}
+

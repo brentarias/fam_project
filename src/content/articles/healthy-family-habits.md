@@ -3,6 +3,8 @@ title: 9 Healthy Family Habits to Start Today
 slug: "healthy-family-habits"
 categories:
   - "Family"
+author: "Chris Lange"
+authorBio: "With an unparalleled passion for helping people, Chris has experience with non-profit organizations as a lead educator, where he helped thousands become educated and empowered against drug addiction, social bullying, pornography, unhealthy relationships, and many other challenges we all face today."
 excerpt: "Starting healthy family habits shouldn’t be tough to do or expensive. Check out these 9 ideas you can use to bring your family closer and healthier today!"
 featuredImage: "../../assets/articles/healthy-family-habits.jpg"
 publishDate: "2020-04-02"
