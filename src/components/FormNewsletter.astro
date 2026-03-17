@@ -3,13 +3,15 @@ import SuccessToast from './SuccessToast.astro';
 
 interface Props {
   buttonText?: string;
+  /** Tailwind class that controls when the form switches to row layout. Default: 'sm:flex-row' */
+  rowBreakpoint?: string;
 }
 
-const { buttonText = "Let's change the world!" } = Astro.props;
+const { buttonText = "Let's change the world!", rowBreakpoint = 'sm:flex-row' } = Astro.props;
 ---
 
 <div class="form-newsletter-wrapper">
-  <form class="stubbed-form flex flex-col sm:flex-row gap-3" novalidate>
+  <form class:list={['stubbed-form flex flex-col gap-3', rowBreakpoint]} novalidate>
     <input
       type="email"
       placeholder="Email"
