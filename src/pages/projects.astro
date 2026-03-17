@@ -101,16 +101,7 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div class="order-2 md:order-1 flex justify-center">
-          <Image
-            src={famCentralLogo}
-            alt="FAM Central"
-            class="w-full max-w-[400px]"
-            widths={[200, 400, 800]}
-            sizes="(max-width: 768px) 80vw, 400px"
-          />
-        </div>
-        <div class="order-1 md:order-2">
+        <div class="order-2 md:order-1">
           <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-4">From Family Fun to Family Connection!</h2>
           <p class="text-fam-text-light leading-relaxed mb-4">
             An app on both Apple and Android this is your family's "one stop shop" for all things family! Educational resources and tools with tips and tricks from the worlds best experts! Find everything you need to build a stronger, happier and more connected family!
@@ -128,6 +119,15 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
             </svg>
           </a>
         </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <Image
+            src={famCentralLogo}
+            alt="FAM Central"
+            class="w-full max-w-[400px]"
+            widths={[200, 400, 800]}
+            sizes="(max-width: 768px) 80vw, 400px"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -142,17 +142,19 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
           <p class="text-white/90 text-lg leading-relaxed mb-8">
             Drive traffic to your business through our network of families ready to explore new things to do and new ways to learn at no cost to you!
           </p>
-          <a
-            href="https://www.famfunpass.com/become-a-vendor/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center px-8 py-3 bg-fam-red text-white font-semibold rounded-sm hover:bg-fam-red-dark transition-colors duration-200 no-underline"
-          >
-            Check out our vendor benefits
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+          <div class="text-center">
+            <a
+              href="https://www.famfunpass.com/become-a-vendor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-8 py-3 bg-fam-red text-white font-semibold rounded-sm hover:bg-fam-red-dark transition-colors duration-200 no-underline"
+            >
+              Check out our vendor benefits
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
         </div>
         <!-- Right: No Cost Image -->
         <div class="flex justify-center">

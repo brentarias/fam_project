@@ -1,8 +1,22 @@
 ---
+import { Image } from 'astro:assets';
 import { SOCIAL_LINKS } from '../consts';
+import logoImage from '../assets/logos/fam-logo-circle.png';
 ---
 
-<footer class="bg-fam-gray text-white">
+<footer class="relative bg-fam-gray text-white pt-16 md:pt-20">
+  <!-- Floating medallion logo -->
+  <div class="absolute left-1/2 -translate-x-1/2 -top-6 md:-top-8 z-10">
+    <a href="/" class="block">
+      <Image
+        src={logoImage}
+        alt="The F.A.M. Project"
+        class="w-24 md:w-32 h-auto drop-shadow-lg"
+        widths={[80, 96, 192]}
+        sizes="96px"
+      />
+    </a>
+  </div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Logo & Description -->
@@ -19,9 +33,9 @@ import { SOCIAL_LINKS } from '../consts';
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-4">Explore</h3>
         <ul class="space-y-3">
-          <li><a href="/our-mission/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Our Mission</a></li>
-          <li><a href="/projects/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Projects</a></li>
-          <li><a href="/articles/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Articles</a></li>
+          <li><a href="/our-mission/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Our Mission</a></li>
+          <li><a href="/projects/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Projects</a></li>
+          <li><a href="/articles/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Articles</a></li>
         </ul>
       </div>
 
@@ -29,9 +43,9 @@ import { SOCIAL_LINKS } from '../consts';
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-4">Connect</h3>
         <ul class="space-y-3">
-          <li><a href="/our-fam/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Our F.A.M.</a></li>
-          <li><a href="/events/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Events</a></li>
-          <li><a href="/contact/" class="text-sm text-gray-300 hover:text-white no-underline transition-colors">Contact</a></li>
+          <li><a href="/our-fam/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Our F.A.M.</a></li>
+          <li><a href="/events/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Events</a></li>
+          <li><a href="/contact/" class="text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors">Contact</a></li>
         </ul>
       </div>
 
@@ -75,7 +89,7 @@ import { SOCIAL_LINKS } from '../consts';
         </div>
 
         <!-- Newsletter Heading + Form Slot -->
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-3">Subscribe to our FAMatics Newsletter</h4>
+        <h4 class="text-sm font-bold text-white mb-3">Subscribe to our FAMatics Newsletter</h4>
         <div class="footer-newsletter">
           <slot name="newsletter" />
         </div>

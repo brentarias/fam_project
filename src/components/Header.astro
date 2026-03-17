@@ -10,11 +10,11 @@ const currentPath = Astro.url.pathname;
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo (oversized, overflows below header) -->
-      <a href="/" class="relative z-[51] flex items-center gap-2 no-underline self-start -mt-1">
+      <a href="/" class="relative z-[51] flex items-center gap-2 no-underline self-start mt-1">
         <Image
           src={logoImage}
           alt="The F.A.M. Project"
-          class="h-20 md:h-28 w-auto drop-shadow-md"
+          class="h-24 md:h-32 w-auto drop-shadow-md"
           widths={[80, 112, 200]}
           sizes="112px"
         />
@@ -26,10 +26,10 @@ const currentPath = Astro.url.pathname;
           <a
             href={link.href}
             class:list={[
-              'text-sm font-medium transition-colors duration-200 no-underline',
+              'text-sm font-medium transition-colors duration-200 no-underline border-b-2 pb-1',
               currentPath.startsWith(link.href)
-                ? 'text-fam-orange border-b-2 border-fam-orange pb-1'
-                : 'text-fam-neutral-dark hover:text-fam-orange',
+                ? 'text-fam-orange border-fam-orange'
+                : 'text-fam-neutral-dark border-transparent hover:text-fam-purple hover:border-fam-purple',
             ]}
           >
             {link.label}
@@ -70,7 +70,7 @@ const currentPath = Astro.url.pathname;
             'mobile-nav-link block px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 no-underline',
             currentPath.startsWith(link.href)
               ? 'text-fam-orange bg-fam-neutral-light'
-              : 'text-fam-neutral-dark hover:text-fam-orange hover:bg-fam-neutral-light',
+              : 'text-fam-neutral-dark hover:text-fam-purple hover:bg-fam-neutral-light',
           ]}
         >
           {link.label}
