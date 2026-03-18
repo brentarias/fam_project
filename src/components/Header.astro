@@ -6,12 +6,13 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="bg-white shadow-sm sticky top-0 z-50 overflow-visible">
+<header id="site-header" class="bg-white shadow-sm sticky top-0 z-50 overflow-visible">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo (oversized, overflows below header) -->
-      <a href="/" class="relative z-[51] flex items-center gap-2 no-underline self-start mt-1">
+      <a id="logo-link" href="/" class="relative z-[51] flex items-center gap-2 no-underline self-start mt-1">
         <Image
+          id="logo-img"
           src={logoImage}
           alt="The F.A.M. Project"
           class="h-24 md:h-32 w-auto drop-shadow-md"
@@ -86,6 +87,24 @@ const currentPath = Astro.url.pathname;
   </div>
 </header>
 
+<style>
+  /* Smooth transition for logo shrink-on-scroll */
+  #logo-img {
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Shrunk state: logo fits inside header */
+  #site-header.scrolled #logo-img {
+    height: 3.5rem; /* 48px – comfortable inside h-16 (64px) header on mobile */
+  }
+
+  @media (min-width: 768px) {
+    #site-header.scrolled #logo-img {
+      height: 4.25rem; /* 60px – comfortable inside h-20 (80px) header on desktop */
+    }
+  }
+</style>
+
 <script>
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
@@ -117,4 +136,19 @@ const currentPath = Astro.url.pathname;
       btn?.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Shrink logo medallion on scroll
+  const siteHeader = document.getElementById('site-header');
+
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      siteHeader?.classList.add('scrolled');
+    } else {
+      siteHeader?.classList.remove('scrolled');
+    }
+  }
+
+  // Set initial state (handles refresh mid-page)
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
 </script>
