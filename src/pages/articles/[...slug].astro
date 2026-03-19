@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormNewsletter from '../../components/FormNewsletter.astro';
+import FormWaitlist from '../../components/FormWaitlist.astro';
 import { SITE_URL, SOCIAL_LINKS, ABOUT_US_TEXT } from '../../consts';
 
 export async function getStaticPaths() {
@@ -181,12 +181,15 @@ const recentPosts = allArticles
       </div>
     </div>
 
-    <!-- Newsletter CTA: sits behind the bottom of the floating article card -->
+    <!-- ★ PLACEMENT 10 — Instance 1 (compact): Hero Waitlist CTA (Lite Form) -->
     <div class="bg-fam-red text-white pt-32 pb-16 md:pt-36 md:pb-20">
       <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6">Sign up for our Newsletter</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Join the FamCentral Waitlist</h2>
+        <p class="text-white/90 text-base mb-6">
+          Be among the first families to experience the platform. Get early access, event invitations, and the Look Up Challenge guide.
+        </p>
         <div class="[&_button]:bg-fam-purple [&_button]:hover:bg-fam-purple-dark">
-          <FormNewsletter buttonText="Send" />
+          <FormWaitlist variant="lite" buttonText="Join the Waitlist →" rowLayout={true} />
         </div>
         <p class="text-white/70 text-xs mt-4">
           *Family is built on trust! We use the most secure systems and promise to never share, rent, or sell your info to 3rd parties. You can opt out of messages at any time, with a click :)

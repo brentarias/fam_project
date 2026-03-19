@@ -1,19 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CloudsCTA from '../components/CloudsCTA.astro';
-import FormContact from '../components/FormContact.astro';
+import JoinMovementCTA from '../components/JoinMovementCTA.astro';
 ---
 
-<BaseLayout title="Contact Us — The F.A.M. Project" description="Get in touch with The F.A.M. Project. We'd love to hear from you about partnerships, events, or how we can help strengthen your family.">
-  <CloudsCTA
-    heading="Want to get involved?"
-    subheading="We want to hear from you!"
-    headingTag="h1"
-    headingClass="text-3xl md:text-4xl font-semibold text-fam-purple text-center mb-2"
-    subheadingClass="text-xl md:text-2xl text-fam-text-light text-center mb-8"
-    sectionClass="flex-1"
-    headingInGrid
-  >
-    <FormContact buttonText="Let's change the world!" />
-  </CloudsCTA>
+<BaseLayout title="Contact Us — The F.A.M. Project" description="Join The F.A.M. Project movement. Three ways to participate: join the FamCentral waitlist, become an investor, or apply to our Expert Faculty.">
+  <!-- ★ PLACEMENT 9 — Instance 7: Final Tri-Choice CTA (Full Form) -->
+  <JoinMovementCTA headingTag="h1" />
 </BaseLayout>

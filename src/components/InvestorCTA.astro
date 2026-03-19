@@ -1,0 +1,72 @@
+---
+/**
+ * InvestorCTA — Investor opportunity pitch + full form (Instance 4).
+ *
+ * Used on: Projects page §6 (Placement 8).
+ * Replaces the old FormFundraising component.
+ */
+import FormWaitlist from './FormWaitlist.astro';
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+  <!-- Left: Investor pitch copy -->
+  <div>
+    <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-6">Become an Owner in the Movement</h2>
+    <p class="text-fam-text-light leading-relaxed mb-4">
+      For the first time, supporters of The Fam Project can become <strong>owners in the company</strong> helping build this movement.
+    </p>
+    <p class="text-fam-text-light leading-relaxed mb-4">
+      We've launched an investment opportunity through <strong>Wefunder</strong>, allowing families, entrepreneurs, and community leaders to invest alongside us.
+    </p>
+    <p class="text-fam-text-light leading-relaxed mb-6">
+      This is more than an investment. It's a chance to help build a platform designed to strengthen families and communities for generations to come.
+    </p>
+
+    <h3 class="text-lg font-bold text-fam-gray mb-3">What Investors Receive</h3>
+    <ul class="space-y-2 text-fam-text-light mb-6">
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Equity ownership in The Fam Project
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Early access to FamCentral
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Special perks for founding investors
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Advertising credits inside the platform
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        The opportunity to help shape the future of the community
+      </li>
+    </ul>
+
+    <a
+      href="https://wefunder.com/thefamproject"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center px-8 py-3 bg-fam-purple text-white font-semibold rounded-sm hover:bg-fam-purple-dark transition-colors duration-200 no-underline"
+    >
+      View Investment Opportunity
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Right: Full form with "Interested in Investing" pre-checked -->
+  <div>
+    <h3 class="text-2xl font-bold text-fam-purple text-center mb-6">Become a Founding Investor</h3>
+    <FormWaitlist
+      variant="full"
+      buttonText="Learn More About Investing"
+      preChecked={['investor']}
+      buttonClass="bg-fam-green hover:bg-fam-green-dark"
+    />
+  </div>
+</div>

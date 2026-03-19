@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatBlock from '../components/StatBlock.astro';
-import FormContact from '../components/FormContact.astro';
+import FormWaitlist from '../components/FormWaitlist.astro';
 import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import heroImage from '../assets/hero/home-header-2.jpg';
@@ -189,13 +189,45 @@ import statPronImg from '../assets/misc/stat-pron.png';
     </div>
   </section>
 
-  <!-- Contact Form -->
+  <!-- ★ PLACEMENT 5 — Instance 5: Waitlist Large Visual (Full Form) -->
   <CloudsCTA
-    heading="Inspired by our mission?"
-    subheading="Want to get involved?"
-    subheadingClass="text-fam-text-light text-center mb-6"
-    headingInGrid
+    heading="Join the FamCentral Founding Community"
+    headingClass="text-3xl md:text-4xl font-bold text-fam-purple text-center mb-4"
   >
-    <FormContact buttonText="Let's change the world!" />
+    <div>
+      <p class="text-fam-text-light leading-relaxed mb-4">
+        Thousands of parents are already committing to build stronger families and healthier communities.
+        Join the waitlist and be among the first to experience FamCentral.
+      </p>
+      <h3 class="text-lg font-bold text-fam-gray mb-3">By joining the waitlist you will receive:</h3>
+      <ul class="space-y-2 text-fam-text-light mb-6">
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Early access to the FamCentral app
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Invitations to local events
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          The Look Up Challenge toolkit
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Special offers from family-friendly businesses
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Updates from the founders
+        </li>
+      </ul>
+      <FormWaitlist
+        variant="full"
+        buttonText="Join the Waitlist"
+        preChecked={['parent']}
+        buttonClass="bg-fam-green hover:bg-fam-green-dark"
+      />
+    </div>
   </CloudsCTA>
 </BaseLayout>

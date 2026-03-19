@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FormFundraising from '../components/FormFundraising.astro';
+import InvestorCTA from '../components/InvestorCTA.astro';
 import Testimonial from '../components/Testimonial.astro';
 import ZigZagDivider from '../components/ZigZagDivider.astro';
 import { Image } from 'astro:assets';
 import famFunPassLogo from '../assets/projects/fam-funpass-logo.png';
 import famAppImage from '../assets/projects/fam-app-image.png';
-import famFundraisingBanner from '../assets/projects/fam-fundraising-banner.png';
 import noCostImage from '../assets/projects/no-cost-image.png';
 import famCentralLogo from '../assets/projects/fam-central-logo.png';
 import famCentralApp from '../assets/projects/fam-central-app.jpg';
@@ -179,29 +178,10 @@ import chrisLangePhoto from '../assets/team/chris-lange.png';
     background={purpleGrungeBg}
   />
 
-  <!-- Section 6: Fundraising -->
+  <!-- ★ PLACEMENT 8 — Instance 4: Investor Opportunity (Full Form) -->
   <section class="py-16 md:py-24 bg-fam-cream">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <!-- Left: Banner image heading + text -->
-        <div>
-          <Image
-            src={famFundraisingBanner}
-            alt="FAM FUNdraising"
-            class="w-full max-w-md mb-6"
-            widths={[300, 600, 762]}
-            sizes="(max-width: 768px) 90vw, 45vw"
-          />
-          <p class="text-fam-text-light leading-relaxed">
-            Technology can be used to create amazing good in the world when used properly and effectively. Our Fam FUNdraising programs utilize our FAM Fun Pass App technology to help schools, youth programs, treatment centers and other amazing organizations that are cause driven to effectively raise money and provide valuable tools and resources. Now these organizations can get what they need, when they need it in order to meet the needs and demands of their programs. Our Fam FUNdraisers also help create fun community events that bring communities closer, more connected and unified to help raise awareness and resources for these organizations. Now you can get involved! Now you can make a difference!
-          </p>
-        </div>
-        <!-- Right: Form CTA -->
-        <div>
-          <h2 class="text-3xl font-bold text-fam-purple text-center mb-6">Learn more about our fundraising opportunities</h2>
-          <FormFundraising />
-        </div>
-      </div>
+      <InvestorCTA />
     </div>
   </section>
 </BaseLayout>

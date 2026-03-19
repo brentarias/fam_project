@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
-import FormNewsletter from '../components/FormNewsletter.astro';
-import FormContact from '../components/FormContact.astro';
-import CloudsCTA from '../components/CloudsCTA.astro';
+import FormWaitlist from '../components/FormWaitlist.astro';
+import JoinMovementCTA from '../components/JoinMovementCTA.astro';
 import StatBlock from '../components/StatBlock.astro';
 import Testimonial from '../components/Testimonial.astro';
 import YouTubeEmbed from '../components/YouTubeEmbed.astro';
@@ -39,7 +38,7 @@ const jsonLd = {
   <!-- Organization JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
 
-  <!-- Hero Section -->
+  <!-- ★ PLACEMENT 1 — Instance 1: Hero Waitlist CTA (Lite Form) -->
   <HeroSection
     title=""
     subtitle=""
@@ -63,19 +62,31 @@ const jsonLd = {
         </p>
       </div>
 
-      <!-- Right: Newsletter signup -->
+      <!-- Right: Hero Waitlist CTA (Instance 1 — Lite Form) -->
       <div class="border border-purple-300/50 rounded-lg p-6 md:p-8 text-center">
-        <div class="text-orange-400 text-2xl mb-3">★</div>
-        <h2 class="text-white text-3xl md:text-4xl font-semibold mb-4 drop-shadow-lg">Get Involved!</h2>
-        <p class="text-white text-lg font-light leading-snug mb-6">
-          Subscribe to our <strong>FAMatics Newsletter</strong> to get insider access to freebies, family articles and resources, events, projects, <em>and more!</em>
+        <h2 class="text-white text-2xl md:text-3xl font-bold mb-3 drop-shadow-lg">A Movement to Strengthen Families Has Begun</h2>
+        <p class="text-white/90 text-base font-light leading-snug mb-2">
+          The Fam Project is launching <strong>FamCentral</strong>, a new platform designed to help families reconnect, discover their local community, and strengthen relationships in a digital world.
         </p>
-        <FormNewsletter buttonText="Let's change the world!" rowBreakpoint="xl:flex-row" />
+        <p class="text-fam-orange text-base font-semibold mb-4">
+          Now you can join the movement — and even become an owner.
+        </p>
+        <div class="text-left mb-4">
+          <p class="text-white/80 text-sm mb-2">Early members receive:</p>
+          <ul class="text-white/80 text-sm space-y-1 list-none pl-0">
+            <li>• Early access to the FamCentral app</li>
+            <li>• Invitations to local family events</li>
+            <li>• The Look Up Challenge guide</li>
+            <li>• Special offers from family-friendly businesses</li>
+            <li>• Updates on the movement</li>
+          </ul>
+        </div>
+        <FormWaitlist variant="lite" buttonText="Join the Waitlist →" rowLayout={true} />
       </div>
     </div>
   </HeroSection>
 
-  <!-- Mission Section -->
+  <!-- Mission Section (original content — unchanged) -->
   <section class="py-12 md:py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -212,7 +223,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- Our Projects Section (dark overlay on home-header bg) -->
+  <!-- Our Projects Section (original content — unchanged, dark overlay on home-header bg) -->
   <section class="relative py-16 md:py-24 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
       <Image
@@ -313,12 +324,6 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- Contact Form Section (clouds background) -->
-  <CloudsCTA
-    heading="Interested in learning more?"
-    headingClass="text-3xl md:text-4xl font-semibold text-fam-purple text-center mb-6"
-    headingInGrid
-  >
-    <FormContact buttonText="Let's change the world!" />
-  </CloudsCTA>
+  <!-- ★ PLACEMENT 2 — Instance 7: Final Tri-Choice CTA (Full Form) -->
+  <JoinMovementCTA />
 </BaseLayout>

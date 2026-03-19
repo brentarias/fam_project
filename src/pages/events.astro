@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FormNewsletter from '../components/FormNewsletter.astro';
-import FormSponsor from '../components/FormSponsor.astro';
+import FormWaitlist from '../components/FormWaitlist.astro';
+import ExpertFacultyCTA from '../components/ExpertFacultyCTA.astro';
 import Testimonial from '../components/Testimonial.astro';
-import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import famtopiaLogo from '../assets/projects/famtopia-logo.png';
 import waveLinesBackground from '../assets/hero/wave-lines-background.jpg';
@@ -16,11 +15,10 @@ import thisIsWePhoto from '../assets/misc/this-is-we.jpg';
 import thisIsWeLogo from '../assets/misc/this-is-we-logo.png';
 import myFamLegacy from '../assets/misc/my-fam-legacy.png';
 import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
-import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
 ---
 
 <BaseLayout title="Events — The F.A.M. Project" description="FAMtopia events and workshops by The F.A.M. Project. Workshops and retreats to empower positive change for couples, kids, and families.">
-  <!-- Section 1: FAMtopia Hero (wave-lines background) -->
+  <!-- Section 1: FAMtopia Hero (wave-lines background) — Unchanged -->
   <section class="relative py-16 md:py-24 overflow-hidden">
     <div class="absolute inset-0 z-0">
       <Image
@@ -46,9 +44,8 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
     </div>
   </section>
 
-  <!-- Section 2: Quote + Workshops & Retreats (purple bg with Beach-Family left half) -->
+  <!-- Section 2: Quote + Workshops & Retreats — Unchanged -->
   <section class="relative text-white overflow-hidden bg-fam-purple">
-    <!-- Left: Beach Family image — full bleed to left edge, hidden on mobile -->
     <div class="hidden md:block absolute top-0 bottom-0 left-0 w-1/2 z-0">
       <Image
         src={beachFamily}
@@ -59,7 +56,6 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
       />
       <div class="absolute inset-0 bg-black/30"></div>
     </div>
-    <!-- Mobile: Beach Family image shown inline -->
     <div class="md:hidden relative w-full h-64 overflow-hidden">
       <Image
         src={beachFamily}
@@ -78,14 +74,12 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
-        <!-- Left: Brad Henry Quote (desktop only — overlays the full-bleed image) -->
         <div class="hidden md:flex relative z-10 flex-col justify-center py-16 pr-10">
           <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed mb-4 text-fam-orange">
             "Families are the compass that guides us. They are the inspiration to reach great heights, and our comfort when we occasionally falter."
           </blockquote>
           <cite class="not-italic text-white/80">— Brad Henry</cite>
         </div>
-        <!-- Right: Workshops & Retreats text -->
         <div class="py-12 md:py-16 md:pl-10 flex flex-col justify-center">
           <h2 class="text-3xl font-bold mb-6">Workshops & Retreats to Empower Positive Change</h2>
           <p class="text-fam-green leading-relaxed mb-4">
@@ -99,7 +93,7 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
     </div>
   </section>
 
-  <!-- Section 3: Our Flagship Trilogy Event Series -->
+  <!-- Section 3: Our Flagship Trilogy Event Series — Unchanged -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-fam-purple">Our Flagship Trilogy Event Series</h2>
@@ -180,14 +174,16 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
     </div>
   </section>
 
-  <!-- Section 4: Workshops coming soon! (orange) -->
+  <!-- Section 4: Workshops coming soon! (orange) — Unchanged -->
   <section class="py-10 md:py-14 text-white text-center bg-fam-orange">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-bold">WORKSHOPS COMING SOON!</h2>
     </div>
   </section>
 
-  <!-- Section 5: My FAM Legacy — Upcoming Event Series -->
+  <!-- ★ PLACEMENT 6 — Instance 5: Waitlist Large Visual (Full Form)
+       Consolidates old §5 (My FAM Legacy right-column purple card) + old §7 (events newsletter).
+       Left column: My FAM Legacy text retained. Right column: FamCentral Founding Community waitlist. -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <Image
@@ -198,8 +194,8 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
         sizes="(max-width: 768px) 90vw, 50vw"
       />
       <h2 class="text-3xl md:text-4xl font-bold text-fam-purple text-center mb-10">Upcoming Event Series | Envision, Craft, Pass it On</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <!-- Left: text -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Left: My FAM Legacy text (retained) -->
         <div>
           <p class="text-fam-text-light leading-relaxed mb-4">
             Did you know that a recent study by APFM, the nation's largest senior living referral service found that more than a quarter of Americans would like to know more about their parents? Those that were surveyed wanted to know more about their parents family history, personal history, medical history, life advice and personal achievements throughout their lives.
@@ -208,58 +204,43 @@ import ropesCourseFamily from '../assets/hero/ropes-course-family.jpg';
             The FAM Legacy Events are designed to help individuals learn how to first live a purposeful life in building a valuable legacy to leave behind, but we also teach and provide the best tools and resources to parents to know <em>how</em> to leave a legacy with their families through our <strong>Leave A Legacy</strong> events. By doing this we build deeper connection and memory of those we love most.
           </p>
         </div>
-        <!-- Right: CTA + Form (vertically centered) -->
-        <div class="flex items-center justify-center">
+        <!-- Right: FamCentral Founding Community waitlist (Instance 5) -->
+        <div class="flex items-start justify-center">
           <div class="rounded-xl p-8 text-center w-full bg-fam-purple">
-            <p class="text-white text-lg leading-relaxed mb-6">
-              Download our <strong>FREE guide <em>"Crafting Your Living Legacy"</em></strong> and get notified when this event series is live!
+            <h3 class="text-white text-xl font-bold mb-2">Join the FamCentral Founding Community</h3>
+            <p class="text-white/90 text-sm leading-relaxed mb-4">
+              Thousands of parents are already committing to build stronger families. Join the waitlist and be among the first to experience FamCentral.
             </p>
-            <FormNewsletter buttonText="Get my free guide" />
+            <div class="text-left mb-4">
+              <p class="text-white/80 text-xs mb-2">By joining you will receive:</p>
+              <ul class="text-white/80 text-xs space-y-1 list-none pl-0">
+                <li>✓ Early access to the FamCentral app</li>
+                <li>✓ Invitations to local events</li>
+                <li>✓ The Look Up Challenge toolkit</li>
+                <li>✓ Special offers from family-friendly businesses</li>
+                <li>✓ Updates from the founders</li>
+              </ul>
+            </div>
+            <FormWaitlist
+              variant="full"
+              buttonText="Join the Waitlist"
+              preChecked={['parent']}
+              buttonClass="bg-fam-red hover:bg-fam-red-dark"
+            />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: Brandon Lee Quote (purple-grunge background) -->
+  <!-- Section 6: Brandon Lee Quote (purple-grunge background) — Unchanged -->
   <Testimonial
     quote={`Immortality is to live your life doing good things, and <em><strong>leaving your mark behind.</strong></em>`}
     name="Brandon Lee"
     background={purpleGrungeBg}
   />
 
-  <!-- Section 7: Subscribe to FAM Events List (Ropes Course background) -->
-  <section class="relative py-16 md:py-24 bg-gray-900 text-white overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={ropesCourseFamily}
-        alt="Family enjoying a ropes course adventure together"
-        class="w-full h-full object-cover object-top opacity-20"
-        widths={[800, 1200]}
-        sizes="100vw"
-      />
-    </div>
-    <div class="relative z-10 max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-white text-lg leading-relaxed mb-8">
-        <strong class="text-fam-orange">Subscribe to The FAM Events List</strong> to get notified of upcoming events in your area and world-class destinations all over the globe.
-      </p>
-      <FormNewsletter buttonText="Get my free guide" />
-    </div>
-  </section>
-
-  <!-- Section 8: Sponsor / Venue / Partner (Clouds background) -->
-  <CloudsCTA
-    heading="Interested in being an event sponsor, venue, or partner?"
-    headingClass="text-3xl font-bold text-fam-purple mb-6"
-    maxWidth="max-w-4xl"
-    gridClass="grid-cols-1 md:grid-cols-2 gap-10 items-start"
-    headingInGrid
-  >
-    <p class="text-fam-text-light leading-relaxed">
-      With decades of experience, we know transformational events take a lot of moving parts and helping hands. We're an experienced team who loves to collaborate with change-makers and influencers. If you are passionate for our cause and either have a venue, would like to speak at, sponsor, help facilitate at or JV in some other way… get in touch!
-    </p>
-    <div slot="info">
-      <FormSponsor />
-    </div>
-  </CloudsCTA>
+  <!-- ★ PLACEMENT 7 — Instance 6: Expert Faculty (Full Form)
+       Replaces old §8 sponsor/partner CloudsCTA. Old §7 (events newsletter) is removed. -->
+  <ExpertFacultyCTA />
 </BaseLayout>

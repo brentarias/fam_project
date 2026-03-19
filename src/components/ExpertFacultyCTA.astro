@@ -1,0 +1,69 @@
+---
+/**
+ * ExpertFacultyCTA — Expert faculty application pitch + full form (Instance 6).
+ *
+ * Used on: Events page §8/§7 (Placement 7).
+ * Replaces the old FormSponsor component in the CloudsCTA wrapper.
+ */
+import FormWaitlist from './FormWaitlist.astro';
+import CloudsCTA from './CloudsCTA.astro';
+---
+
+<CloudsCTA
+  heading="Join Our Expert Faculty"
+  subheading="Help Strengthen Families Nationwide"
+  headingClass="text-3xl md:text-4xl font-bold text-fam-purple text-center mb-2"
+  subheadingClass="text-xl md:text-2xl text-fam-text-light text-center mb-8"
+  maxWidth="max-w-5xl"
+  gridClass="grid-cols-1 md:grid-cols-2 gap-10 items-start"
+>
+  <!-- Left: Expert faculty pitch copy -->
+  <div>
+    <p class="text-fam-text-light leading-relaxed mb-4">
+      The Fam Project is building a trusted network of experts, authors, and content creators committed to helping families thrive.
+    </p>
+    <p class="text-fam-text-light leading-relaxed mb-4">
+      If you have proven insights, practical tools, or transformational content that can positively impact parents and children, we invite you to apply to join our <strong>Expert Faculty</strong>.
+    </p>
+
+    <h3 class="text-lg font-bold text-fam-gray mb-3">As a member you'll have the opportunity to:</h3>
+    <ul class="space-y-2 text-fam-text-light mb-6 text-sm">
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Share your message with a growing national audience of families
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Contribute articles, videos, and resources featured in the FamCentral app
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Be recognized as a trusted voice in the family and parenting space
+      </li>
+      <li class="flex items-start gap-2">
+        <span class="text-fam-green mt-0.5">✓</span>
+        Expand your reach, influence, and impact through our community
+      </li>
+    </ul>
+
+    <h3 class="text-lg font-bold text-fam-gray mb-3">We're looking for aligned experts in:</h3>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-fam-text-light text-sm">
+      <li>• Parenting & Family Relationships</li>
+      <li>• Mental Health & Emotional Wellness</li>
+      <li>• Faith & Values-Based Living</li>
+      <li>• Digital Wellness & Screen-Time Balance</li>
+      <li>• Education, Safety & Child Development</li>
+      <li>• Health, Nutrition & Family Wellness</li>
+    </ul>
+  </div>
+
+  <!-- Right: Full form with "Expert" pre-checked -->
+  <div slot="info">
+    <FormWaitlist
+      variant="full"
+      buttonText="Apply to Join the Expert Faculty"
+      preChecked={['expert']}
+      buttonClass="bg-fam-green hover:bg-fam-green-dark"
+    />
+  </div>
+</CloudsCTA>

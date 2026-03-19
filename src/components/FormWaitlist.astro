@@ -1,0 +1,138 @@
+---
+/**
+ * FormWaitlist — Unified waitlist form with lite/full variants.
+ *
+ * All instances feed into a single mailing list. The full variant
+ * adds optional phone + role-segmenting checkboxes.
+ *
+ * Props:
+ *   variant      – 'lite' | 'full' (default 'lite')
+ *   buttonText   – CTA button label (default 'Join the Waitlist →')
+ *   preChecked   – Array of checkbox values to pre-check (full variant only)
+ *                  Valid values: 'parent', 'business', 'investor', 'expert'
+ *   rowLayout    – When true, lite form renders inputs in a row (for hero/banner)
+ *   buttonClass  – Override button color classes
+ */
+import SuccessToast from './SuccessToast.astro';
+
+interface Props {
+  variant?: 'lite' | 'full';
+  buttonText?: string;
+  preChecked?: ('parent' | 'business' | 'investor' | 'expert')[];
+  rowLayout?: boolean;
+  buttonClass?: string;
+}
+
+const {
+  variant = 'lite',
+  buttonText = 'Join the Waitlist →',
+  preChecked = [],
+  rowLayout = false,
+  buttonClass = 'bg-fam-red hover:bg-fam-red-dark',
+} = Astro.props;
+
+const isFull = variant === 'full';
+
+const checkboxes = [
+  { value: 'parent', label: 'Parent / Family Member' },
+  { value: 'business', label: 'Business Owner' },
+  { value: 'investor', label: 'Interested in Investing' },
+  { value: 'expert', label: 'Expert / Content Creator' },
+];
+---
+
+<div class="form-waitlist-wrapper">
+  {isFull ? (
+    <!-- Full variant: stacked layout with optional phone + checkboxes -->
+    <form class="stubbed-form space-y-4" novalidate>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone (optional)"
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+      />
+      <!-- Role checkboxes -->
+      <fieldset class="space-y-2">
+        <legend class="text-sm font-medium text-gray-600 mb-1">I am a… <span class="text-gray-400 font-normal">(select all that apply)</span></legend>
+        {checkboxes.map((cb) => (
+          <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
+            <input
+              type="checkbox"
+              name="role"
+              value={cb.value}
+              checked={preChecked.includes(cb.value as any)}
+              class="w-4 h-4 rounded border-gray-300 text-fam-purple focus:ring-fam-purple"
+            />
+            {cb.label}
+          </label>
+        ))}
+      </fieldset>
+      <button
+        type="submit"
+        class:list={['w-full px-6 py-3 text-white font-semibold rounded-lg transition-colors duration-200', buttonClass]}
+      >
+        {buttonText}
+      </button>
+    </form>
+  ) : (
+    <!-- Lite variant: name + email -->
+    <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'sm:flex-row']} novalidate>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+      />
+      <button
+        type="submit"
+        class:list={['px-6 py-3 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap', buttonClass]}
+      >
+        {buttonText}
+      </button>
+    </form>
+  )}
+  <SuccessToast />
+</div>
+
+<script>
+  document.querySelectorAll('.form-waitlist-wrapper .stubbed-form').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formEl = e.target as HTMLFormElement;
+      const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement;
+      const nameInput = formEl.querySelector('input[name="name"]') as HTMLInputElement;
+      if (!nameInput.checkValidity()) {
+        nameInput.reportValidity();
+        return;
+      }
+      if (!emailInput.checkValidity()) {
+        emailInput.reportValidity();
+        return;
+      }
+      formEl.reset();
+      (window as any).__showToast?.(formEl);
+    });
+  });
+</script>
