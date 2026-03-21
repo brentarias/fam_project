@@ -12,6 +12,8 @@
  *                  Valid values: 'parent', 'business', 'investor', 'expert'
  *   rowLayout    – When true, lite form renders inputs in a row (for hero/banner)
  *   buttonClass  – Override button color classes
+ *   theme        – 'light' | 'dark' (default 'light'). Use 'dark' when the form
+ *                  sits on a dark background so legend/label text remains legible.
  */
 import SuccessToast from './SuccessToast.astro';
 
@@ -21,6 +23,7 @@ interface Props {
   preChecked?: ('parent' | 'business' | 'investor' | 'expert')[];
   rowLayout?: boolean;
   buttonClass?: string;
+  theme?: 'light' | 'dark';
 }
 
 const {
@@ -29,7 +32,13 @@ const {
   preChecked = [],
   rowLayout = false,
   buttonClass = 'bg-fam-red hover:bg-fam-red-dark',
+  theme = 'light',
 } = Astro.props;
+
+const isDark = theme === 'dark';
+const legendClass = isDark ? 'text-white/80' : 'text-gray-600';
+const legendSubClass = isDark ? 'text-white/50' : 'text-gray-400';
+const labelClass = isDark ? 'text-white' : 'text-gray-700';
 
 const isFull = variant === 'full';
 
@@ -67,9 +76,9 @@ const checkboxes = [
       />
       <!-- Role checkboxes -->
       <fieldset class="space-y-2">
-        <legend class="text-sm font-medium text-gray-600 mb-1">I am a… <span class="text-gray-400 font-normal">(select all that apply)</span></legend>
+        <legend class:list={['text-sm font-medium mb-1', legendClass]}>I am a… <span class:list={['font-normal', legendSubClass]}>(select all that apply)</span></legend>
         {checkboxes.map((cb) => (
-          <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
+          <label class:list={['flex items-center gap-2 cursor-pointer text-sm', labelClass]}>
             <input
               type="checkbox"
               name="role"
