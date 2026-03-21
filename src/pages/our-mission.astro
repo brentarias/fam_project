@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatBlock from '../components/StatBlock.astro';
-import FormWaitlist from '../components/FormWaitlist.astro';
 import CloudsCTA from '../components/CloudsCTA.astro';
 import { Image } from 'astro:assets';
 import heroImage from '../assets/hero/home-header-2.jpg';
@@ -192,7 +191,11 @@ import statPronImg from '../assets/misc/stat-pron.png';
   <!-- ★ PLACEMENT 5 — Instance 5: Waitlist Large Visual (Full Form) -->
   <CloudsCTA
     heading="Join the FamCentral Founding Community"
-    headingClass="text-3xl md:text-4xl font-bold text-fam-purple text-center mb-4"
+    layout="left"
+    formVariant="full"
+    formButtonText="Join the Waitlist"
+    formPreChecked={['parent']}
+    formButtonClass="bg-fam-green hover:bg-fam-green-dark"
   >
     <div>
       <p class="text-fam-text-light leading-relaxed mb-4">
@@ -222,12 +225,6 @@ import statPronImg from '../assets/misc/stat-pron.png';
           Updates from the founders
         </li>
       </ul>
-      <FormWaitlist
-        variant="full"
-        buttonText="Join the Waitlist"
-        preChecked={['parent']}
-        buttonClass="bg-fam-green hover:bg-fam-green-dark"
-      />
     </div>
   </CloudsCTA>
 </BaseLayout>

@@ -2,53 +2,79 @@
 /**
  * CloudsCTA — Shared clouds-background CTA section.
  *
- * Used on: index, our-mission, contact, and events pages.
+ * A reusable section with a clouds background image that arranges
+ * content and an optional form in one of three layouts:
+ *
+ *   - left:   content (default slot) on the left, form on the right
+ *   - right:  form on the left, content (default slot) on the right
+ *   - center: title/subtitle at top, then content centered, then form centered below
+ *
+ * The form can be provided in two ways:
+ *   1. **Prop-driven (preferred):** Set `formVariant` and optional form* props
+ *      to render an embedded FormWaitlist automatically.
+ *   2. **Slot-based (escape hatch):** Pass a `form` named slot for custom
+ *      form markup. The slot takes precedence if both are provided.
  *
  * Props:
- *   heading      – main heading text (required)
- *   subheading   – optional subheading below the heading
- *   headingTag   – 'h1' | 'h2' (default 'h2')
- *   headingInGrid – when true, heading/subheading render inside the left
- *                   grid column (above the default slot) instead of above
- *                   the grid. Use for layouts where the heading is paired
- *                   with the form in one column. (default false)
- *   sectionClass – extra classes on the <section> (e.g. 'flex-1')
- *   maxWidth     – container max-width class (default 'max-w-6xl')
- *   gridClass    – grid layout class (default 'grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center')
+ *   heading          – main heading text
+ *   subheading       – optional subheading below the heading
+ *   headingTag       – 'h1' | 'h2' (default 'h2')
+ *   layout           – 'left' | 'right' | 'center' (default 'left')
+ *   sectionClass     – extra classes on the <section> (e.g. 'flex-1')
+ *   maxWidth         – container max-width class (default 'max-w-6xl')
+ *   headingClass     – classes for heading element
+ *   subheadingClass  – classes for subheading paragraph
+ *
+ *   formVariant      – 'lite' | 'full' — enables the embedded FormWaitlist
+ *   formButtonText   – CTA button label (default 'Join the Waitlist →')
+ *   formPreChecked   – Array of checkbox values to pre-check (full variant)
+ *   formButtonClass  – Override button color classes
+ *   formRowLayout    – When true, lite form renders inputs in a row
  *
  * Slots:
- *   (default)  – left column content (typically a form)
- *   info       – right column content (defaults to email/phone block)
+ *   (default)  – content area (copy, benefits lists, etc.)
+ *   form       – override slot for a custom form component
  */
 import { Image } from 'astro:assets';
 import cloudsBg from '../assets/hero/clouds.jpg';
+import FormWaitlist from './FormWaitlist.astro';
 
 interface Props {
-  heading: string;
+  heading?: string;
   subheading?: string;
   headingTag?: 'h1' | 'h2';
-  headingInGrid?: boolean;
+  layout?: 'left' | 'right' | 'center';
   sectionClass?: string;
   maxWidth?: string;
-  gridClass?: string;
   headingClass?: string;
   subheadingClass?: string;
+  formVariant?: 'lite' | 'full';
+  formButtonText?: string;
+  formPreChecked?: ('parent' | 'business' | 'investor' | 'expert')[];
+  formButtonClass?: string;
+  formRowLayout?: boolean;
 }
 
 const {
   heading,
   subheading,
   headingTag = 'h2',
-  headingInGrid = false,
+  layout = 'left',
   sectionClass = '',
   maxWidth = 'max-w-6xl',
-  gridClass = 'grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center',
-  headingClass = 'text-3xl md:text-4xl font-semibold text-fam-purple text-center mb-4',
+  headingClass = 'text-3xl md:text-4xl font-bold text-fam-purple text-center mb-4',
   subheadingClass = 'text-xl md:text-2xl text-fam-text-light text-center mb-8',
+  formVariant,
+  formButtonText,
+  formPreChecked = [],
+  formButtonClass,
+  formRowLayout = false,
 } = Astro.props;
 
 const HeadingTag = headingTag;
-const hasInfoSlot = Astro.slots.has('info');
+const isCenter = layout === 'center';
+const hasFormSlot = Astro.slots.has('form');
+const showForm = hasFormSlot || !!formVariant;
 ---
 
 <section class:list={['relative py-16 md:py-24 overflow-hidden', sectionClass]}>
@@ -62,28 +88,73 @@ const hasInfoSlot = Astro.slots.has('info');
     />
   </div>
   <div class:list={['relative z-10 mx-auto px-4 sm:px-6 lg:px-8', maxWidth]}>
-    {!headingInGrid && <HeadingTag class={headingClass}>{heading}</HeadingTag>}
-    {!headingInGrid && subheading && <p class={subheadingClass}>{subheading}</p>}
-    <div class:list={['grid', gridClass]}>
+    {heading && <HeadingTag class={headingClass}>{heading}</HeadingTag>}
+    {subheading && <p class={subheadingClass}>{subheading}</p>}
+
+    {isCenter ? (
+      <!-- Center layout: content stacked above form, form centered at max-w-md -->
       <div>
-        {headingInGrid && <HeadingTag class={headingClass}>{heading}</HeadingTag>}
-        {headingInGrid && subheading && <p class={subheadingClass}>{subheading}</p>}
         <slot />
+        {showForm && (
+          <div class="mt-8 max-w-md mx-auto">
+            {hasFormSlot ? (
+              <slot name="form" />
+            ) : (
+              <FormWaitlist
+                variant={formVariant!}
+                buttonText={formButtonText}
+                preChecked={formPreChecked}
+                buttonClass={formButtonClass}
+                rowLayout={formRowLayout}
+              />
+            )}
+          </div>
+        )}
       </div>
-      {hasInfoSlot ? (
-        <slot name="info" />
-      ) : (
-        <div class="text-fam-text text-lg font-light leading-relaxed">
-          <p class="mb-4">
-            <strong>Email</strong><br />
-            help@theFAMproject.com
-          </p>
-          <p>
-            <strong>Phone</strong><br />
-            +1 (888) 44-FAMILY
-          </p>
+    ) : layout === 'right' ? (
+      <!-- Right layout: form on left, content on right -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+        {showForm && (
+          <div>
+            {hasFormSlot ? (
+              <slot name="form" />
+            ) : (
+              <FormWaitlist
+                variant={formVariant!}
+                buttonText={formButtonText}
+                preChecked={formPreChecked}
+                buttonClass={formButtonClass}
+                rowLayout={formRowLayout}
+              />
+            )}
+          </div>
+        )}
+        <div>
+          <slot />
         </div>
-      )}
-    </div>
+      </div>
+    ) : (
+      <!-- Left layout (default): content on left, form on right -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div>
+          <slot />
+        </div>
+        {showForm && (
+          <div>
+            {hasFormSlot ? (
+              <slot name="form" />
+            ) : (
+              <FormWaitlist
+                variant={formVariant!}
+                buttonText={formButtonText}
+                preChecked={formPreChecked}
+                buttonClass={formButtonClass}
+                rowLayout={formRowLayout}
+              />
+            )}
+          </div>
+        )}
+      </div>
+    )}
   </div>
 </section>

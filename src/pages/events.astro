@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FormWaitlist from '../components/FormWaitlist.astro';
-import ExpertFacultyCTA from '../components/ExpertFacultyCTA.astro';
+import CloudsCTA from '../components/CloudsCTA.astro';
 import Testimonial from '../components/Testimonial.astro';
 import { Image } from 'astro:assets';
 import famtopiaLogo from '../assets/projects/famtopia-logo.png';
@@ -242,5 +242,55 @@ import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
 
   <!-- ★ PLACEMENT 7 — Instance 6: Expert Faculty (Full Form)
        Replaces old §8 sponsor/partner CloudsCTA. Old §7 (events newsletter) is removed. -->
-  <ExpertFacultyCTA />
+  <CloudsCTA
+    heading="Join Our Expert Faculty"
+    subheading="Help Strengthen Families Nationwide"
+    headingClass="text-3xl md:text-4xl font-bold text-fam-purple text-center mb-2"
+    subheadingClass="text-xl md:text-2xl text-fam-text-light text-center mb-8"
+    maxWidth="max-w-5xl"
+    layout="left"
+    formVariant="full"
+    formButtonText="Apply to Join the Expert Faculty"
+    formPreChecked={['expert']}
+    formButtonClass="bg-fam-green hover:bg-fam-green-dark"
+  >
+    <div>
+      <p class="text-fam-text-light leading-relaxed mb-4">
+        The Fam Project is building a trusted network of experts, authors, and content creators committed to helping families thrive.
+      </p>
+      <p class="text-fam-text-light leading-relaxed mb-4">
+        If you have proven insights, practical tools, or transformational content that can positively impact parents and children, we invite you to apply to join our <strong>Expert Faculty</strong>.
+      </p>
+
+      <h3 class="text-lg font-bold text-fam-gray mb-3">As a member you'll have the opportunity to:</h3>
+      <ul class="space-y-2 text-fam-text-light mb-6 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Share your message with a growing national audience of families
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Contribute articles, videos, and resources featured in the FamCentral app
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Be recognized as a trusted voice in the family and parenting space
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-fam-green mt-0.5">✓</span>
+          Expand your reach, influence, and impact through our community
+        </li>
+      </ul>
+
+      <h3 class="text-lg font-bold text-fam-gray mb-3">We're looking for aligned experts in:</h3>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-fam-text-light text-sm">
+        <li>• Parenting & Family Relationships</li>
+        <li>• Mental Health & Emotional Wellness</li>
+        <li>• Faith & Values-Based Living</li>
+        <li>• Digital Wellness & Screen-Time Balance</li>
+        <li>• Education, Safety & Child Development</li>
+        <li>• Health, Nutrition & Family Wellness</li>
+      </ul>
+    </div>
+  </CloudsCTA>
 </BaseLayout>

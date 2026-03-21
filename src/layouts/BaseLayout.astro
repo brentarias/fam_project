@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import JoinMovementCTA from '../components/JoinMovementCTA.astro';
+import FormWaitlist from '../components/FormWaitlist.astro';
 
 interface Props {
   title: string;
@@ -26,7 +26,26 @@ const { title, description, image, canonicalURL } = Astro.props;
       <slot />
     </main>
     <Footer>
-      <JoinMovementCTA compact slot="newsletter" />
+      <div slot="newsletter">
+        <h4 class="text-sm font-bold text-white mb-3">Join the Movement</h4>
+        <FormWaitlist variant="lite" buttonText="Join the Waitlist" buttonClass="bg-fam-red hover:bg-fam-red-dark" />
+        <div class="mt-3 space-y-1">
+          <a
+            href="https://wefunder.com/thefamproject"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors"
+          >
+            Become an Investor →
+          </a>
+          <a
+            href="/contact/"
+            class="block text-sm text-fam-green hover:text-fam-purple-soft no-underline transition-colors"
+          >
+            Apply as Expert →
+          </a>
+        </div>
+      </div>
     </Footer>
   </body>
 </html>

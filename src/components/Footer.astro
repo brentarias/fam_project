@@ -19,17 +19,7 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
   </div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Logo & Description -->
-      <div class="md:col-span-1">
-        <a href="/" class="text-xl font-bold text-white no-underline hover:text-fam-orange">
-          The F.A.M. Project
-        </a>
-        <p class="mt-4 text-sm text-gray-300">
-          Strengthening families through education, community events, and resources that bring families closer together.
-        </p>
-      </div>
-
-      <!-- Navigation Column 1 -->
+      <!-- Column 1: Explore nav (was col 2) -->
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-4">Explore</h3>
         <ul class="space-y-3">
@@ -39,7 +29,7 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
         </ul>
       </div>
 
-      <!-- Navigation Column 2 -->
+      <!-- Column 2: Connect nav (was col 3) -->
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-4">Connect</h3>
         <ul class="space-y-3">
@@ -49,7 +39,7 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
         </ul>
       </div>
 
-      <!-- Social Links & Newsletter -->
+      <!-- Column 3: Follow Us (social) + Logo & Description (was col 1) -->
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-fam-orange mb-4">Follow Us</h3>
         <div class="flex gap-4 mb-6">
@@ -87,11 +77,18 @@ import logoImage from '../assets/logos/fam-logo-circle.png';
             </svg>
           </a>
         </div>
+        <a href="/" class="text-xl font-bold text-white no-underline hover:text-fam-orange">
+          The F.A.M. Project
+        </a>
+        <p class="mt-4 text-sm text-gray-300">
+          Strengthening families through education, community events, and resources that bring families closer together.
+        </p>
+      </div>
 
-        <!-- ★ PLACEMENT 11 — Instance 7 (compact): Join the Movement -->
-        <div class="footer-newsletter">
-          <slot name="newsletter" />
-        </div>
+      <!-- Column 4: Join the Movement (was bottom of col 4) -->
+      <!-- ★ PLACEMENT 11 — Instance 7 (compact): Join the Movement -->
+      <div class="footer-newsletter">
+        <slot name="newsletter" />
       </div>
     </div>
 

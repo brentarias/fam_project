@@ -90,20 +90,20 @@ const checkboxes = [
     </form>
   ) : (
     <!-- Lite variant: name + email -->
-    <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'sm:flex-row']} novalidate>
+    <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'lg:flex-row']} novalidate>
       <input
         type="text"
         name="name"
         placeholder="Name"
         required
-        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+        class="flex-1 min-w-0 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
       />
       <input
         type="email"
         name="email"
         placeholder="Email"
         required
-        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
+        class="flex-1 min-w-0 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-fam-orange focus:border-transparent text-base"
       />
       <button
         type="submit"
