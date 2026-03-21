@@ -1,62 +1,36 @@
-# Astro Starter Kit: Blog
+# The F.A.M. Project — Website
 
-```sh
-pnpm create astro@latest -- --template blog
-```
+Pre-launch sign-up portal for **The F.A.M. Project** and its flagship product, **FamCentral** — a platform designed to help families build stronger relationships. The site captures waitlist sign-ups, investor interest, and expert faculty applications ahead of launch.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built with Astro 6, Tailwind CSS 4, and deployed via Netlify.
 
-Features:
+There was a prior version of this site built with WordPress. The WordPress site had many broken links (mostly images that could not be located) and had poor performance. Astro was chosen because no meaningful dynamic behavior, particularly SSR, was expected.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+| | Performance | Accessibility | Best Practices | SEO |
+| :---------------- | :---------: | :-----------: | :------------: | :-: |
+| WordPress (prior) | 🟡 82 | 🟢 91 | 🔴 54 | 🟡 69 |
+| Astro (current)   | 🟢 99 | 🟢 94 | 🟢 92 | 🟢 100 |
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command        | Action                                      |
+| :------------- | :------------------------------------------ |
+| `pnpm dev`     | Start local dev server at `localhost:4321`  |
+| `pnpm build`   | Build production site to `./dist/`          |
+| `pnpm preview` | Preview production build locally            |
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+## Form Placement IDs
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Every waitlist form submits a hidden `form_id` field alongside the user's data, identifying which placement drove the conversion. The current placements are:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+| `form_id`          | Location                                              |
+| :----------------- | :---------------------------------------------------- |
+| `global-footer`    | Footer — present on every page (`BaseLayout.astro`)   |
+| `index-hero`       | Homepage hero section                                 |
+| `index-join`       | Homepage → Join the Movement section (CloudsCTA)      |
+| `our-mission-join` | Our Mission page → Founding Community form (CloudsCTA)|
+| `events-waitlist`  | Events page → Founding Community card (purple)        |
+| `events-experts`   | Events page → Join Our Expert Faculty (CloudsCTA)     |
+| `projects-investor`| Projects page → Become a Founding Investor            |
+| `contact-join`     | Contact page → Join the Movement section (CloudsCTA)  |
+| `articles-inline`  | Article pages → inline banner at end of each article  |

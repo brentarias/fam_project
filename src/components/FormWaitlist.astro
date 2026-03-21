@@ -14,6 +14,7 @@
  *   buttonClass  – Override button color classes
  *   theme        – 'light' | 'dark' (default 'light'). Use 'dark' when the form
  *                  sits on a dark background so legend/label text remains legible.
+ *   formId       – Identifies this placement for conversion tracking (e.g. 'index-hero')
  */
 import SuccessToast from './SuccessToast.astro';
 
@@ -24,6 +25,7 @@ interface Props {
   rowLayout?: boolean;
   buttonClass?: string;
   theme?: 'light' | 'dark';
+  formId?: string;
 }
 
 const {
@@ -33,6 +35,7 @@ const {
   rowLayout = false,
   buttonClass = 'bg-fam-red hover:bg-fam-red-dark',
   theme = 'light',
+  formId,
 } = Astro.props;
 
 const isDark = theme === 'dark';
@@ -54,6 +57,7 @@ const checkboxes = [
   {isFull ? (
     <!-- Full variant: stacked layout with optional phone + checkboxes -->
     <form class="stubbed-form space-y-4" novalidate>
+      {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
         name="name"
@@ -100,6 +104,7 @@ const checkboxes = [
   ) : (
     <!-- Lite variant: name + email -->
     <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'lg:flex-row']} novalidate>
+      {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
         name="name"
