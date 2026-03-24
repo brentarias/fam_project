@@ -1,7 +1,7 @@
 ---
 name: "Chris Lange"
-title: "President & Co-Founder"
+title: "Hownd - CEO"
 photo: "../../assets/team/chris-lange.png"
-bio: "Chris has over 20 years of experience running and operating large and small businesses. With an unparalleled passion for helping people, he has experience with non-profit organizations as a lead educator, where he helped thousands become educated and empowered in character building while creating awareness against drug addiction, social bullying, pornography, unhealthy relationships, and many other challenges we all face today."
-order: 2
+bio: "Chris Lange is CEO of Hownd, a Fam Project subsidiary, and a marketing technology executive with 25+ years of experience building automated promotion platforms that help local businesses drive customer engagement, retention, and measurable revenue growth."
+order: 3
 ---

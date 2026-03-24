@@ -1,7 +1,7 @@
 ---
-name: "Nate Leavitt"
-title: "Board Member"
+name: "Nathan Leavitt"
+title: "CTO"
 photo: "../../assets/team/nate-leavitt.png"
-bio: "Nate is passionate about technology and as one of the original leaders of Infusionsoft, he understands the need for automation with a focus on marketing. He's an entrepreneur and has developed several technologies to help influencers get their message out into the world. Even with his love and knowledge of technology, he understands the importance of limited use."
-order: 6
+bio: "Seasoned software architect and CTO with 15+ years building scalable SaaS platforms. Co-founder of CustomerHub and technology leader behind cloud-native systems serving thousands of businesses and millions of users."
+order: 4
 ---
