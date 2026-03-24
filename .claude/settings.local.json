@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__read_multiple_files",
+      "WebFetch(domain:wefunder.com)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "mcp__brave-search__brave_web_search",
+      "WebFetch(domain:webcache.googleusercontent.com)"
+    ]
+  }
+}
