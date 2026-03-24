@@ -57,6 +57,7 @@ const checkboxes = [
   {isFull ? (
     <!-- Full variant: stacked layout with optional phone + checkboxes -->
     <form class="stubbed-form space-y-4" data-button-text={buttonText} novalidate>
+      <input type="hidden" name="campaign" value="famcentral-prelaunch" />
       {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
@@ -104,6 +105,7 @@ const checkboxes = [
   ) : (
     <!-- Lite variant: name + email -->
     <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'lg:flex-row']} data-button-text={buttonText} novalidate>
+      <input type="hidden" name="campaign" value="famcentral-prelaunch" />
       {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
