@@ -56,7 +56,7 @@ const checkboxes = [
 <div class="form-waitlist-wrapper">
   {isFull ? (
     <!-- Full variant: stacked layout with optional phone + checkboxes -->
-    <form class="stubbed-form space-y-4" novalidate>
+    <form class="stubbed-form space-y-4" data-button-text={buttonText} novalidate>
       {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
@@ -103,7 +103,7 @@ const checkboxes = [
     </form>
   ) : (
     <!-- Lite variant: name + email -->
-    <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'lg:flex-row']} novalidate>
+    <form class:list={['stubbed-form flex flex-col gap-3', rowLayout && 'lg:flex-row']} data-button-text={buttonText} novalidate>
       {formId && <input type="hidden" name="form_id" value={formId} />}
       <input
         type="text"
@@ -131,8 +131,10 @@ const checkboxes = [
 </div>
 
 <script>
+  const GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/535RAqUk5Kkq0zbDXiFC/webhook-trigger/65b7cd75-5b8a-404b-8045-2d3c424aba81';
+
   document.querySelectorAll('.form-waitlist-wrapper .stubbed-form').forEach((form) => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formEl = e.target as HTMLFormElement;
       const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement;
@@ -145,8 +147,33 @@ const checkboxes = [
         emailInput.reportValidity();
         return;
       }
-      formEl.reset();
-      (window as any).__showToast?.(formEl);
+      const submitBtn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+      try {
+        const formData = new FormData(formEl);
+        const payload: Record<string, string | string[]> = {};
+        formData.forEach((value, key) => {
+          if (key === 'role') {
+            if (!payload[key]) payload[key] = [];
+            (payload[key] as string[]).push(value as string);
+          } else {
+            payload[key] = value as string;
+          }
+        });
+        await fetch(GHL_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        formEl.reset();
+        (window as any).__showToast?.(formEl);
+      } catch {
+        alert('Something went wrong. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = formEl.dataset.buttonText || 'Join the Waitlist →';
+      }
     });
   });
 </script>
