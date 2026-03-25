@@ -107,7 +107,7 @@
 - [x] 12.5c Add newsletter CTA section below article with "underlapping" effect — article uses "floating card" pattern: white card with `shadow-xl` overlaps both the purple header above (via `-mt-24`) and the red CTA below (via `mb-[-5rem]`); red CTA section (`bg-fam-red`) sits behind the bottom edge of the card with `pt-32` padding; includes email form, "Send" button, and privacy disclaimer
 - [x] 12.5d Scrape article author names from all 37 original WordPress articles — wrote `scripts/detect-article-authors.mjs`; found 2 authors: "Jason & Dellynn" (32 articles) and "Chris Lange" (5 articles); added optional `author` field to article schema in `src/content.config.ts` (defaults to "Jason & Dellynn"); added `author: "Chris Lange"` to the 5 Chris Lange articles; author name displayed below article body in the detail page template with initials avatar
 - [x] 12.5e Re-scrape all 37 articles with improved HTML-to-markdown converter (`scripts/rescrape-article-content.mjs`) — fixed bulleted/numbered list formatting (items now on consecutive lines without excess blank lines), fixed paragraph separation (proper double-newline breaks), preserved existing frontmatter while replacing body, auto-inserted known YouTube iframe embeds, manually fixed "music" missing bullet in how-to-make-a-difference article (original HTML had malformed `<li>`) 
-- [ ] 12.6 Review each migrated article for formatting correctness (broken HTML, missing images, markdown rendering)
+- [x] 12.6 Review each migrated article for formatting correctness (broken HTML, missing images, markdown rendering)
 - [x] 12.7 Scrape actual text content from the WordPress **homepage** and replace fabricated copy in `src/pages/index.astro` (hero text, founding story, mission teaser, M.A.D. paragraph, projects description, etc.)
 - [x] 12.8 Scrape actual text content from the WordPress **Our Mission** page and replace fabricated copy in `src/pages/our-mission.astro`
 - [x] 12.9 Scrape actual text content from the WordPress **Events** page (`thefamproject.com/events/`) and replace fabricated copy in `src/pages/events.astro` — scraped all 8 sections: FAMtopia hero (wave-lines bg), Brad Henry quote + Workshops (beach-family bg), Flagship Trilogy tiles (This is Me/Us/We), Workshops coming soon, My FAM Legacy CTA, Brandon Lee quote (purple-grunge bg), Subscribe to Events List (ropes-course bg), Sponsor form (clouds bg); downloaded 10 new images
@@ -117,7 +117,7 @@
 - [x] 12.13 Integrate image-based section titles (`one-world.png`, `did-you-know.png`, `famtopia-logo.png`, `stat-phone-use.png`) into homepage and mission page sections with appropriate alt text
 - [x] 12.14 Implement "Did you know?" info bits and founder/celebrity quote callouts (Jashin Howell quote on homepage, Tim Cook quote on mission page) as visually distinct sections
 - [x] 12.15 Replace placeholder YouTube video ID (`dQw4w9WgXcQ`) with the actual FAM Central App Promo Video — discovered it's Vimeo (ID: 509100210), not YouTube; embedded as Vimeo iframe
-- [ ] 12.16 Audit all downloaded images in `src/assets/` and ensure every image is referenced in the appropriate page; flag or remove any orphaned assets
+- [x] 12.16 Audit all downloaded images in `src/assets/` and ensure every image is referenced in the appropriate page; flag or remove any orphaned assets
 
 ## 13. RSS & Sitemap
 
@@ -135,7 +135,7 @@
 
 ## 15. SEO Audit & Deployment
 
-- [ ] 15.1 Run Lighthouse audit and fix any Performance, Accessibility, Best Practices, or SEO issues (target ≥ 90 in all categories)
+- [x] 15.1 Run Lighthouse audit and fix any Performance, Accessibility, Best Practices, or SEO issues (target ≥ 90 in all categories)
 - [ ] 15.2 Verify all Open Graph and Twitter Card meta tags render correctly per page
 - [ ] 15.3 Verify canonical URLs are correct on all pages
 - [ ] 15.4 Configure Netlify build settings and deploy
