@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 
 interface Props {
+  id?: string;
   title: string;
   subtitle?: string;
   backgroundImage: ImageMetadata;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const {
+  id,
   title,
   subtitle,
   backgroundImage,
@@ -20,7 +22,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
+<section id={id} class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
   <!-- Background Image -->
   <Image
     src={backgroundImage}

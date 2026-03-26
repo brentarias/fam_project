@@ -39,6 +39,7 @@ const jsonLd = {
        SECTION 1 — HERO
        ============================================================ -->
   <HeroSection
+    id="hero-form"
     title=""
     subtitle=""
     backgroundImage={heroImage}
@@ -63,7 +64,7 @@ const jsonLd = {
       </div>
 
       <!-- Right: CTA card with form -->
-      <div id="hero-form" class="border border-purple-300/50 rounded-lg p-6 md:p-8 text-center">
+      <div class="border border-purple-300/50 rounded-lg p-6 md:p-8 text-center">
         <h2 class="text-white text-2xl font-bold mb-3">Join the FamCentral Waitlist</h2>
         <p class="text-white/80 text-sm mb-4">Be among the first families to experience the platform.</p>
         <div class="text-left mb-4">
@@ -76,7 +77,7 @@ const jsonLd = {
             <li>• Founder updates and behind-the-scenes access</li>
           </ul>
         </div>
-        <FormWaitlist variant="lite" buttonText="Join the Waitlist →" formId="index-hero" theme="dark" />
+        <FormWaitlist variant="full" buttonText="Join the Waitlist →" formId="index-hero" theme="dark" preChecked={['parent']} />
       </div>
     </div>
   </HeroSection>
@@ -127,8 +128,8 @@ const jsonLd = {
     </div>
     <div class="relative z-10 grid grid-cols-1 md:grid-cols-2">
       <!-- Left: Text on white background -->
-      <div class="bg-white py-16 md:py-24 px-6 sm:px-10 lg:px-16 flex items-center">
-        <div class="max-w-xl">
+      <div class="bg-white py-16 md:py-24 px-6 sm:px-10 lg:px-16 flex items-center justify-end">
+        <div class="max-w-xl w-full">
           <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-6">We're Building the Solution</h2>
           <div class="text-fam-text-light text-lg leading-relaxed space-y-4">
             <p>The FAM Project exists to reverse this trend.</p>
@@ -354,7 +355,7 @@ const jsonLd = {
         <!-- Right: Form -->
         <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
           <h3 class="text-white text-xl font-bold mb-4 text-center">Join the Waitlist</h3>
-          <FormWaitlist variant="lite" buttonText="Join the Waitlist →" formId="index-waitlist" theme="dark" />
+          <FormWaitlist variant="full" buttonText="Join the Waitlist →" formId="index-waitlist" theme="dark" preChecked={['parent']} />
         </div>
       </div>
     </div>
@@ -409,7 +410,7 @@ const jsonLd = {
         <!-- Right: Application form -->
         <div class="bg-white rounded-xl shadow-lg p-8">
           <h3 class="text-fam-purple text-xl font-bold mb-4 text-center">Apply to Join the Expert Faculty</h3>
-          <FormWaitlist variant="lite" buttonText="Apply Now →" formId="index-experts" buttonClass="bg-fam-green hover:bg-fam-green-dark" />
+          <FormWaitlist variant="full" buttonText="Apply Now →" formId="index-experts" buttonClass="bg-fam-green hover:bg-fam-green-dark" preChecked={['expert']} />
         </div>
       </div>
     </div>
@@ -435,39 +436,39 @@ const jsonLd = {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Path 1: Waitlist -->
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <div class="flex flex-col bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <div class="text-fam-green text-4xl mb-4">1</div>
           <h3 class="text-xl font-bold text-white mb-3">Join the FamCentral Waitlist</h3>
           <p class="text-white/80 text-sm mb-6">Become part of a growing community of families choosing connection.</p>
           <a
             href="#hero-form"
-            class="inline-block px-6 py-3 bg-fam-red text-white font-semibold rounded-lg hover:bg-fam-red-dark transition-colors duration-200 no-underline"
+            class="mt-auto inline-block px-6 py-3 bg-fam-red text-white font-semibold rounded-lg hover:bg-fam-red-dark transition-colors duration-200 no-underline"
           >
             Join the Waitlist
           </a>
         </div>
 
         <!-- Path 2: Expert Faculty -->
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <div class="flex flex-col bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <div class="text-fam-orange text-4xl mb-4">2</div>
           <h3 class="text-xl font-bold text-white mb-3">Apply to Join Our Expert Faculty</h3>
           <p class="text-white/80 text-sm mb-6">Share your message and impact families nationwide.</p>
           <a
             href="#expert-section"
-            class="inline-block px-6 py-3 bg-fam-green text-white font-semibold rounded-lg hover:bg-fam-green-dark transition-colors duration-200 no-underline"
+            class="mt-auto inline-block px-6 py-3 bg-fam-green text-white font-semibold rounded-lg hover:bg-fam-green-dark transition-colors duration-200 no-underline"
           >
             Apply Now
           </a>
         </div>
 
         <!-- Path 3: Founding Partner -->
-        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <div class="flex flex-col bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           <div class="text-fam-purple-soft text-4xl mb-4">3</div>
           <h3 class="text-xl font-bold text-white mb-3">Become a Founding Partner</h3>
           <p class="text-white/80 text-sm mb-6">Help us bring FamCentral to your city and be part of building this ecosystem from the ground up.</p>
           <a
-            href="mailto:info@thefamproject.com?subject=Founding%20Partner%20Inquiry"
-            class="inline-block px-6 py-3 bg-fam-purple text-white font-semibold rounded-lg hover:bg-fam-purple-dark transition-colors duration-200 no-underline"
+            href="#waitlist-section"
+            class="mt-auto inline-block px-6 py-3 bg-fam-purple text-white font-semibold rounded-lg hover:bg-fam-purple-dark transition-colors duration-200 no-underline"
           >
             Learn More
           </a>
@@ -478,30 +479,6 @@ const jsonLd = {
 </BaseLayout>
 
 <script>
-  // Inject hidden role fields into FormWaitlist instances based on section context
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.form-waitlist-wrapper .stubbed-form').forEach((form) => {
-      const formIdInput = form.querySelector('input[name="form_id"]') as HTMLInputElement | null;
-      if (!formIdInput) return;
-      const formId = formIdInput.value;
-
-      let role = '';
-      if (formId === 'index-hero' || formId === 'index-waitlist') {
-        role = 'parent';
-      } else if (formId === 'index-experts') {
-        role = 'expert';
-      }
-
-      if (role && !form.querySelector('input[name="role"]')) {
-        const hidden = document.createElement('input');
-        hidden.type = 'hidden';
-        hidden.name = 'role';
-        hidden.value = role;
-        form.appendChild(hidden);
-      }
-    });
-  });
-
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
