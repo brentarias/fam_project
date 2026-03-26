@@ -11,11 +11,8 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: 'Our Mission', href: '/our-mission/' },
-  { label: 'Events', href: '/events/' },
-  { label: 'Projects', href: '/projects/' },
-  { label: 'Our F.A.M.', href: '/our-fam/' },
-  { label: 'Articles', href: '/articles/' },
+  { label: 'Home', href: '/' },
+  { label: 'Team', href: '/our-fam/' },
 ] as const;
 
 export const ARTICLE_CATEGORIES = [

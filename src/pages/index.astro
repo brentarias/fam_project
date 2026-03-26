@@ -2,27 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import FormWaitlist from '../components/FormWaitlist.astro';
-import JoinMovementCTA from '../components/JoinMovementCTA.astro';
-import StatBlock from '../components/StatBlock.astro';
-import Testimonial from '../components/Testimonial.astro';
-import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+import SuccessToast from '../components/SuccessToast.astro';
+import ZigZagDivider from '../components/ZigZagDivider.astro';
 import { Image } from 'astro:assets';
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SOCIAL_LINKS } from '../consts';
+import { SITE_URL, SOCIAL_LINKS } from '../consts';
+
 import heroImage from '../assets/hero/home-header-2.jpg';
-import oneWorldImg from '../assets/misc/one-world.png';
-import statPhoneUseImg from '../assets/misc/stat-phone-use.png';
-import didYouKnowImg from '../assets/misc/did-you-know.png';
 import didYouKnowBgImg from '../assets/hero/did-you-know-screens.jpg';
-import famtopiaLogo from '../assets/projects/famtopia-logo.png';
-import sunburstBg from '../assets/hero/sunburst-background.jpg';
-import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
-import famFunPassLogo from '../assets/projects/fam-funpass-logo.png';
+import sunsetOceanBg from '../assets/hero/sunset-ocean-horizon.jpg';
 import famCentralLogo from '../assets/projects/fam-central-logo.png';
 import famCentralApp from '../assets/projects/fam-central-app.jpg';
-import famCentralIcon from '../assets/projects/fam-central-icon.png';
-import jashinMedallion from '../assets/team/jashin-howell-medallion.png';
-import homeHeaderBg from '../assets/hero/home-header.jpg';
-
+import cloudsBg from '../assets/hero/clouds.jpg';
+import famBikesBg from '../assets/hero/background-fam-bikes-color.jpg';
+import sunburstBg from '../assets/hero/sunburst-background.jpg';
+import purpleGrungeBg from '../assets/hero/purple-grunge.jpg';
+import beachFamilyBg from '../assets/hero/beach-family.jpg';
+import moreThisImg from '../assets/misc/more-this-image.png';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -34,43 +29,43 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={`${SITE_TITLE} — Disconnect to Connect`} description="Raising awareness surrounding the technological addictions that are destroying family bonds through smartphones, social media, and other digital devices.">
-  <!-- Organization JSON-LD -->
+<BaseLayout
+  title="The F.A.M. Project — Join the FamCentral Waitlist"
+  description="The FAM Project is launching FamCentral — a platform designed to help families reconnect, strengthen relationships, and engage with their communities in a digital world."
+>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
 
-  <!-- ★ PLACEMENT 1 — Instance 1: Hero Waitlist CTA (Lite Form) -->
+  <!-- ============================================================
+       SECTION 1 — HERO
+       ============================================================ -->
   <HeroSection
     title=""
     subtitle=""
     backgroundImage={heroImage}
-    backgroundAlt="Families enjoying time together at a F.A.M. Project event"
+    backgroundAlt="Families enjoying time together"
     overlayClass="bg-purple-900/87"
     maxWidth="max-w-7xl"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-6xl mx-auto px-4">
-      <!-- Left: One World image + tagline -->
+      <!-- Left: Headline + copy -->
       <div class="text-left">
-        <Image
-          src={oneWorldImg}
-          alt="One World, one big F.A.M."
-          class="w-full mb-6"
-          widths={[300, 500, 716]}
-          sizes="(max-width: 768px) 80vw, 40vw"
-        />
-        <p class="text-white text-xl md:text-2xl font-light leading-snug">
-          The <strong>Family Awareness Movement</strong> is healing hearts and homes by meeting the needs of modern day families.
+        <p class="text-fam-orange text-sm font-semibold uppercase tracking-wider mb-4">Help Us Launch a Family Movement</p>
+        <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">A Movement to Strengthen Families Has Begun</h1>
+        <p class="text-white/90 text-lg font-light leading-relaxed mb-4">
+          The FAM Project is launching FamCentral — a platform designed to help families reconnect, strengthen relationships, and engage with their communities in a digital world.
+        </p>
+        <p class="text-white/80 text-base font-light leading-relaxed mb-2">
+          Built on proven infrastructure, existing revenue, and a rapidly growing national network.
+        </p>
+        <p class="text-fam-orange text-base font-semibold">
+          Now you can be part of it.
         </p>
       </div>
 
-      <!-- Right: Hero Waitlist CTA (Instance 1 — Lite Form) -->
-      <div class="border border-purple-300/50 rounded-lg p-6 md:p-8 text-center">
-        <h2 class="text-white text-2xl md:text-3xl font-bold mb-3 drop-shadow-lg">A Movement to Strengthen Families Has Begun</h2>
-        <p class="text-white/90 text-base font-light leading-snug mb-2">
-          The Fam Project is launching <strong>FamCentral</strong>, a new platform designed to help families reconnect, discover their local community, and strengthen relationships in a digital world.
-        </p>
-        <p class="text-fam-orange text-base font-semibold mb-4">
-          Now you can join the movement — and even become an owner.
-        </p>
+      <!-- Right: CTA card with form -->
+      <div id="hero-form" class="border border-purple-300/50 rounded-lg p-6 md:p-8 text-center">
+        <h2 class="text-white text-2xl font-bold mb-3">Join the FamCentral Waitlist</h2>
+        <p class="text-white/80 text-sm mb-4">Be among the first families to experience the platform.</p>
         <div class="text-left mb-4">
           <p class="text-white/80 text-sm mb-2">Early members receive:</p>
           <ul class="text-white/80 text-sm space-y-1 list-none pl-0">
@@ -78,59 +73,18 @@ const jsonLd = {
             <li>• Invitations to local family events</li>
             <li>• The Look Up Challenge guide</li>
             <li>• Special offers from family-friendly businesses</li>
-            <li>• Updates on the movement</li>
+            <li>• Founder updates and behind-the-scenes access</li>
           </ul>
         </div>
-        <FormWaitlist variant="lite" buttonText="Join the Waitlist →" rowLayout={true} formId="index-hero" />
+        <FormWaitlist variant="lite" buttonText="Join the Waitlist →" formId="index-hero" theme="dark" />
       </div>
     </div>
   </HeroSection>
 
-  <!-- Mission Section (original content — unchanged) -->
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <!-- Left: Text content -->
-        <div>
-          <h2 class="text-3xl md:text-4xl font-semibold text-fam-purple mb-6">We're on a mission to heal and empower strong families</h2>
-          <p class="text-fam-text-light leading-relaxed mb-4">
-            <strong><em>Our Passion and Purpose is to Connect Families through Fun and Authentic Transformation!</em></strong>
-          </p>
-          <p class="text-fam-text-light leading-relaxed mb-4">
-            The FAM Project was started by a group of families tired of losing their kids attention to devices and social media. F.A.M. stands for Family Awareness Movement, and we are committed to shining a light so bright on the effects and issues surrounding the technological addictions that are destroying family bonds and leading children down dark paths, alone.
-          </p>
-          <p class="text-fam-text-light leading-relaxed mb-6">
-            And parents aren't faring much better! We live and work in the 21st century. The advent of the internet, smart phones, and social media has put our careers and lives into hyperdrive. Constant notifications, overstimulation, and information at our fingertips, it doesn't stop! And that's not going to change… unless we get M.A.D. (Make A Difference) and take charge of ourselves and the environment our children are raised in!
-          </p>
-          <div class="text-center">
-            <a
-              href="/our-mission/"
-              class="inline-flex items-center px-8 py-3 bg-fam-red text-white font-normal rounded-sm hover:bg-fam-red-dark transition-colors duration-200 no-underline"
-            >
-              Read more about our mission
-              <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Stat Phone Use image -->
-        <div class="flex justify-center">
-          <Image
-            src={statPhoneUseImg}
-            alt="Parents spend an average of 7 hours and 4 minutes looking at screens every day"
-            class="w-full max-w-md"
-            widths={[300, 558]}
-            sizes="(max-width: 768px) 80vw, 40vw"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Did You Know? Section (dark background) -->
-  <section class="relative py-12 md:py-16 bg-gray-900 text-white overflow-hidden">
+  <!-- ============================================================
+       SECTION 2 — THE PROBLEM
+       ============================================================ -->
+  <section class="relative py-16 md:py-24 bg-gray-900 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
       <Image
         src={didYouKnowBgImg}
@@ -140,31 +94,185 @@ const jsonLd = {
         sizes="100vw"
       />
     </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-[30%_70%] gap-8 items-center">
-        <!-- Left: Did You Know image -->
-        <div class="flex justify-center md:justify-start">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Families Are Facing a Connection Crisis</h2>
+      <div class="text-lg md:text-xl font-light leading-relaxed space-y-4 text-white/90">
+        <p>Parents everywhere are asking the same questions:</p>
+        <p class="text-fam-orange font-medium">Why are our kids spending more time on screens than with people?</p>
+        <p class="text-fam-orange font-medium">Why are families feeling more disconnected than ever?</p>
+        <p class="text-fam-orange font-medium">Why are meaningful conversations becoming rare?</p>
+        <div class="pt-4">
+          <p>The truth is simple:</p>
+          <p class="text-xl md:text-2xl font-semibold text-white mt-2">Technology has connected the world —<br/>but quietly disconnected our homes.</p>
+        </div>
+        <p>Devices have become the default. Distraction has become normal.<br/>And connection has become something we have to fight for.</p>
+        <p>Most families don't want this.<br/>But modern life makes it easy to drift into it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — THE MISSION
+       ============================================================ -->
+  <section class="relative overflow-hidden bg-white">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={sunsetOceanBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200, 1920]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-purple-900/70"></div>
+    </div>
+    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2">
+      <!-- Left: Text on white background -->
+      <div class="bg-white py-16 md:py-24 px-6 sm:px-10 lg:px-16 flex items-center">
+        <div class="max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-6">We're Building the Solution</h2>
+          <div class="text-fam-text-light text-lg leading-relaxed space-y-4">
+            <p>The FAM Project exists to reverse this trend.</p>
+            <p>Our mission is simple:</p>
+            <p class="text-fam-purple font-semibold text-xl">Reconnect families. Strengthen communities. Inspire the next generation.</p>
+            <p>But this isn't about removing technology.</p>
+            <p class="font-medium">We are <span class="text-fam-red">not</span> anti-technology.<br/>We are <span class="text-fam-green font-bold">pro-intentional technology</span>.</p>
+            <p>We're creating tools that help families lead their homes again — with structure, purpose, and connection.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right: sunset-ocean bg + purple overlay + "More of this" foreground image -->
+      <div class="relative min-h-[400px] md:min-h-[600px] flex items-center justify-center p-8 md:p-12">
+        <Image
+          src={moreThisImg}
+          alt="More of this – families spending quality time together"
+          class="w-full max-w-[640px] lg:max-w-[800px] h-auto drop-shadow-lg"
+          widths={[380, 480, 768, 1028]}
+          sizes="(max-width: 1024px) 380px, 480px"
+        />
+      </div>
+    </div>
+  </section>
+
+  <ZigZagDivider />
+
+  <!-- ============================================================
+       SECTION 4 — INTRODUCING FAMCENTRAL
+       ============================================================ -->
+  <section class="py-16 md:py-24 bg-fam-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left: Logos / app image -->
+        <div class="flex flex-col items-center gap-6">
           <Image
-            src={didYouKnowImg}
-            alt="Did you know?"
-            class="w-3/4 md:w-full max-w-[200px]"
-            widths={[200, 400, 579]}
-            sizes="(max-width: 768px) 60vw, 200px"
+            src={famCentralLogo}
+            alt="FamCentral"
+            class="w-4/5 max-w-[400px]"
+            widths={[200, 400, 800]}
+            sizes="(max-width: 768px) 80vw, 400px"
+          />
+          <Image
+            src={famCentralApp}
+            alt="FamCentral app screenshot"
+            class="w-2/5 max-w-[160px]"
+            widths={[120, 300]}
+            sizes="160px"
           />
         </div>
-        <!-- Right: Stat text -->
+
+        <!-- Right: Description + features -->
         <div>
-          <p class="text-lg md:text-xl font-normal leading-relaxed mb-3">
-            Young people who spend seven hours or more a day on screens are more than twice as likely to be diagnosed with depression or anxiety than those who use screens for an hour a day
+          <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-6">Meet FamCentral</h2>
+          <p class="text-fam-text-light text-lg leading-relaxed mb-6">
+            FamCentral is a new kind of platform designed to help families live better — together.
           </p>
-          <p class="text-xs text-gray-400 font-light">Preventative Medicine Reports 2018</p>
+          <p class="text-fam-text font-medium mb-4">Inside FamCentral, families can:</p>
+          <ul class="space-y-3 text-fam-text-light text-base">
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Discover local events and activities
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Connect with other families nearby
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Support trusted, family-friendly businesses
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Participate in the Look Up Challenge
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Access expert guidance and practical tools
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-fam-green font-bold text-lg">&#10003;</span>
+              Build stronger real-world relationships
+            </li>
+          </ul>
+          <p class="text-fam-text-light text-lg leading-relaxed mt-6">
+            Instead of another app that keeps families glued to screens…<br/>
+            <strong class="text-fam-purple">FamCentral helps families reconnect in real life.</strong>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAMtopia Events & Workshops Section -->
-  <section class="relative py-12 md:py-16 bg-white overflow-hidden">
+  <!-- ============================================================
+       SECTION 5 — WHY THIS IS DIFFERENT
+       ============================================================ -->
+  <section class="relative py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={famBikesBg}
+        alt="Family riding bikes together"
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-purple-900/87"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Not Another App. A Family-First Economy.</h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-8">
+        FamCentral isn't just a content platform or social network.<br/>
+        It's a connected ecosystem that brings together:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <p class="text-fam-purple-soft font-bold text-lg mb-2">Families</p>
+          <p class="text-white/80 text-sm">seeking stronger relationships</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <p class="text-fam-orange font-bold text-lg mb-2">Experts</p>
+          <p class="text-white/80 text-sm">delivering transformation and guidance</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <p class="text-fam-green font-bold text-lg mb-2">Local Businesses</p>
+          <p class="text-white/80 text-sm">offering real-world value</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <p class="text-fam-red font-bold text-lg mb-2">Entrepreneurs</p>
+          <p class="text-white/80 text-sm">building income through connection</p>
+        </div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+        <p class="text-fam-orange font-bold text-xl mb-4">Aligned incentives</p>
+        <p class="text-white text-lg leading-relaxed">
+          Families benefit. Businesses grow. Leaders earn.<br/>
+          <strong>Everyone wins by strengthening real-world relationships.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 — TRACTION & FOUNDATION
+       ============================================================ -->
+  <section class="relative py-16 md:py-24 overflow-hidden">
     <div class="absolute inset-0 z-0">
       <Image
         src={sunburstBg}
@@ -175,155 +283,235 @@ const jsonLd = {
       />
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <Image
-        src={famtopiaLogo}
-        alt="FAMtopia Events & Workshops"
-        class="mx-auto w-4/5 max-w-xl mb-6"
-        widths={[300, 600, 800]}
-        sizes="(max-width: 768px) 80vw, 50vw"
-      />
-      <p class="text-lg md:text-2xl text-fam-text font-light leading-snug mb-8">
-        We are committed to educating couples, kids, families, and anyone wanting to learn how to better build and develop the meaningful relationships in their lives.
+      <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-6">Built on Real Infrastructure — Not Just an Idea</h2>
+      <p class="text-fam-text text-lg leading-relaxed mb-8">
+        The FAM Project is not starting from zero.<br/>
+        We are building on an existing foundation that includes:
       </p>
-      <a
-        href="/events/"
-        class="inline-flex items-center px-8 py-3 bg-fam-red text-white font-normal rounded-sm hover:bg-fam-red-dark transition-colors duration-200 no-underline"
-      >
-        Check out our flagship event series
-        <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Jashin Howell Quote / Testimonial (purple grunge background) -->
-  <Testimonial
-    quote="I'm proud to champion the Family Awareness Movement, and the family of companies, projects, causes and partners we work with to help modern families navigate complex times and complex challenges... together!"
-    name="Jashin Howell"
-    title="CEO & Co-Founder"
-    photo={jashinMedallion}
-    background={purpleGrungeBg}
-  />
-
-  <!-- Video Section (Vimeo embed) -->
-  <section class="py-12 md:py-16 bg-fam-gray">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="relative w-full" style="padding-bottom: 56.25%;">
-        <iframe
-          class="absolute top-0 left-0 w-full h-full rounded-lg"
-          src="https://player.vimeo.com/video/509100210?title=1&portrait=1&byline=1"
-          title="FAM Central App Promo Video"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
+        <div class="bg-white/80 rounded-xl p-6 shadow-sm text-left">
+          <p class="text-fam-green font-bold mb-2">Live Marketplace</p>
+          <p class="text-fam-text-light text-sm">A live marketplace platform connecting families and local businesses</p>
+        </div>
+        <div class="bg-white/80 rounded-xl p-6 shadow-sm text-left">
+          <p class="text-fam-green font-bold mb-2">WER1 Network</p>
+          <p class="text-fam-text-light text-sm">An integrated affiliate and referral network</p>
+        </div>
+        <div class="bg-white/80 rounded-xl p-6 shadow-sm text-left">
+          <p class="text-fam-green font-bold mb-2">Proven Systems</p>
+          <p class="text-fam-text-light text-sm">Proven systems for offers, tracking, and payouts</p>
+        </div>
+        <div class="bg-white/80 rounded-xl p-6 shadow-sm text-left">
+          <p class="text-fam-green font-bold mb-2">Hownd Acquisition</p>
+          <p class="text-fam-text-light text-sm">Strategic acquisition of Hownd, generating over $1M+ annually</p>
+        </div>
       </div>
+      <p class="text-fam-text text-lg leading-relaxed">
+        This allows us to move faster, scale smarter, and deliver value from day one.
+      </p>
+      <p class="text-fam-purple text-xl font-bold mt-4">
+        We are not building a concept. We are scaling an ecosystem.
+      </p>
     </div>
   </section>
 
-  <!-- Our Projects Section (original content — unchanged, dark overlay on home-header bg) -->
-  <section class="relative py-16 md:py-24 text-white overflow-hidden">
+  <!-- ============================================================
+       SECTION 7 — WAITLIST VISUAL
+       ============================================================ -->
+  <section id="waitlist-section" class="relative py-16 md:py-24 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
       <Image
-        src={homeHeaderBg}
+        src={purpleGrungeBg}
         alt=""
         class="w-full h-full object-cover"
         widths={[800, 1200]}
         sizes="100vw"
       />
-      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="absolute inset-0 bg-purple-900/60"></div>
     </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section intro -->
-      <div class="text-center mb-12 px-4 md:px-16">
-        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Our Projects</h2>
-        <p class="text-white/90 font-light leading-relaxed">
-          Cyber bullying, social media pressure, alcohol and drug addiction, pornography, anxiety, depression, and screen addictions are just a few of the issues that might affect our homes today. It's time to take a stand and get M.A.D (Make A Difference)! The FAM Project was created by deeply caring families coupled with renowned family and relationship development professionals. We have collectively built solution based programs that create meaning, direction and offers help as we all try to navigate through these issues seeking to have a strong family unit and strong connections within our families.
-        </p>
-      </div>
-
-      <!-- Project tiles -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-        <!-- FAM Fun Pass -->
-        <div class="bg-white rounded-xl p-8 text-center text-fam-text">
-          <Image
-            src={famFunPassLogo}
-            alt="FAM Fun Pass"
-            class="mx-auto w-3/4 max-w-[300px] mb-4"
-            widths={[200, 400, 500]}
-            sizes="(max-width: 768px) 70vw, 300px"
-          />
-          <a
-            href="https://www.famfunpass.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block px-6 py-2 bg-fam-red text-white text-sm rounded-sm hover:bg-fam-red-dark transition-colors no-underline mb-4"
-          >
-            Learn More!
-          </a>
-          <p class="text-fam-text-light text-lg font-light leading-snug mb-4">
-            A subscription based app full of incredible freebies and discounts on things to do, shopping, travel, dining and so much more! All to help better <strong>Connect</strong> your family!
-          </p>
-          <a href="https://www.famfunpass.com/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src={famCentralIcon}
-              alt="Download FAM Fun Pass on the App Store"
-              class="mx-auto w-2/5 max-w-[120px]"
-              widths={[120, 300]}
-              sizes="120px"
-            />
-          </a>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left: Copy -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join the FamCentral Founding Community</h2>
+          <div class="text-white/90 text-lg leading-relaxed space-y-4 mb-8">
+            <p>Thousands of families are making a decision:</p>
+            <p>To be more present.<br/>To be more intentional.<br/>To build stronger homes.</p>
+            <p class="text-fam-orange font-semibold">You're invited to be part of it.</p>
+          </div>
+          <div>
+            <p class="text-white/80 text-sm font-medium mb-3">By joining the waitlist, you'll receive:</p>
+            <ul class="text-white/80 text-sm space-y-2 list-none pl-0">
+              <li>• Early access to the FamCentral app</li>
+              <li>• Invitations to local events</li>
+              <li>• The Look Up Challenge toolkit</li>
+              <li>• Exclusive partner offers</li>
+              <li>• Founder updates and opportunities to get involved</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- FAM Central -->
-        <div class="bg-white rounded-xl p-8 text-center text-fam-text">
-          <Image
-            src={famCentralLogo}
-            alt="FAM Central"
-            class="mx-auto w-[87%] max-w-[400px] mb-4"
-            widths={[200, 400, 800]}
-            sizes="(max-width: 768px) 80vw, 400px"
-          />
-          <a
-            href="https://apps.apple.com/us/app/fam-central/id1548755945"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block px-6 py-2 bg-fam-red text-white text-sm rounded-sm hover:bg-fam-red-dark transition-colors no-underline mb-4"
-          >
-            Learn More!
-          </a>
-          <p class="text-fam-text-light text-lg font-light leading-snug mb-4">
-            Our <strong>FAM Central APP</strong> provides education, community, tools and resources to bring all things FAMILY into a "one stop shop" for building stronger, happier and more connected Families!
-          </p>
-          <a href="https://apps.apple.com/us/app/fam-central/id1548755945" target="_blank" rel="noopener noreferrer">
-            <Image
-              src={famCentralApp}
-              alt="Download FAM Central on the App Store"
-              class="mx-auto w-2/5 max-w-[120px]"
-              widths={[120, 300]}
-              sizes="120px"
-            />
-          </a>
+        <!-- Right: Form -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <h3 class="text-white text-xl font-bold mb-4 text-center">Join the Waitlist</h3>
+          <FormWaitlist variant="lite" buttonText="Join the Waitlist →" formId="index-waitlist" theme="dark" />
         </div>
-      </div>
-
-      <!-- Read more button -->
-      <div class="text-center">
-        <a
-          href="/projects/"
-          class="inline-flex items-center px-8 py-3 bg-fam-red text-white font-normal rounded-sm hover:bg-fam-red-dark transition-colors duration-200 no-underline"
-        >
-          Read more about our projects
-          <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ★ PLACEMENT 2 — Instance 7: Final Tri-Choice CTA (Full Form) -->
-  <JoinMovementCTA formId="index-join" />
+  <!-- ============================================================
+       SECTION 8 — EXPERT FACULTY
+       ============================================================ -->
+  <section id="expert-section" class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={cloudsBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-fam-purple mb-3">Join Our Expert Faculty</h2>
+        <p class="text-fam-text text-xl">Help Strengthen Families Nationwide</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- Left: Info -->
+        <div>
+          <p class="text-fam-text-light text-base leading-relaxed mb-4">
+            We are building a trusted network of experts, authors, and creators committed to helping families thrive.
+          </p>
+          <p class="text-fam-text-light text-base leading-relaxed mb-4">
+            If you have proven frameworks, tools, or insights that can positively impact families, we invite you to apply.
+          </p>
+          <p class="text-fam-text font-medium mb-3">As part of our Expert Faculty, you can:</p>
+          <ul class="text-fam-text-light text-sm space-y-2 mb-6">
+            <li class="flex items-start gap-2"><span class="text-fam-orange font-bold">&#10003;</span> Share your message with a national audience</li>
+            <li class="flex items-start gap-2"><span class="text-fam-orange font-bold">&#10003;</span> Contribute content inside the FamCentral platform</li>
+            <li class="flex items-start gap-2"><span class="text-fam-orange font-bold">&#10003;</span> Build authority and expand your reach</li>
+            <li class="flex items-start gap-2"><span class="text-fam-orange font-bold">&#10003;</span> Be recognized as a trusted voice in the family space</li>
+          </ul>
+          <p class="text-fam-text font-medium mb-3">We are actively seeking experts in:</p>
+          <ul class="text-fam-text-light text-sm space-y-1">
+            <li>• Parenting & Family Relationships</li>
+            <li>• Mental Health & Emotional Wellness</li>
+            <li>• Faith & Values-Based Living</li>
+            <li>• Digital Wellness & Screen-Time Balance</li>
+            <li>• Education, Safety & Child Development</li>
+            <li>• Health, Nutrition & Family Wellness</li>
+          </ul>
+        </div>
+
+        <!-- Right: Application form -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h3 class="text-fam-purple text-xl font-bold mb-4 text-center">Apply to Join the Expert Faculty</h3>
+          <FormWaitlist variant="lite" buttonText="Apply Now →" formId="index-experts" buttonClass="bg-fam-green hover:bg-fam-green-dark" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 9 — FINAL CTA
+       ============================================================ -->
+  <section class="relative py-16 md:py-24 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={beachFamilyBg}
+        alt=""
+        class="w-full h-full object-cover"
+        widths={[800, 1200]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Join the Movement</h2>
+      <p class="text-white/80 text-lg mb-12">There are three powerful ways to get involved:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Path 1: Waitlist -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <div class="text-fam-green text-4xl mb-4">1</div>
+          <h3 class="text-xl font-bold text-white mb-3">Join the FamCentral Waitlist</h3>
+          <p class="text-white/80 text-sm mb-6">Become part of a growing community of families choosing connection.</p>
+          <a
+            href="#hero-form"
+            class="inline-block px-6 py-3 bg-fam-red text-white font-semibold rounded-lg hover:bg-fam-red-dark transition-colors duration-200 no-underline"
+          >
+            Join the Waitlist
+          </a>
+        </div>
+
+        <!-- Path 2: Expert Faculty -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <div class="text-fam-orange text-4xl mb-4">2</div>
+          <h3 class="text-xl font-bold text-white mb-3">Apply to Join Our Expert Faculty</h3>
+          <p class="text-white/80 text-sm mb-6">Share your message and impact families nationwide.</p>
+          <a
+            href="#expert-section"
+            class="inline-block px-6 py-3 bg-fam-green text-white font-semibold rounded-lg hover:bg-fam-green-dark transition-colors duration-200 no-underline"
+          >
+            Apply Now
+          </a>
+        </div>
+
+        <!-- Path 3: Founding Partner -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <div class="text-fam-purple-soft text-4xl mb-4">3</div>
+          <h3 class="text-xl font-bold text-white mb-3">Become a Founding Partner</h3>
+          <p class="text-white/80 text-sm mb-6">Help us bring FamCentral to your city and be part of building this ecosystem from the ground up.</p>
+          <a
+            href="mailto:info@thefamproject.com?subject=Founding%20Partner%20Inquiry"
+            class="inline-block px-6 py-3 bg-fam-purple text-white font-semibold rounded-lg hover:bg-fam-purple-dark transition-colors duration-200 no-underline"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<script>
+  // Inject hidden role fields into FormWaitlist instances based on section context
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.form-waitlist-wrapper .stubbed-form').forEach((form) => {
+      const formIdInput = form.querySelector('input[name="form_id"]') as HTMLInputElement | null;
+      if (!formIdInput) return;
+      const formId = formIdInput.value;
+
+      let role = '';
+      if (formId === 'index-hero' || formId === 'index-waitlist') {
+        role = 'parent';
+      } else if (formId === 'index-experts') {
+        role = 'expert';
+      }
+
+      if (role && !form.querySelector('input[name="role"]')) {
+        const hidden = document.createElement('input');
+        hidden.type = 'hidden';
+        hidden.name = 'role';
+        hidden.value = role;
+        form.appendChild(hidden);
+      }
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const href = (link as HTMLAnchorElement).getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
