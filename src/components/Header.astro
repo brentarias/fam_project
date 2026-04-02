@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { NAV_LINKS } from '../consts';
 import logoImage from '../assets/logos/fam-logo-circle.png';
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <header id="site-header" class="bg-white shadow-sm sticky top-0 z-50 overflow-visible">
@@ -28,7 +28,7 @@ const currentPath = Astro.url.pathname;
             href={link.href}
             class:list={[
               'text-sm font-medium transition-colors duration-200 no-underline border-b-2 pb-1',
-              currentPath.startsWith(link.href)
+              currentPath === (link.href.replace(/\/$/, '') || '/')
                 ? 'text-fam-orange border-fam-orange'
                 : 'text-fam-neutral-dark border-transparent hover:text-fam-purple hover:border-fam-purple',
             ]}
@@ -69,7 +69,7 @@ const currentPath = Astro.url.pathname;
           href={link.href}
           class:list={[
             'mobile-nav-link block px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 no-underline',
-            currentPath.startsWith(link.href)
+            currentPath === (link.href.replace(/\/$/, '') || '/')
               ? 'text-fam-orange bg-fam-neutral-light'
               : 'text-fam-neutral-dark hover:text-fam-purple hover:bg-fam-neutral-light',
           ]}
