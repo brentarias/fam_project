@@ -140,12 +140,37 @@ const checkboxes = [
           );
         })}
       </fieldset>
+      <!-- Legal consent checkboxes -->
+      <div class:list={['legal-consent space-y-3 p-4 rounded-lg border', isDark ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200']}>
+        <label class:list={['flex items-start gap-2 cursor-pointer text-xs leading-relaxed', isDark ? 'text-white/70' : 'text-gray-500']}>
+          <input
+            type="checkbox"
+            name="sms_consent"
+            value="true"
+            class="w-4 h-4 mt-0.5 rounded border-gray-300 text-fam-purple focus:ring-fam-purple shrink-0"
+          />
+          <span>By checking this box, I consent to receive SMS messages from <strong>Abundant Holdings LLC</strong>. These messages may include updates, promotions, and reminders. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms &amp; Conditions</a>.</span>
+        </label>
+        <label class:list={['flex items-start gap-2 cursor-pointer text-xs leading-relaxed', isDark ? 'text-white/70' : 'text-gray-500']}>
+          <input
+            type="checkbox"
+            name="terms_accepted"
+            value="true"
+            required
+            class="w-4 h-4 mt-0.5 rounded border-gray-300 text-fam-purple focus:ring-fam-purple shrink-0"
+          />
+          <span>By checking this box, I confirm that I have read and agree to the <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms &amp; Conditions</a> of <strong>Abundant Holdings LLC</strong>, including how my data will be collected, used, and protected.</span>
+        </label>
+      </div>
       <button
         type="submit"
         class:list={['w-full px-6 py-3 text-white font-semibold rounded-lg transition-colors duration-200', buttonClass]}
       >
         {buttonText}
       </button>
+      <p class:list={['text-xs text-center mt-2', isDark ? 'text-white/40' : 'text-gray-400']}>
+        By submitting this form you agree to our <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms of Service</a>. Your SMS consent is not shared with third parties except SMS service providers.
+      </p>
     </form>
   ) : (
     <!-- Lite variant: name + email -->
@@ -178,6 +203,33 @@ const checkboxes = [
       >
         {buttonText}
       </button>
+      <!-- Legal consent checkboxes (hidden until first submit click) -->
+      <div class:list={['lite-legal-consent legal-consent-collapsed space-y-3 p-4 rounded-lg border', isDark ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200']}>
+        <label class:list={['flex items-start gap-2 cursor-pointer text-xs leading-relaxed', isDark ? 'text-white/70' : 'text-gray-500']}>
+          <input
+            type="checkbox"
+            name="sms_consent"
+            value="true"
+            disabled
+            class="w-4 h-4 mt-0.5 rounded border-gray-300 text-fam-purple focus:ring-fam-purple shrink-0"
+          />
+          <span>By checking this box, I consent to receive SMS messages from <strong>Abundant Holdings LLC</strong>. These messages may include updates, promotions, and reminders. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms &amp; Conditions</a>.</span>
+        </label>
+        <label class:list={['flex items-start gap-2 cursor-pointer text-xs leading-relaxed', isDark ? 'text-white/70' : 'text-gray-500']}>
+          <input
+            type="checkbox"
+            name="terms_accepted"
+            value="true"
+            required
+            disabled
+            class="w-4 h-4 mt-0.5 rounded border-gray-300 text-fam-purple focus:ring-fam-purple shrink-0"
+          />
+          <span>By checking this box, I confirm that I have read and agree to the <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms &amp; Conditions</a> of <strong>Abundant Holdings LLC</strong>, including how my data will be collected, used, and protected.</span>
+        </label>
+      </div>
+      <p class:list={['lite-legal-fineprint legal-consent-collapsed text-xs text-center mt-2', isDark ? 'text-white/40' : 'text-gray-400']}>
+        By submitting this form you agree to our <a href="/privacy-policy/" target="_blank" class="underline hover:text-fam-green">Privacy Policy</a> and <a href="/terms-and-conditions/" target="_blank" class="underline hover:text-fam-green">Terms of Service</a>. Your SMS consent is not shared with third parties except SMS service providers.
+      </p>
     </form>
   )}
   <SuccessToast />
@@ -186,7 +238,7 @@ const checkboxes = [
 <style>
   :global(.field-invalid) {
     border-color: #ee2e56 !important;
-    box-shadow: 0 0 0 2px rgba(238, 46, 86, 0.25) !important;
+    box-shadow: 0 0 0 3px rgba(238, 46, 86, 0.25) !important;
   }
   :global(.field-error-msg) {
     color: #ee2e56;
@@ -205,6 +257,22 @@ const checkboxes = [
   .extra-fields-collapsed {
     max-height: 0;
     opacity: 0;
+  }
+  :global(.legal-consent-error) {
+    background-color: rgb(254 242 242) !important;
+    border-color: rgb(252 165 165) !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .legal-consent-collapsed {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  .legal-consent-expanded {
+    max-height: 30rem;
+    opacity: 1;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
 </style>
 
@@ -287,8 +355,85 @@ const checkboxes = [
     }
   });
 
+  function showCheckboxError(checkbox: HTMLInputElement, message: string) {
+    checkbox.classList.add('field-invalid');
+    const label = checkbox.closest('label');
+    if (!label) return;
+    let msg = label.nextElementSibling as HTMLElement | null;
+    if (!msg || !msg.classList.contains('field-error-msg')) {
+      msg = document.createElement('p');
+      msg.className = 'field-error-msg';
+      label.after(msg);
+    }
+    msg.textContent = message;
+    // Tint the consent container
+    const container = checkbox.closest('.legal-consent, .lite-legal-consent');
+    if (container) {
+      container.classList.add('legal-consent-error');
+    }
+    // Scroll checkbox into view
+    checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    checkbox.focus();
+  }
+
+  function clearCheckboxError(checkbox: HTMLInputElement) {
+    checkbox.classList.remove('field-invalid');
+    const label = checkbox.closest('label');
+    if (!label) return;
+    const next = label.nextElementSibling;
+    if (next?.classList.contains('field-error-msg')) next.remove();
+    // Revert consent container tint
+    const container = checkbox.closest('.legal-consent, .lite-legal-consent');
+    if (container) {
+      container.classList.remove('legal-consent-error');
+    }
+  }
+
+  function isLiteForm(form: HTMLFormElement): boolean {
+    return !!form.querySelector('.lite-legal-consent');
+  }
+
+  function isLiteExpanded(form: HTMLFormElement): boolean {
+    const panel = form.querySelector('.lite-legal-consent');
+    return !!panel && panel.classList.contains('legal-consent-expanded');
+  }
+
+  function expandLiteConsent(form: HTMLFormElement) {
+    const panel = form.querySelector('.lite-legal-consent');
+    const fineprint = form.querySelector('.lite-legal-fineprint');
+    if (!panel) return;
+    panel.classList.remove('legal-consent-collapsed');
+    panel.classList.add('legal-consent-expanded');
+    panel.querySelectorAll<HTMLInputElement>('input[type="checkbox"]').forEach(cb => { cb.disabled = false; });
+    if (fineprint) {
+      fineprint.classList.remove('legal-consent-collapsed');
+      fineprint.classList.add('legal-consent-expanded');
+    }
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    if (btn) btn.textContent = 'Confirm & Join →';
+  }
+
+  function collapseLiteConsent(form: HTMLFormElement) {
+    const panel = form.querySelector('.lite-legal-consent');
+    const fineprint = form.querySelector('.lite-legal-fineprint');
+    if (!panel) return;
+    panel.classList.add('legal-consent-collapsed');
+    panel.classList.remove('legal-consent-expanded');
+    panel.querySelectorAll<HTMLInputElement>('input[type="checkbox"]').forEach(cb => { cb.disabled = true; cb.checked = false; });
+    if (fineprint) {
+      fineprint.classList.add('legal-consent-collapsed');
+      fineprint.classList.remove('legal-consent-expanded');
+    }
+  }
+
   document.querySelectorAll('.form-waitlist-wrapper .stubbed-form').forEach((form) => {
     attachFieldValidation(form);
+
+    // Live clear for terms checkbox error
+    form.querySelectorAll<HTMLInputElement>('input[name="terms_accepted"]').forEach(cb => {
+      cb.addEventListener('change', () => { if (cb.checked) clearCheckboxError(cb); });
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formEl = e.target as HTMLFormElement;
@@ -297,12 +442,26 @@ const checkboxes = [
       const nameOk = validateField(nameInput, true);
       const emailOk = validateField(emailInput, true);
       if (!nameOk || !emailOk) return;
+
+      // Lite variant: first click expands consent, second click submits
+      if (isLiteForm(formEl) && !isLiteExpanded(formEl)) {
+        expandLiteConsent(formEl);
+        return;
+      }
+
+      // Validate terms checkbox (required)
+      const termsCheckbox = formEl.querySelector('input[name="terms_accepted"]:not([disabled])') as HTMLInputElement | null;
+      if (termsCheckbox && !termsCheckbox.checked) {
+        showCheckboxError(termsCheckbox, 'You must agree to the Privacy Policy and Terms & Conditions.');
+        return;
+      }
+
       const submitBtn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement;
       submitBtn.disabled = true;
       submitBtn.textContent = 'Submitting…';
       try {
         const formData = new FormData(formEl);
-        const payload: Record<string, string | string[]> = {};
+        const payload: Record<string, string | string[] | boolean> = {};
         formData.forEach((value, key) => {
           if (key === 'role') {
             if (!payload[key]) payload[key] = [];
@@ -311,6 +470,10 @@ const checkboxes = [
             payload[key] = value as string;
           }
         });
+        // Add consent booleans
+        payload.sms_consent = formData.has('sms_consent');
+        payload.terms_accepted = formData.has('terms_accepted');
+
         await fetch(GHL_WEBHOOK, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -320,6 +483,8 @@ const checkboxes = [
         formEl.querySelectorAll<HTMLInputElement>('input[type="checkbox"][name="role"]').forEach(cb => {
           if (cb.value === 'business' || cb.value === 'expert') applyExtraFields(cb);
         });
+        // Collapse lite consent panel after reset
+        if (isLiteForm(formEl)) collapseLiteConsent(formEl);
         (window as any).__showToast?.(formEl);
       } catch {
         alert('Something went wrong. Please try again.');
